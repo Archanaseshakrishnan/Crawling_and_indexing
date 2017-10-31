@@ -1,0 +1,78 @@
+ <br>
+<br> Event Handling
+Java ProgrammingJavaBeans
+Canvas 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br>
+Reusability comes at the core of any modern computer language's framework. It is often desirable to use components you previously built in recurring environments. In Rapid Application Development, these prove more helpful as you can drag them off a list of components and use it elsewhere in your project. Such level of reusability is added into the Java Programming language with the help of the JavaBeans architecture.<br>
+<br>JavaBeans are the mainstream Java component model, introduced in 1996 by Sun Microsystems. JavaBeans are defined as follows:<br>
+<br>"A JavaBean is a reusable software component that can be manipulated visually in a builder tool."<br>
+<br>Together with the component model, Sun released a simple visual composition tool, the BeanBox. It is mostly intended for experimenting with Beans rather than offering a professional IDE. For real world applications, one should better deploy on one of the Java IDEs like Visual Age or JBuilder that support the visual composition of JavaBeans.<br>
+<br>As we will see, JavaBeans do not essentially differ from standard Java classes, which makes the component model quite easy to use. What sets a JavaBean apart from normal Java classes is that a JavaBean follows the Oracle JavaBeans Standard (the term JavaBean or simply bean also refers to the instances of a JavaBean class). There is a set of features and conventions adopted for facilitating reuse:<br>
+<br>Presence of a no argument constructor;
+Support for persistence;
+Properties manipulated by getter and setter methods;
+Support for introspection;
+Events as the mechanism of communication between beans;
+Support for customization via property editors.
+<br>The JavaBeans standard provides a framework for creating objects to be used by GUI tools, including Java development environments. But in more common usage, a bean is a serializable class that follows the JavaBeans naming conventions for its properties. These naming standards make it easy to use Java introspection.<br>
+<br>
+<br>To follow these standards, the bean needs one or more properties abstractions which represent different state values of an object. A property has a name (a valid Java identifier) and a type (either a reference type, a primitive type or an array type). By default, the properties of a JavaBean class are inferred by the presence of either a getter method, a setter method, or both:<br>
+<br>A getter method which is used to obtain the value of the property from a bean. The name is usually of the form getPropertyName. For example, the getter method for the String property whiskey is public String getWhiskey(). For boolean properties (those whose type is boolean, the convention is to use the naming pattern isPropertyName.
+<br>isDiscounted() would be the getter method for a boolean property named discounted. Thus, the method signature of most getters is public PropertyType getPropertyName() or public boolean isPropertyName().<br>
+<br>A setter method which is used to assign a value to a bean's property. A setter method is a method of the form public void setPropertyName(PropertyType value). For the previous example, the setter could be invoked as setWhiskey("bourbon");.
+<br>As per the JavaBeans standard, getters and setters defined as described above automatically determine the properties of the class. However, by creating java.beans.PropertyDescriptor classes, you can specify alternate implementations by explicitly declaring the property names and the getter and/or setter methods for each property.<br>
+<br>Properties are often implemented with private instance variables, but this is not required.<br>
+<br>
+<br>This is an example of a simple JavaBean type with the properties int age and String color.<br>
+<br>
+Code listing 9.12: Puppy.java
+
+
+ 1 class Puppy implements java.io.Serializable {
+ 2 
+ 3   private static final long serialVersionUID = 348652158488L;
+ 4 
+ 5   private String color;
+ 6 
+ 7   private int age;
+ 8 
+ 9   public String getColor() {
+10     return color;
+11   }
+12 
+13   public void setColor(String color) {
+14     this.color = color;
+15   }
+16 
+17   public int getAge() {
+18     return age;
+19   }
+20 
+21   public void setAge(int age) {
+22     this.age = age;
+23   }
+24 }
+
+
+<br>

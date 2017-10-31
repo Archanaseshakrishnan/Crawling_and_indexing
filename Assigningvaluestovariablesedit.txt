@@ -1,0 +1,123 @@
+ <br>
+<br> Boolean expressions
+Java ProgrammingVariables
+Primitive Types 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>In the Java programming language, the words field and variable are both one and the same thing. Variables are devices that are used to store data, such as a number, or a string of character data.<br>
+<br>
+<br>Java is considered as a strongly typed programming language. Thus all variables in the Java programming language ought to have a particular data type. This is either declared or inferred and the Java language only allows programs to run if they adhere to type constraints.<br>
+<br>If you present a numeric type with data that is not numeric, say textual content, then such declarations would violate Java’s type system. This gives Java the ability of type safety. Java checks if an expression or data is encountered with an incorrect type or none at all. It then automatically flags this occurrence as an error at compile time. Most type-related errors are caught by the Java compiler, hence making a program more secure and safe once compiled completely and successfully. Some languages (such as C) define an interpretation of such a statement and use that interpretation without any warning; others (such as PL/I) define a conversion for almost all such statements and perform the conversion to complete the assignment. Some type errors can still occur at runtime because Java supports a cast operation which is a way of changing the type of one expression to another. However, Java performs run time type checking when doing such casts, so an incorrect type cast will cause a runtime exception rather than succeeding silently and allowing data corruption.<br>
+<br>On the other hand, Java is also known as a hybrid language. While supporting object oriented programming (OOP), Java is not a pure OO language like Smalltalk or Ruby. Instead, Java offers both object types and primitive types. Primitive types are used for boolean, character, and numeric values and operations. This allows relatively good performance when manipulating numeric data, at the expense of flexibility. For example, you cannot subclass the primitive types and add new operations to them.<br>
+<br>
+<br>In the Java programming language, there are four kinds of variables.<br>
+<br>
+Code listing 3.9: ClassWithVariables.java
+
+
+1 public class ClassWithVariables {
+2     public int id = 0;
+3     public static boolean isClassUsed;
+4 
+5     public void processData(String parameter) {
+6       Object currentValue = null;
+7     }
+8 }
+
+
+<br>In the code listing 3.9, are examples of all four kinds of variables.<br>
+<br>Instance variables: These are variables that are used to store the state of an object (for example, id). Every object created from a class definition would have its own copy of the variable. It is valid for and occupies storage for as long as the corresponding object is in memory.
+Class variables: These variables are explicitly defined within the class-level scope with a static modifier (for example, isClassUsed). No other variables can have a static modifier attached to them. Because these variables are defined with the static modifier, there would always be a single copy of these variables no matter how many times the class has been instantiated. They live as long as the class is loaded in memory.
+Parameters or Arguments: These are variables passed into a method signature (for example, parameter). Recall the usage of the args variable in the main method. They are not attached to modifiers (i.e. public, private, protected or static) and they can be used everywhere in the method. They are in memory during the execution of the method and can't be used after the method returns.
+Local variables: These variables are defined and used specifically within the method-level scope (for example, currentValue) but not in the method signature. They do not have any modifiers attached to it. They no longer exist after the method has returned.
+<br>
+Test your knowledge
+
+Question 3.5: Consider the following code:
+
+Question 3.5: SomeClass.java
+
+
+ 1 public class SomeClass {
+ 2   public static int c = 1;
+ 3   public int a = c;
+ 4   private int b;
+ 5 
+ 6   public void someMethod(int d) {
+ 7     d = c;
+ 8     int e;
+ 9   }
+10 }
+
+
+In the example above, we created five variables: a, b, c, d and e. All these variables have the same data type int (integer). However, can you tell what kind of variable each one is?
+
+Answer
+
+a and b are instance variables;
+c is a class variable;
+d is a parameter or argument; and,
+e is a local variable.
+
+
+
+<br>
+<br>
+<br>
+
+
+
+A graphical representation of computer memory
+
+<br>
+<br>Variables and all the information they store are kept in the computer's memory for access. Think of a computer's memory as a table of data — where each cell corresponds to a variable.<br>
+<br>Upon creating a variable, we basically create a new address space and give it a unique name. Java goes one step further and lets you define what you can place within the variable — in Java parlance you call this a data type. So, you essentially have to do two things in order to create a variable:<br>
+<br>Create a variable by giving it a unique name; and,
+Define a data type for the variable.
+<br>The following code demonstrates how a simple variable can be created. This process is known as variable declaration.<br>
+<br>
+Code section 3.40: A simple variable declaration.
+
+
+1 int a;
+
+
+<br>
+<br>Because we have provided a data type for the variable, we have a hint as to what the variable can and cannot hold. We know that int (integer) data type supports numbers that are either positive or negative integers. Therefore once a variable is created, we can provide it with any integer value using the following syntax. This process is called an assignment operation.<br>
+<br>
+Code section 3.41: Variable declaration and assignment operation (on different lines).
+
+
+1 int a;
+2 a = 10;
+
+
+<br>Java provides programmers with a simpler way of combining both variable declaration and assignment operation in one line. Consider the following code:<br>
+<br>
+Code section 3.42: Variable declaration and assignment operation (on the same line).
+
+
+1 int a = 10;
+
+
+<br>

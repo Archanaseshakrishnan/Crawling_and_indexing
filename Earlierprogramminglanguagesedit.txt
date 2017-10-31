@@ -1,0 +1,18 @@
+ <br>
+<br> About This Book
+Java ProgrammingHistory
+Java Overview 
+<br>Navigate Preface: ( v • d • e )
+ About this book
+ History of Java
+ Overview of the Java programming language
+ The Java platform (JRE & JDK)
+
+<br><br>
+<br>On 23 May 1995, John Gage, the director of the Science Office of the Sun Microsystems along with Marc Andreesen, co-founder and executive vice president at Netscape announced to an audience of SunWorldTM that Java technology wasn't a myth and that it was going to be incorporated into Netscape Navigator.[1]<br>
+<br>At the time the total number of people working on Java was less than 30.[1] This team would shape the future in the next decade and no one had any idea as to what was in store. From running an unmanned vehicle on Mars to serving as the operating environment of most consumer electronics, e.g. cable set-top boxes, VCRs, toasters and PDAs,[2] Java has come a long way from its inception. Let's see how it all began.<br>
+<br>
+<br>Before Java emerged as a programming language, C++ was the dominant player in the trade. The primary goal of the creators of Java was to create a language that could tackle most of the things that C++ offered while getting rid of some of the more tedious tasks that came with the earlier languages.<br>
+<br>Computer hardware went through a performance and price revolution from 1972 to 1991. Better, faster hardware was available at ever lower prices, and the demand for big and complex software exponentially increased. To accommodate the demand, new development technologies were invented.<br>
+<br>The C language developed in 1972 by Dennis Ritchie had taken a decade to become the most popular language amongst programmers working on PCs and similar platforms (other languages, like COBOL and FORTRAN, dominated the mainframe market). But, with time programmers found that programming in C became tedious with its structural syntax.[3] Although people attempted to solve this problem, it would be later that a new development philosophy was introduced, one named Object-Oriented Programming (OOP). With OOP, one can write code that can be reused later without needing to rewrite the code over and over again. In 1979, Bjarne Stroustrup developed C++, an enhancement to the C language with included OOP fundamentals and features. Sun generated revenue from Java through the selling of licenses for specialized products such as the Java Enterprise System.<br>
+<br>

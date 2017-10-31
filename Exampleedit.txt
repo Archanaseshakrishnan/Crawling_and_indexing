@@ -1,0 +1,244 @@
+ <br>
+<br> Invoking C
+Java ProgrammingByte Code
+Links 
+<br>Topics:
+Preface
+Getting started
+Language fundamentals
+Classes and objects
+Aggregate
+Exceptions
+Concurrent Programming
+Javadoc & Annotations
+Designing user interfaces
+Advanced topics
+
+<br>
+Java Byte Code is the language to which Java source is compiled and the Java Virtual Machine understands. Unlike compiled languages that have to be specifically compiled for each different type of computers, a Java program only needs to be converted to byte code once, after which it can run on any platform for which a Java Virtual Machine exists.<br>
+<br>Bytecode is the compiled format for Java programs. Once a Java program has been converted to bytecode, it can be transferred across a network and executed by Java Virtual Machine (JVM). Bytecode files generally have a .class extension. It is not normally necessary for a Java programmer to know byte code, but it can be useful.<br>
+<br><br>
+<br>
+
+Contents
+
+1 Other Languages
+2 Example
+3 Example 2
+4 The Java bytecodes
+5 References
+6 External Links
+<br>
+<br><br>
+<br>
+<br>There are a number of exciting new languages being created that also compile to Java byte code, such as Groovy.<br>
+<br>GNAT 
+The GNU Ada-Compiler, is capable of compiling Ada into Java-style bytecode.
+ftp://cs.nyu.edu/pub/gnat
+<br>JPython 
+Compiles Python to Java-style bytecode.
+http://www.jpython.org/
+<br>Kawa 
+Compiles Scheme to Java-style bytecode.
+http://www.gnu.org/software/kawa/
+<br><br>
+<br>
+<br>Consider the following Java code.<br>
+<br>
+
+ outer:
+ for (int i = 2; i < 1000; i++) {
+  for (int j = 2; j < i; j++) {
+    if (i % j == 0)
+      continue outer;
+  }
+  System.out.println (i);
+ }
+<br>
+<br>A Java compiler might translate the Java code above into byte code as follows, assuming the above was put in a method:<br>
+<br>
+ Code:
+  0:   iconst_2
+  1:   istore_1
+  2:   iload_1
+  3:   sipush  1000
+  6:   if_icmpge       44
+  9:   iconst_2
+  10:  istore_2
+  11:  iload_2
+  12:  iload_1
+  13:  if_icmpge       31
+  16:  iload_1
+  17:  iload_2
+  18:  irem             # remainder
+  19:  ifne    25
+  22:  goto    38
+  25:  iinc    2, 1
+  28:  goto    11
+  31:  getstatic       #84; //Field java/lang/System.out:Ljava/io/PrintStream;
+  34:  iload_1
+  35:  invokevirtual   #85; //Method java/io/PrintStream.println:(I)V
+  38:  iinc    1, 1
+  41:  goto    2
+  44:  return
+
+<br>
+<br> <br>
+<br> Invoking C
+Java ProgrammingByte Code
+Links 
+<br>Topics:
+Preface
+Getting started
+Language fundamentals
+Classes and objects
+Aggregate
+Exceptions
+Concurrent Programming
+Javadoc & Annotations
+Designing user interfaces
+Advanced topics
+
+<br>
+Java Byte Code is the language to which Java source is compiled and the Java Virtual Machine understands. Unlike compiled languages that have to be specifically compiled for each different type of computers, a Java program only needs to be converted to byte code once, after which it can run on any platform for which a Java Virtual Machine exists.<br>
+<br>Bytecode is the compiled format for Java programs. Once a Java program has been converted to bytecode, it can be transferred across a network and executed by Java Virtual Machine (JVM). Bytecode files generally have a .class extension. It is not normally necessary for a Java programmer to know byte code, but it can be useful.<br>
+<br><br>
+<br>
+
+Contents
+
+1 Other Languages
+2 Example
+3 Example 2
+4 The Java bytecodes
+5 References
+6 External Links
+<br>
+<br><br>
+<br>
+<br>There are a number of exciting new languages being created that also compile to Java byte code, such as Groovy.<br>
+<br>GNAT 
+The GNU Ada-Compiler, is capable of compiling Ada into Java-style bytecode.
+ftp://cs.nyu.edu/pub/gnat
+<br>JPython 
+Compiles Python to Java-style bytecode.
+http://www.jpython.org/
+<br>Kawa 
+Compiles Scheme to Java-style bytecode.
+http://www.gnu.org/software/kawa/
+<br><br>
+<br>
+<br>Consider the following Java code.<br>
+<br>
+
+ outer:
+ for (int i = 2; i < 1000; i++) {
+  for (int j = 2; j < i; j++) {
+    if (i % j == 0)
+      continue outer;
+  }
+  System.out.println (i);
+ }
+<br>
+<br>A Java compiler might translate the Java code above into byte code as follows, assuming the above was put in a method:<br>
+<br>
+ Code:
+  0:   iconst_2
+  1:   istore_1
+  2:   iload_1
+  3:   sipush  1000
+  6:   if_icmpge       44
+  9:   iconst_2
+  10:  istore_2
+  11:  iload_2
+  12:  iload_1
+  13:  if_icmpge       31
+  16:  iload_1
+  17:  iload_2
+  18:  irem             # remainder
+  19:  ifne    25
+  22:  goto    38
+  25:  iinc    2, 1
+  28:  goto    11
+  31:  getstatic       #84; //Field java/lang/System.out:Ljava/io/PrintStream;
+  34:  iload_1
+  35:  invokevirtual   #85; //Method java/io/PrintStream.println:(I)V
+  38:  iinc    1, 1
+  41:  goto    2
+  44:  return
+
+<br>
+<br>
+<br>As an example we can write a simple Foo.java source:<br>
+<br>
+
+public class Foo {
+  public static void main(final String[] args) {
+    System.out.println("This is a simple example of decompilation using javap");
+    a();
+    b();
+  }
+	
+  public static void a() {
+    System.out.println("Now we are calling a function...");
+  }
+
+  public static void b() {
+    System.out.println("...and now we are calling b");
+  }
+}
+<br>
+<br>Compile it and then move Foo.java to another directory or delete it if you wish. What can we do with javap and Foo.class ?<br>
+<br>
+$javap Foo
+<br>
+<br>produces this result:<br>
+<br>
+Compiled from "Foo.java"
+public class Foo extends java.lang.Object {
+    public Foo();
+    public static void main(java.lang.String[]);
+    public static void a();
+    public static void b();
+}
+<br>
+<br>As you can see the javac compiler doesn't strip any (public) variable name from the .class file. As a result the names of the functions, their parameters and types of return are exposed. (This is necessary in order for other classes to access them.)<br>
+<br>Let's do a bit more, try:<br>
+<br>
+$javap -c Foo
+<br>
+<br>
+Compiled from "Foo.java"
+public class Foo extends java.lang.Object{
+public Foo();
+  Code:
+   0:   aload_0
+   1:   invokespecial   #1; //Method java/lang/Object."<init>":()V
+   4:   return
+
+public static void main(java.lang.String[]);
+  Code:
+   0:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   3:   ldc             #3; //String This is a simple example of decompilation using javap
+   5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   8:   invokestatic    #5; //Method a:()V
+   11:  invokestatic    #6; //Method b:()V
+   14:  return
+
+public static void a();
+  Code:
+   0:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   3:   ldc             #7; //String Now we are calling a function...
+   5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   8:   return
+
+public static void b();
+  Code:
+   0:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   3:   ldc             #8; //String ...and now we are calling b
+   5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   8:   return
+
+}
+<br>
+<br>

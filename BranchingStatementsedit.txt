@@ -1,0 +1,163 @@
+ <br>
+<br> Language Fundamentals
+Java ProgrammingStatements
+Conditional blocks 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+Now that we have the Java platform on our systems and have run the first program successfully, we are geared towards understanding how programs are actually made. As we have already discussed, a program is a set of instructions, which are tasks provided to a computer. These instructions are called statements in Java. Statements can be anything from a single line of code to a complex mathematical equation. Consider the following line:<br>
+<br>
+Code section 3.1: A simple assignment statement.
+
+
+1 int age = 24;
+
+
+<br>This line is a simple instruction that tells the system to initialize a variable and set its value as 24. If the above statement was the only one in the program, it would look similar to this:<br>
+<br>
+Code listing 3.1: A statement in a simple class.
+
+
+1 public class MyProgram {
+2     public static void main(String[] args) {
+3         int age = 24;
+4     }
+5 }
+
+
+<br>Java places its statements within a class declaration and, in the class declaration, the statements are usually placed in a method declaration, as above.<br>
+<br>
+<br>The simplest statement is a variable declaration:<br>
+<br>
+Code section 3.2: A simple declaration statement.
+
+
+1 int age;
+
+
+<br>It defines a variable that can be used to store values for later use. The first token is the data type of the variable (which type of values this variable can store). The second token is the name of the variable, by which you will be referring to it. Then each declaration statement is ended by a semicolon (;).<br>
+<br>
+<br>Up until now, we've assumed the creation of variables as a single statement. In essence, we assign a value to those variables, and that's just what it is called. When you assign a value to a variable in a statement, that statement is called an assignment statement (also called an initialization statement). Did you notice one more thing? It's the semicolon (;), which is at the end of each statement. A clear indicator that a line of code is a statement is its termination with an ending semicolon. If one was to write multiple statements, it is usually done with each statement on a separate line ending with a semicolon. Consider the example below:<br>
+<br>
+Code section 3.3: Multiple assignment statements.
+
+
+1 int a = 10;
+2 int b = 20;
+3 int c = 30;
+
+
+<br>You do not necessarily have to use a new line to write each statement. Just like English, you can begin writing the next statement where you ended the first one as depicted below:<br>
+<br>
+Code section 3.4: Multiple assignment statements on the same line.
+
+
+1 int a = 10; int b = 20; int c = 30;
+
+
+<br>However, the only problem with putting multiple statements on one line is, it's very difficult to read it. It doesn't look that intimidating at first, but once you've got a significant amount of code, it's usually better to organize it in a way that makes sense. It would look more complex and incomprehensible written as it is in Listing 3.4.<br>
+<br>Now that we have looked into the anatomy of a simple assignment statement, we can look back at what we've achieved. We know that...<br>
+<br>A statement is a unit of code in programming.
+If we are assigning a variable a value, the statement is called an assignment statement.
+An assignment statement includes three parts: a data type, the variable name (also called the identifier) and the value of a variable. We will look more into the nature of identifiers and values in the section Variables later.
+<br>Now, before we move on to the next topic, you need to try and understand what the code below does.<br>
+<br>
+Code section 3.5: Multiple assignment statements with expressions.
+
+
+1 int firstNumber = 10;
+2 int secondNumber = 20;
+3 int result = firstNumber + secondNumber;
+4 System.out.println(result);
+5 secondNumber = 30;
+6 System.out.println(result);
+
+
+<br>The first two statements are pretty much similar to those in Section 3.3 but with different variable names. The third however is a bit interesting. We've already talked of variables as being similar to gift boxes. Think of your computer's memory as a shelf where you put all those boxes. Whenever you need a box (or variable), you call its identifier (that's the name of the variable). So calling the variable identifier firstNumber gives you the number 10, calling secondNumber would give you 20 hence when you add the two up, the answer should be 30. That's what the value of the last variable result would be. The part of the third statement where you add the numbers, i.e., firstNumber + secondNumber is called an expression and the expression is what decides what the value is to be. If it's just a plain value, like in the first two statements, then it's called a literal (the value is literally the value, hence the name literal).<br>
+<br>Note that after the assignment to result its value will not be changed if we assign different values to firstNumber or secondNumber, like in line 5.<br>
+<br>With the information you have just attained, you can actually write a decent Java program that can sum up values.<br>
+<br>
+<br>An assertion checks if a condition is true:<br>
+<br>
+Code section 3.6: A return statement.
+
+
+1     public int getAge() {
+2         assert age >= 0;
+3         return age;
+4     }
+
+
+<br>Each assert statement is ended by a semi-colon (;). However, assertions are disabled by default, so you must run the program with the -ea argument in order for assertions to be enabled (java -ea [name of compiled program]).<br>
+<br>
+<br>Statements are evaluated in the order as they occur. The execution of flow begins at the top most statement and proceed downwards till the last statement is encountered. A statement can be substituted by a statement block. There are special statements that can redirect the execution flow based on a condition, those statements are called branching statements, described in detail in a later section.<br>
+<br>
+<br>A bunch of statements can be placed in braces to be executed as a single block. Such a block of statements can be named or be provided with a condition for execution. Below is how you'd place a series of statements in a block.<br>
+<br>
+Code section 3.7: A statement block.
+
+
+1 {
+2     int a = 10;
+3     int b = 20;
+4     int result = a + b;
+5 }
+
+
+<br>
+<br>Program flow can be affected using function/method calls, loops and iterations. Of various types of branching constructs, we can easily pick out two generic branching methods.<br>
+<br>Unconditional Branching
+Conditional Branching
+<br>Unconditional Branching Statements[edit]<br>
+<br>If you look closely at a method, you'll see that a method is a named statement block that is executed by calling that particular name. An unconditional branch is created either by invoking the method or by calling break, continue, return or throw, all of which are described below.<br>
+<br>When a name of a method is encountered in a flow, it stops execution in the current method and branches to the newly called method. After returning a value from the called method, execution picks up at the original method on the line below the method call.<br>
+<br>
+
+Code listing 3.8: UnconditionalBranching.java
+
+
+ 1 public class UnconditionalBranching {
+ 2     public static void main(String[] args) {
+ 3         System.out.println("Inside main method! Invoking aMethod!");
+ 4         aMethod();
+ 5         System.out.println("Back in main method!");
+ 6     }
+ 7 
+ 8     public static void aMethod() {
+ 9         System.out.println("Inside aMethod!");
+10     }
+11 }
+
+
+
+
+
+Output provided with the screen of information running the above code.
+
+Inside main method! Invoking aMethod!
+Inside aMethod!
+Back in main method!
+
+
+<br>The program flow begins in the main method. Just as aMethod is invoked, the flow travels to the called method. At this very point, the flow branches to the other method. Once the method is completed, the flow is returned to the point it left off and resumes at the next statement after the call to the method.<br>
+<br>

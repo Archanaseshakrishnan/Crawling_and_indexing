@@ -1,0 +1,43 @@
+  Libraries, extensions and frameworks
+Java Programming3D Programming
+Java Native Interface 
+<br>
+
+
+This page or section is an undeveloped draft or outline.
+You can help to develop the work, or you can ask for assistance in the project room.
+<br>Although Java comes with the Java 3D library other libraries have been developed over time with similar functionality. Thus, unlike many other areas of Java development explored in this book, a Java programmer has a choice to make as to which 3D library to use.<br>
+<br>
+<br>Java 3D
+JOGL
+JPCT
+Light Weight Java Game Library
+<br> 
+NewPP limit report
+Parsed by mw1308
+Cached time: 20171026142635
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.144 seconds
+Real time usage: 0.204 seconds
+Preprocessor visited node count: 191/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 4497/2097152 bytes
+Template argument size: 559/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 89/500
+Lua time usage: 0.120/10.000 seconds
+Lua memory usage: 1.01 MB/50 MB
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  192.521      1 -total
+ 93.59%  180.186      1 Template:Programming/Navigation
+  6.38%   12.276      1 Template:Stub
+  5.61%   10.805      1 Template:Ambox
+  3.62%    6.975      1 Template:Ambox/core
+  2.64%    5.082      1 Template:BookCat
+  1.84%    3.545      1 Template:BookCat/default
+  1.10%    2.111      1 Template:BOOKCATEGORY
+  0.63%    1.205      1 Template:Is_book
+  0.53%    1.025      1 Template:FULLBOOKNAME
+<br>

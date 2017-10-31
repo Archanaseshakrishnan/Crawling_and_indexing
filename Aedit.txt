@@ -1,0 +1,10 @@
+  Links
+Java ProgrammingGlossary
+Index 
+<br>This is a glossary of the book.<br>
+<br>Contents:
+Top - 0–9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+<br>
+<br>annotation 
+A means of attaching metadata to methods and classes directly in the source code.
+<br>

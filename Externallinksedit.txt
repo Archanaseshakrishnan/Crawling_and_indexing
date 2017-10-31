@@ -1,0 +1,1874 @@
+ <br>
+<br> Remote Method Invocation
+Java ProgrammingEJB
+JavaSpaces 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+Enterprise JavaBeans (EJB) technology is the server-side component architecture for Java Platform, Enterprise Edition (Java EE). EJB technology enables to create distributed, transactional, secure and portable application component objects.<br>
+<br>EJB supports the development and deployment of component based business applications. Applications written using the Enterprise JavaBeans architecture are scalable, transactional, and multi-user secure. These applications may be written once, and then deployed on any server platform that supports the Enterprise JavaBeans specification.<br>
+<br>
+<br><br>
+<br>
+
+
+
+To do:
+Complete this section.
+
+<br><br>
+<br>
+<br>Security Management
+Persistence Management
+Transaction Management
+Distributable Interoperable Management
+Exception Management
+<br>
+<br>Session Beans
+StateFull Session Beans
+Stateless Session Beans
+
+Entity Beans
+Message Driven Beans
+<br>
+<br>EJBs are an attempt to create component based application development. With EJBs it is easier to develop components, but the same basic and fundamental maintenance problem will still be there. That is the dependencies between the client and the components. The usage of a component is fixed, changes on the component interface cause to break the client code. The same client/server problem comes back, that is as the users of a component increases the maintenance of that component getting harder and harder until it goes to impossible.<br>
+<br>For a true component based application development we need to standardize the usage of a component. The client must somehow flexibly figure out automatically how to use a component, so component changes don't affect any of the clients using that component. Without that flexibility, a true component based application development will remain as an idea, a dream, a theory without significant practical use. If we had that flexibility, it could cause a paradigm shift in the software development industry.<br>
+<br>JINI was an attempt from Sun to address this flexibility problem. In JINI, the client download the component interface implementation and execute it in the client space.<br>
+<br>So we need to mix (somehow) EJB and JINI technologies to come up with a true flexible component based technology.<br>
+<br>
+<br>Sun EJB Home
+<br>
+<br>EJB in Java EE
+<br>
+<br>EJB 2 Tutorial, interactive Java Lessons
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br> Remote Method Invocation
+Java ProgrammingEJB
+JavaSpaces 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1306
+Cached time: 20171026142113
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.164 seconds
+Real time usage: 0.216 seconds
+Preprocessor visited node count: 553/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 9731/2097152 bytes
+Template argument size: 1024/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 61/500
+Lua time usage: 0.119/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  190.011      1 -total
+ 88.99%  169.087      2 Template:Programming/Navigation
+  5.99%   11.377      1 Template:Java_Programming/ConcurrentTopic/Nav
+  3.18%    6.042      3 Template:BookCat
+  2.53%    4.807      1 Template:Java_Programming/Concurrent_Programming/Topic
+  2.51%    4.775      1 Template:Navbar
+  2.25%    4.273      3 Template:BookCat/default
+  2.01%    3.820      2 Template:Todo
+  1.90%    3.605      1 Template:Status
+  1.35%    2.563      6 Template:Stage_short
+<br>
+<br> <br>
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br><br>
+<br>
+<br>In Java, an annotation is a language construct (introduced in J2SE 1.5) that provides a mechanism for including metadata directly in the source code.<br>
+<br>Annotations can provide metadata for Java classes, attributes, and methods. Syntactically, annotations can be viewed as a special kind of modifier and can be used anywhere that other modifiers (such as public, static, or final) can be used.<br>
+<br>One of the main forces of adding this feature to Java was the wide spread use of XML descriptors to add additional information, metadata, for Java classes. Frameworks like EJB, JSF, Spring, Hibernate were heavily using external XML descriptors. The problem of those external descriptors was that those files are out of reach of the Java compiler and for that reason compiler type checking could not be used. A small spelling mistake bug in a huge XML descriptor file is hard to locate and fix. On the other hand the Java annotations use the Java compiler type checking features so spelling mistakes in annotation names will be caught by the Java compiler.<br>
+<br>In summary, annotations can be...<br>
+<br>used as a source of information for the compiler;
+made available for compile-time or deployment-time processing;
+examined at runtime.
+<br>
+<br>[1] The Java™ Tutorial on Annotations
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables.
+
+<br><br>
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1310
+Cached time: 20171026142603
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.048 seconds
+Real time usage: 0.067 seconds
+Preprocessor visited node count: 601/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 9286/2097152 bytes
+Template argument size: 1047/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.014/10.000 seconds
+Lua memory usage: 694 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   54.596      1 -total
+ 58.29%   31.822      2 Template:Programming/Navigation
+ 19.05%   10.400      1 Template:Java_Programming/JavadocAndAnnotationsTopic/Nav
+ 12.39%    6.767      4 Template:BookCat
+  9.41%    5.136      4 Template:BookCat/default
+  8.69%    4.746      1 Template:Java_Programming/JavadocAndAnnotationsTopic
+  7.44%    4.060      1 Template:Navbar
+  7.15%    3.902      1 Template:Status
+  4.57%    2.497      5 Template:Stage_short
+  4.05%    2.210      4 Template:BOOKCATEGORY
+<br>
+<br> <br>
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br>
+Annotations can be used by the compiler to carry out certain directives. Much that you'd love programming in Java, you probably would have been fussed about compiler warnings. Compiler warnings are not necessarily errors but are warnings that tell you the code might malfunction because of some reason.<br>
+<br>Taming the compiler[edit]<br>
+<br>You can issue directive to the compiler in the shape of three pre-defined annotation to tell it what sort of pre-processing a certain bit of code requires. The three annotations are:<br>
+<br>@Deprecated
+@Override
+@SuppressWarnings(..)
+<br>@Deprecated is used to flag that a method or class should no longer be used, normally because a better alternative exists. Compilers and IDEs typically raise a warning if deprecated code is invoked from non deprecated code. [1]<br>
+<br>@Override flags that a method overrides a method in a superclass. If there is no overridden method, a compile error should occur. [2]<br>
+<br>@SuppressWarnings(..) SuppressWarnings tells the compiler not to report on some, or all, types of warnings. It can be applied to a type, a method or a variable. [3]<br>
+<br>
+<br>[4] Advanced usage of the @SuppressWarnings(..) annotation
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1310
+Cached time: 20171026142600
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.048 seconds
+Real time usage: 0.066 seconds
+Preprocessor visited node count: 575/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 9013/2097152 bytes
+Template argument size: 1025/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.014/10.000 seconds
+Lua memory usage: 694 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   51.244      1 -total
+ 58.93%   30.196      2 Template:Programming/Navigation
+ 23.90%   12.249      1 Template:Java_Programming/JavadocAndAnnotationsTopic/Nav
+ 10.67%    5.467      1 Template:Navbar
+ 10.48%    5.371      4 Template:BookCat
+  9.60%    4.921      1 Template:Java_Programming/JavadocAndAnnotationsTopic
+  7.26%    3.719      4 Template:BookCat/default
+  6.85%    3.511      1 Template:Status
+  4.82%    2.468      5 Template:Stage_short
+  4.67%    2.392      3 Template:Transclude
+<br>
+<br> <br>
+<br> TOC
+Java ProgrammingDrawing shapes
+Drawing complex shapes 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br>
+<br>Throughout this chapter, we will refer to the process of creating Graphical content with code as either drawing or painting. However, Java officially recognizes the latter as the proper word for the process, but we will differentiate between the two later on.<br>
+<br>Now, the main class that you would be needing would, without doubt, be the Graphics class. If you take a closer look at the method that we used in theIdentifying the acquisition of the Graphics class in our code<br>
+<br>
+Code listing 9.3: A basic canvas
+
+
+import java.awt.*;
+import javax.swing.*;
+public class MyCanvas extends Canvas {
+    public MyCanvas() {
+    }
+
+    public void paint(Graphics graphics) {
+        /* We would be using this method only for the sake
+         * of brevity throughout the current section. Note
+         * that the Graphics class has been acquired along
+         * with the method that we overrode. */
+    }
+
+    public static void main(String[] args) {
+        MyCanvas canvas = new MyCanvas();
+        JFrame frame = new JFrame();
+        frame.setSize(400, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(canvas);
+        frame.setVisible(true);
+    }
+}
+
+
+<br>To view the contents of the Graphics class, please check the external links at the bottom of the page for links to the online API.<br>
+<br>
+<br>Understanding coordinates[edit]<br>
+<br>To start off your drawing experience, consider drawing the most basic shape — a line. A canvas when viewed upon with regards to drawing routines can be expressed as an inverted Cartesian coordinate system. A plane expressed by an x- and a y-axis. The origin point or (0,0){\displaystyle (0,0)} being the top-left corner of a canvas and the visible area of the canvas being the Cartesian quadrant I or the positive-positive (+,+) quadrant. The further you go down from the top, the greater the value of y-coordinate on the y-axis, vice-versa for the x-axis as you move toward the right from the left. And unlike the values on a normal graph, the values appear to be positive. So a point at (10,20){\displaystyle (10,20)} would be 10 pixels away from the left and 20 pixels away from the top, hence the format (x,y){\displaystyle (x,y)}.<br>
+<br>
+
+
+
+Figure 9.2: A simple line form displayed across the canvas from Code section 9.4
+
+<br>
+<br>Drawing a simple line across the screen[edit]<br>
+<br>Now, we already know that a line is a connection of two discreet points atop a canvas. So, if one point is at (x1,y1){\displaystyle (x1,y1)} and the other is at (x2,y2){\displaystyle (x2,y2)}, drawing a line would require you to write a syntax like code below. For the sake of brevity, we will skim out the rest of the method unused in the example.<br>
+<br>
+Code section 9.4: Drawing a simple line form
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(Color.black);
+        graphics.drawLine(40, 30, 330, 380);
+        
+    }
+    ...
+}
+
+
+<br>In the above example, a simple method is used to define precisely where to place the line on the Cartesian scale of the canvas. The drawLine(int,int,int,int) asks you to put four arguments, appearing in order, the x1 coordinate, the y1 coordinate, the x2 coordinate and the y2 coordinate. Running the program will show a simple black line diagonally going across the canvas.<br>
+<br>
+
+
+
+Figure 9.3: A simple black-outlined rectangle drawn
+
+<br>
+<br>
+<br>We now proceed on to our second drawing. A simple rectangle would do it justice, see below for code.<br>
+<br>
+Code section 9.5: Drawing a simple rectangle
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.drawRect(10, 10, 100, 100);
+    }
+    ...
+}
+
+
+<br>In the above example, you see how easy it is to draw a simple rectangle using the drawRect(int, int, int, int) method in the Graphics instance that we obtained. Run the program and you will see a simple black outline of a rectangle appearing where once a blank canvas was.<br>
+<br>The four arguments that are being passed into the method are, in order of appearance, the x-coordinate, the y-coordinate, width and the height. Hence, the resultant rectangle would start painting at the point on the screen 10 pixels from the left and 10 from the top and would be a 100 pixel wide and a 100 pixel in height. To save the argument here, the above drawing is that of a square with equal sides but squares are drawn using the same method and there is no such method as drawSquare(int, int, int)<br>
+<br>
+
+
+
+Figure 9.4: Same rectangle drawn with a red outline
+
+<br>
+<br>Playing around with colors[edit]<br>
+<br>You can change the color of the outline by telling the Graphics instance the color you desire. This can be done as follows:<br>
+<br>
+Code section 9.6: Changing the outline color of the rectangle
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(Color.red);
+        graphics.drawRect(100, 100, 500, 500);
+    }
+    ...
+}
+
+
+<br>Running the program would render the same rectangle but with a red colored outline.<br>
+<br>For the purposes of bringing color to our drawing, we used a method namely the setColor(Color) method. This method comes into force for all the drawing made after its call until another color is set. It asks for an argument of type Color. Now because you have no idea of how to actually instantiate a Color class, the class itself has a few built-in colors. Some built-in colors that you can use are mentioned below.<br>
+<br>Color.red
+Color.blue
+Color.green
+Color.yellow
+Color.pink
+Color.black
+Color.white
+<br>Try running the program while coding changes to colors for a different colored outline each time. Play around a bit with more colors. Look for the Color class API documentation in the external links at the bottom of the page.<br>
+<br>
+
+
+
+Figure 9.5: Same rectangle drawn with a red outline and a yellow fill
+
+<br>
+<br>Filling up the area of the rectangle[edit]<br>
+<br>Up until now, you have been able to draw a simple rectangle for yourself while asking a question silently, "why is the outline of the rectangle being painted rather the area as a whole?" The answer is simple. Any method that starts with drawXxxx(...) only draws the outline. To paint the area within the outline, we use the fillXxxx(...) methods. For instance, the code below would fill a rectangle with yellow color while having a red outline. Notice that the arguments remain the same.<br>
+<br>
+Code section 9.7: Drawing a yellow rectangle with a red outline
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(Color.yellow);
+        graphics.fillRect(10, 10, 100, 100);
+        graphics.setColor(Color.red);
+        graphics.drawRect(10, 10, 100, 100);
+    }
+    ...
+}
+
+
+<br><br>
+<br>
+
+
+
+Figure 9.6: A white circle drawn with a blue outline
+
+<br>
+<br>
+<br>Drawing a circle is ever so easy? It is the same process as the syntax above only that the word Rect is changed to the word Oval. And don't ask me why oval? You simply don't have the method drawCircle(int, int, int) as you don't have drawSquare(int, int, int). Following is the application of Graphics code to draw a circle just to whet your appetite.<br>
+<br>
+Code section 9.8: Drawing a white circle with a blue outline
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(new Color(0,0,255));
+        graphics.drawOval(50, 50, 100, 100);
+    }
+    ...
+}
+
+
+<br><br>
+<br>
+<br>
+
+
+
+Figure 9.7: A pink rounded rectangle with a red outline. Amazing!
+
+<br>
+<br>Simple so far, isn't it? Of all the shapes out there, these two are the only shapes that you'd need to build for the moment. Complex graphics routines are required to build shapes like a rhombus, triangle, trapezium or a parallelogram. We would be tackling them later on in another section. However, on a last note I would leave you with another interesting shape - a combination of both ovals and rectangle. Think a rectangle with rounded corners, a Rounded Rectangle (RoundRect).<br>
+<br>
+Code section 9.9: Drawing a pink rounded rectangle with a red outline
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(Color.pink);
+        graphics.fillRoundRect(10, 10, 100, 100, 5, 5);
+        graphics.setColor(Color.red);
+        graphics.drawRoundRect(10, 10, 100, 100, 5, 5);
+    }
+    ...
+}
+
+
+<br>Notice that the syntax of the drawRoundRect(int, int, int, int, int, int) method is a bit different than the syntax for the simple rectangle drawing routine drawRect(int, int, int, int). The two new arguments added at the end are the width of the arc in pixels and the height of the arc in pixels. The result is pretty amazing when you run the program. You don't need to squint your eyes to tell that the corners of the rectangle are slightly rounded. The more the values of the width and height of the arcs, the more roundness appears to form around the corner.<br>
+<br>
+<br>Sometimes people ask, after creating simple programs like the ones above, questions like:<br>
+<br>Why did I have to tell the Graphics instance the color before each drawing routine? Why can't it remember my choice for the outlines and for the fill colors? The answer is simpler than it seems. But, to fully understand it, we need to focus on one little thing called the Graphics Context. The graphics context is the information that adheres to a single instance of the Graphics class. Such an instance remembers only one color at a time and that is why we need to make sure the context knows of the color we need to use by using the setColor(Color) method.
+Can I manipulate the shapes, like tilt them and crop them? Hold your horses, cowboy! Everything is possible in Java, even tilting and cropping drawings. We will be focusing on these issues in a later section.
+Is making shapes like triangles, rhombuses and other complex ones tedious? Well, to be honest here, you need to go back to your dusty book cabinet and take out that High School Geometry book because we would be covering some geometry basics while dealing with such shapes. Why not read a wikibook on Geometry?
+<br>
+Test your knowledge
+
+Question 9.3: Throughout the exercise listings above, we have been filling the shapes first and then drawing their outlines. What happens if we do it the other way around? Consider the code below.
+
+
+...
+public void paint(Graphics graphics) {
+    graphics.setColor(Color.red);
+    graphics.drawRect(10, 10, 100, 100);
+    graphics.setColor(Color.yellow);
+    graphics.fillRect(10, 10, 100, 100);
+}
+...
+
+The left and the top outlines disappear.
+The right and the bottom outlines disappear.
+The color for the outline becomes the color for the fill area.
+All the outlines disappear.
+
+Answer
+
+All the outlines disappear.
+
+
+Question 9.4: What would drawLine(10, 100, 100, 100) give you?
+A horizontal line.
+A vertical line.
+A diagonal line.
+
+Answer
+
+A horizontal line.
+
+
+
+<br>
+<br>If you have any questions regarding the content provided here, please feel free to comment in this page's discussion.<br>
+<br>
+<br>Locate the Graphics class in the online Java API documentation
+Locate the Color class in the online Java API documentation
+<br><br>
+<br> TOC
+Java ProgrammingDrawing shapes
+Drawing complex shapes 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1269
+Cached time: 20171026140821
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.152 seconds
+Real time usage: 1.141 seconds
+Preprocessor visited node count: 1208/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 20628/2097152 bytes
+Template argument size: 2157/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 3/500
+Lua time usage: 0.011/10.000 seconds
+Lua memory usage: 590 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  960.005      1 -total
+ 68.93%  661.711      6 Template:XExample
+ 10.67%  102.404      1 Template:XCode
+  4.52%   43.420      2 Template:Programming/Navigation
+  1.96%   18.847      1 Template:Java_Programming/UserInterfaceTopics/Nav
+  1.25%   12.041      1 Template:Java_Programming/UserInterface/Topic
+  1.02%    9.807      5 Template:BookCat
+  0.75%    7.184      5 Template:BookCat/default
+  0.62%    5.978      1 Template:Status
+  0.59%    5.648     15 Template:Stage_short
+<br>
+<br> <br>
+<br> Invoking C
+Java ProgrammingByte Code
+Links 
+<br>Topics:
+Preface
+Getting started
+Language fundamentals
+Classes and objects
+Aggregate
+Exceptions
+Concurrent Programming
+Javadoc & Annotations
+Designing user interfaces
+Advanced topics
+
+<br>
+Java Byte Code is the language to which Java source is compiled and the Java Virtual Machine understands. Unlike compiled languages that have to be specifically compiled for each different type of computers, a Java program only needs to be converted to byte code once, after which it can run on any platform for which a Java Virtual Machine exists.<br>
+<br>Bytecode is the compiled format for Java programs. Once a Java program has been converted to bytecode, it can be transferred across a network and executed by Java Virtual Machine (JVM). Bytecode files generally have a .class extension. It is not normally necessary for a Java programmer to know byte code, but it can be useful.<br>
+<br><br>
+<br>
+
+Contents
+
+1 Other Languages
+2 Example
+3 Example 2
+4 The Java bytecodes
+5 References
+6 External Links
+<br>
+<br><br>
+<br>
+<br>There are a number of exciting new languages being created that also compile to Java byte code, such as Groovy.<br>
+<br>GNAT 
+The GNU Ada-Compiler, is capable of compiling Ada into Java-style bytecode.
+ftp://cs.nyu.edu/pub/gnat
+<br>JPython 
+Compiles Python to Java-style bytecode.
+http://www.jpython.org/
+<br>Kawa 
+Compiles Scheme to Java-style bytecode.
+http://www.gnu.org/software/kawa/
+<br><br>
+<br>
+<br>Consider the following Java code.<br>
+<br>
+
+ outer:
+ for (int i = 2; i < 1000; i++) {
+  for (int j = 2; j < i; j++) {
+    if (i % j == 0)
+      continue outer;
+  }
+  System.out.println (i);
+ }
+<br>
+<br>A Java compiler might translate the Java code above into byte code as follows, assuming the above was put in a method:<br>
+<br>
+ Code:
+  0:   iconst_2
+  1:   istore_1
+  2:   iload_1
+  3:   sipush  1000
+  6:   if_icmpge       44
+  9:   iconst_2
+  10:  istore_2
+  11:  iload_2
+  12:  iload_1
+  13:  if_icmpge       31
+  16:  iload_1
+  17:  iload_2
+  18:  irem             # remainder
+  19:  ifne    25
+  22:  goto    38
+  25:  iinc    2, 1
+  28:  goto    11
+  31:  getstatic       #84; //Field java/lang/System.out:Ljava/io/PrintStream;
+  34:  iload_1
+  35:  invokevirtual   #85; //Method java/io/PrintStream.println:(I)V
+  38:  iinc    1, 1
+  41:  goto    2
+  44:  return
+
+<br>
+<br>
+<br>As an example we can write a simple Foo.java source:<br>
+<br>
+
+public class Foo {
+  public static void main(final String[] args) {
+    System.out.println("This is a simple example of decompilation using javap");
+    a();
+    b();
+  }
+	
+  public static void a() {
+    System.out.println("Now we are calling a function...");
+  }
+
+  public static void b() {
+    System.out.println("...and now we are calling b");
+  }
+}
+<br>
+<br>Compile it and then move Foo.java to another directory or delete it if you wish. What can we do with javap and Foo.class ?<br>
+<br>
+$javap Foo
+<br>
+<br>produces this result:<br>
+<br>
+Compiled from "Foo.java"
+public class Foo extends java.lang.Object {
+    public Foo();
+    public static void main(java.lang.String[]);
+    public static void a();
+    public static void b();
+}
+<br>
+<br>As you can see the javac compiler doesn't strip any (public) variable name from the .class file. As a result the names of the functions, their parameters and types of return are exposed. (This is necessary in order for other classes to access them.)<br>
+<br>Let's do a bit more, try:<br>
+<br>
+$javap -c Foo
+<br>
+<br>
+Compiled from "Foo.java"
+public class Foo extends java.lang.Object{
+public Foo();
+  Code:
+   0:   aload_0
+   1:   invokespecial   #1; //Method java/lang/Object."<init>":()V
+   4:   return
+
+public static void main(java.lang.String[]);
+  Code:
+   0:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   3:   ldc             #3; //String This is a simple example of decompilation using javap
+   5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   8:   invokestatic    #5; //Method a:()V
+   11:  invokestatic    #6; //Method b:()V
+   14:  return
+
+public static void a();
+  Code:
+   0:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   3:   ldc             #7; //String Now we are calling a function...
+   5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   8:   return
+
+public static void b();
+  Code:
+   0:   getstatic       #2; //Field java/lang/System.out:Ljava/io/PrintStream;
+   3:   ldc             #8; //String ...and now we are calling b
+   5:   invokevirtual   #4; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   8:   return
+
+}
+<br>
+<br>
+<br>See Oracle's Java Virtual Machine Specification[1] for more detailed descriptions<br>
+<br>The manipulation of the operand stack is notated as [before]→[after], where [before] is the stack before the instruction is executed and [after] is the stack after the instruction is executed. A stack with the element 'b' on the top and element 'a' just after the top element is denoted 'a,b'.<br>
+<br>Mnemonic
+Opcode(in hex)
+Other bytes
+Stack
+[before]→[after]
+Description
+A
+aaload
+32
+
+arrayref, index → value
+loads onto the stack a reference from an array
+aastore
+53
+
+arrayref, index, value →
+stores a reference into an array
+aconst_null
+01
+
+→ null
+pushes a null reference onto the stack
+aload
+19
+index
+→ objectref
+loads a reference onto the stack from a local variable #index
+aload_0
+2a
+
+→ objectref
+loads a reference onto the stack from local variable 0
+aload_1
+2b
+
+→ objectref
+loads a reference onto the stack from local variable 1
+aload_2
+2c
+
+→ objectref
+loads a reference onto the stack from local variable 2
+aload_3
+2d
+
+→ objectref
+loads a reference onto the stack from local variable 3
+anewarray
+bd
+indexbyte1, indexbyte2
+count → arrayref
+creates a new array of references of length count and component type identified by the class reference index (indexbyte1 << 8 + indexbyte2) in the constant pool
+areturn
+b0
+
+objectref → [empty]
+returns a reference from a method
+arraylength
+be
+
+arrayref → length
+gets the length of an array
+astore
+3a
+index
+objectref →
+stores a reference into a local variable #index
+astore_0
+4b
+
+objectref →
+stores a reference into local variable 0
+astore_1
+4c
+
+objectref →
+stores a reference into local variable 1
+astore_2
+4d
+
+objectref →
+stores a reference into local variable 2
+astore_3
+4e
+
+objectref →
+stores a reference into local variable 3
+athrow
+bf
+
+objectref → [empty], objectref
+throws an error or exception (notice that the rest of the stack is cleared, leaving only a reference to the Throwable)
+B
+baload
+33
+
+arrayref, index → value
+loads a byte or Boolean value from an array
+bastore
+54
+
+arrayref, index, value →
+stores a byte or Boolean value into an array
+bipush
+10
+byte
+→ value
+pushes a byte onto the stack as an integer value
+C
+caload
+34
+
+arrayref, index → value
+loads a char from an array
+castore
+55
+
+arrayref, index, value →
+stores a char into an array
+checkcast
+c0
+indexbyte1, indexbyte2
+objectref → objectref
+checks whether an objectref is of a certain type, the class reference of which is in the constant pool at index (indexbyte1 << 8 + indexbyte2)
+D
+d2f
+90
+
+value → result
+converts a double to a float
+d2i
+8e
+
+value → result
+converts a double to an int
+d2l
+8f
+
+value → result
+converts a double to a long
+dadd
+63
+
+value1, value2 → result
+adds two doubles
+daload
+31
+
+arrayref, index → value
+loads a double from an array
+dastore
+52
+
+arrayref, index, value →
+stores a double into an array
+dcmpg
+98
+
+value1, value2 → result
+compares two doubles
+dcmpl
+97
+
+value1, value2 → result
+compares two doubles
+dconst_0
+0e
+
+→ 0.0
+pushes the constant 0.0 onto the stack
+dconst_1
+0f
+
+→ 1.0
+pushes the constant 1.0 onto the stack
+ddiv
+6f
+
+value1, value2 → result
+divides two doubles
+dload
+18
+index
+→ value
+loads a double value from a local variable #index
+dload_0
+26
+
+→ value
+loads a double from local variable 0
+dload_1
+27
+
+→ value
+loads a double from local variable 1
+dload_2
+28
+
+→ value
+loads a double from local variable 2
+dload_3
+29
+
+→ value
+loads a double from local variable 3
+dmul
+6b
+
+value1, value2 → result
+multiplies two doubles
+dneg
+77
+
+value → result
+negates a double
+drem
+73
+
+value1, value2 → result
+gets the remainder from a division between two doubles
+dreturn
+af
+
+value → [empty]
+returns a double from a method
+dstore
+39
+index
+value →
+stores a double value into a local variable #index
+dstore_0
+47
+
+value →
+stores a double into local variable 0
+dstore_1
+48
+
+value →
+stores a double into local variable 1
+dstore_2
+49
+
+value →
+stores a double into local variable 2
+dstore_3
+4a
+
+value →
+stores a double into local variable 3
+dsub
+67
+
+value1, value2 → result
+subtracts a double from another
+dup
+59
+
+value → value, value
+duplicates the value on top of the stack
+dup_x1
+5a
+
+value2, value1 → value1, value2, value1
+inserts a copy of the top value into the stack two values from the top
+dup_x2
+5b
+
+value3, value2, value1 → value1, value3, value2, value1
+inserts a copy of the top value into the stack two (if value2 is double or long it takes up the entry of value3, too) or three values (if value2 is neither double nor long) from the top
+dup2
+5c
+
+{value2, value1} → {value2, value1}, {value2, value1}
+duplicate top two stack words (two values, if value1 is not double nor long; a single value, if value1 is double or long)
+dup2_x1
+5d
+
+value3, {value2, value1} → {value2, value1}, value3, {value2, value1}
+duplicate two words and insert beneath third word (see explanation above)
+dup2_x2
+5e
+
+{value4, value3}, {value2, value1} → {value2, value1}, {value4, value3}, {value2, value1}
+duplicate two words and insert beneath fourth word
+F
+f2d
+8d
+
+value → result
+converts a float to a double
+f2i
+8b
+
+value → result
+converts a float to an int
+f2l
+8c
+
+value → result
+converts a float to a long
+fadd
+62
+
+value1, value2 → result
+adds two floats
+faload
+30
+
+arrayref, index → value
+loads a float from an array
+fastore
+51
+
+arreyref, index, value →
+stores a float in an array
+fcmpg
+96
+
+value1, value2 → result
+compares two floats
+fcmpl
+95
+
+value1, value2 → result
+compares two floats
+fconst_0
+0b
+
+→ 0.0f
+pushes 0.0f on the stack
+fconst_1
+0c
+
+→ 1.0f
+pushes 1.0f on the stack
+fconst_2
+0d
+
+→ 2.0f
+pushes 2.0f on the stack
+fdiv
+6e
+
+value1, value2 → result
+divides two floats
+fload
+17
+index
+→ value
+loads a float value from a local variable #index
+fload_0
+22
+
+→ value
+loads a float value from local variable 0
+fload_1
+23
+
+→ value
+loads a float value from local variable 1
+fload_2
+24
+
+→ value
+loads a float value from local variable 2
+fload_3
+25
+
+→ value
+loads a float value from local variable 3
+fmul
+6a
+
+value1, value2 → result
+multiplies two floats
+fneg
+76
+
+value → result
+negates a float
+frem
+72
+
+value1, value2 → result
+gets the remainder from a division between two floats
+freturn
+ae
+
+value → [empty]
+returns a float from method
+fstore
+38
+index
+value →
+stores a float value into a local variable #index
+fstore_0
+43
+
+value →
+stores a float value into local variable 0
+fstore_1
+44
+
+value →
+stores a float value into local variable 1
+fstore_2
+45
+
+value →
+stores a float value into local variable 2
+fstore_3
+46
+
+value →
+stores a float value into local variable 3
+fsub
+66
+
+value1, value2 → result
+subtracts two floats
+G
+getfield
+b4
+index1, index2
+objectref → value
+gets a field value of an object objectref, where the field is identified by field reference in the constant pool index (index1 << 8 + index2)
+getstatic
+b2
+index1, index2
+→ value
+gets a static field value of a class, where the field is identified by field reference in the constant pool index (index1 << 8 + index2)
+goto
+a7
+branchbyte1, branchbyte2
+[no change]
+goes to another instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+goto_w
+c8
+branchbyte1, branchbyte2, branchbyte3, branchbyte4
+[no change]
+goes to another instruction at branchoffset (signed int constructed from unsigned bytes branchbyte1 << 24 + branchbyte2 << 16 + branchbyte3 << 8 + branchbyte4)
+I
+i2b
+91
+
+value → result
+converts an int into a byte
+i2c
+92
+
+value → result
+converts an int into a character
+i2d
+87
+
+value → result
+converts an int into a double
+i2f
+86
+
+value → result
+converts an int into a float
+i2l
+85
+
+value → result
+converts an int into a long
+i2s
+93
+
+value → result
+converts an int into a short
+iadd
+60
+
+value1, value2 → result
+adds two ints together
+iaload
+2e
+
+arrayref, index → value
+loads an int from an array
+iand
+7e
+
+value1, value2 → result
+performs a logical and on two integers
+iastore
+4f
+
+arrayref, index, value →
+stores an int into an array
+iconst_m1
+02
+
+→ -1
+loads the int value -1 onto the stack
+iconst_0
+03
+
+→ 0
+loads the int value 0 onto the stack
+iconst_1
+04
+
+→ 1
+loads the int value 1 onto the stack
+iconst_2
+05
+
+→ 2
+loads the int value 2 onto the stack
+iconst_3
+06
+
+→ 3
+loads the int value 3 onto the stack
+iconst_4
+07
+
+→ 4
+loads the int value 4 onto the stack
+iconst_5
+08
+
+→ 5
+loads the int value 5 onto the stack
+idiv
+6c
+
+value1, value2 → result
+divides two integers
+if_acmpeq
+a5
+branchbyte1, branchbyte2
+value1, value2 →
+if references are equal, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+if_acmpne
+a6
+branchbyte1, branchbyte2
+value1, value2 →
+if references are not equal, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+if_icmpeq
+9f
+branchbyte1, branchbyte2
+value1, value2 →
+if ints are equal, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+if_icmpne
+a0
+branchbyte1, branchbyte2
+value1, value2 →
+if ints are not equal, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+if_icmplt
+a1
+branchbyte1, branchbyte2
+value1, value2 →
+if value1 is less than value2, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+if_icmpge
+a2
+branchbyte1, branchbyte2
+value1, value2 →
+if value1 is greater than or equal to value2, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+if_icmpgt
+a3
+branchbyte1, branchbyte2
+value1, value2 →
+if value1 is greater than value2, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+if_icmple
+a4
+branchbyte1, branchbyte2
+value1, value2 →
+if value1 is less than or equal to value2, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+ifeq
+99
+branchbyte1, branchbyte2
+value →
+if value is 0, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+ifne
+9a
+branchbyte1, branchbyte2
+value →
+if value is not 0, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+iflt
+9b
+branchbyte1, branchbyte2
+value →
+if value is less than 0, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+ifge
+9c
+branchbyte1, branchbyte2
+value →
+if value is greater than or equal to 0, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+ifgt
+9d
+branchbyte1, branchbyte2
+value →
+if value is greater than 0, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+ifle
+9e
+branchbyte1, branchbyte2
+value →
+if value is less than or equal to 0, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+ifnonnull
+c7
+branchbyte1, branchbyte2
+value →
+if value is not null, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+ifnull
+c6
+branchbyte1, branchbyte2
+value →
+if value is null, branch to instruction at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2)
+iinc
+84
+index, const
+[No change]
+increment local variable #index by signed byte const
+iload
+15
+index
+→ value
+loads an int value from a variable #index
+iload_0
+1a
+
+→ value
+loads an int value from variable 0
+iload_1
+1b
+
+→ value
+loads an int value from variable 1
+iload_2
+1c
+
+→ value
+loads an int value from variable 2
+iload_3
+1d
+
+→ value
+loads an int value from variable 3
+imul
+68
+
+value1, value2 → result
+multiply two integers
+ineg
+74
+
+value → result
+negate int
+instanceof
+c1
+indexbyte1, indexbyte2
+objectref → result
+determines if an object objectref is of a given type, identified by class reference index in constant pool (indexbyte1 << 8 + indexbyte2)
+invokeinterface
+b9
+indexbyte1, indexbyte2, count, 0
+objectref, [arg1, arg2, ...] →
+invokes an interface method on object objectref, where the interface method is identified by method reference index in constant pool (indexbyte1 << 8 + indexbyte2) and count is the number of arguments to pop from the stack frame including the object on which the method is being called and must always be greater than or equal to 1
+invokespecial
+b7
+indexbyte1, indexbyte2
+objectref, [arg1, arg2, ...] →
+invoke instance method on object objectref requiring special handling (instance initialization method, a private method, or a superclass method), where the method is identified by method reference index in constant pool (indexbyte1 << 8 + indexbyte2)
+invokestatic
+b8
+indexbyte1, indexbyte2
+[arg1, arg2, ...] →
+invoke a static method, where the method is identified by method reference index in constant pool (indexbyte1 << 8 + indexbyte2)
+invokevirtual
+b6
+indexbyte1, indexbyte2
+objectref, [arg1, arg2, ...] →
+invoke virtual method on object objectref, where the method is identified by method reference index in constant pool (indexbyte1 << 8 + indexbyte2)
+ior
+80
+
+value1, value2 → result
+logical int or
+irem
+70
+
+value1, value2 → result
+logical int remainder
+ireturn
+ac
+
+value → [empty]
+returns an integer from a method
+ishl
+78
+
+value1, value2 → result
+int shift left
+ishr
+7a
+
+value1, value2 → result
+int shift right
+istore
+36
+index
+value →
+store int value into variable #index
+istore_0
+3b
+
+value →
+store int value into variable 0
+istore_1
+3c
+
+value →
+store int value into variable 1
+istore_2
+3d
+
+value →
+store int value into variable 2
+istore_3
+3e
+
+value →
+store int value into variable 3
+isub
+64
+
+value1, value2 → result
+int subtract
+iushr
+7c
+
+value1, value2 → result
+int shift right
+ixor
+82
+
+value1, value2 → result
+int xor
+J
+jsr
+a8
+branchbyte1, branchbyte2
+→ address
+jump to subroutine at branchoffset (signed short constructed from unsigned bytes branchbyte1 << 8 + branchbyte2) and place the return address on the stack
+jsr_w
+c9
+branchbyte1, branchbyte2, branchbyte3, branchbyte4
+→ address
+jump to subroutine at branchoffset (signed int constructed from unsigned bytes branchbyte1 << 24 + branchbyte2 << 16 + branchbyte3 << 8 + branchbyte4) and place the return address on the stack
+L
+l2d
+8a
+
+value → result
+converts a long to a double
+l2f
+89
+
+value → result
+converts a long to a float
+l2i
+88
+
+value → result
+converts a long to an int
+ladd
+61
+
+value1, value2 → result
+add two longs
+laload
+2f
+
+arrayref, index → value
+load a long from an array
+land
+7f
+
+value1, value2 → result
+bitwise and of two longs
+lastore
+50
+
+arrayref, index, value →
+store a long to an array
+lcmp
+94
+
+value1, value2 → result
+compares two longs values
+lconst_0
+09
+
+→ 0L
+pushes the long 0 onto the stack
+lconst_1
+0a
+
+→ 1L
+pushes the long 1 onto the stack
+ldc
+12
+index
+→ value
+pushes a constant #index from a constant pool (String, int, float or class type) onto the stack
+ldc_w
+13
+indexbyte1, indexbyte2
+→ value
+pushes a constant #index from a constant pool (String, int, float or class type) onto the stack (wide index is constructed as indexbyte1 << 8 + indexbyte2)
+ldc2_w
+14
+indexbyte1, indexbyte2
+→ value
+pushes a constant #index from a constant pool (double or long) onto the stack (wide index is constructed as indexbyte1 << 8 + indexbyte2)
+ldiv
+6d
+
+value1, value2 → result
+divide two longs
+lload
+16
+index
+→ value
+load a long value from a local variable #index
+lload_0
+1e
+
+→ value
+load a long value from a local variable 0
+lload_1
+1f
+
+→ value
+load a long value from a local variable 1
+lload_2
+20
+
+→ value
+load a long value from a local variable 2
+lload_3
+21
+
+→ value
+load a long value from a local variable 3
+lmul
+69
+
+value1, value2 → result
+multiplies two longs
+lneg
+75
+
+value → result
+negates a long
+lookupswitch
+ab
+<0-3 bytes padding>, defaultbyte1, defaultbyte2, defaultbyte3, defaultbyte4, npairs1, npairs2, npairs3, npairs4, match-offset pairs...
+key →
+a target address is looked up from a table using a key and execution continues from the instruction at that address
+lor
+81
+
+value1, value2 → result
+bitwise or of two longs
+lrem
+71
+
+value1, value2 → result
+remainder of division of two longs
+lreturn
+ad
+
+value → [empty]
+returns a long value
+lshl
+79
+
+value1, value2 → result
+bitwise shift left of a long value1 by value2 positions
+lshr
+7b
+
+value1, value2 → result
+bitwise shift right of a long value1 by value2 positions
+lstore
+37
+index
+value →
+store a long value in a local variable #index
+lstore_0
+3f
+
+value →
+store a long value in a local variable 0
+lstore_1
+40
+
+value →
+store a long value in a local variable 1
+lstore_2
+41
+
+value →
+store a long value in a local variable 2
+lstore_3
+42
+
+value →
+store a long value in a local variable 3
+lsub
+65
+
+value1, value2 → result
+subtract two longs
+lushr
+7d
+
+value1, value2 → result
+bitwise shift right of a long value1 by value2 positions, unsigned
+lxor
+83
+
+value1, value2 → result
+bitwise exclusive or of two longs
+M
+monitorenter
+c2
+
+objectref →
+enter monitor for object ("grab the lock" - start of synchronized() section)
+monitorexit
+c3
+
+objectref →
+exit monitor for object ("release the lock" - end of synchronized() section)
+multianewarray
+c5
+indexbyte1, indexbyte2, dimensions
+count1, [count2,...] → arrayref
+create a new array of dimensions dimensions with elements of type identified by class reference in constant pool index (indexbyte1 << 8 + indexbyte2); the sizes of each dimension is identified by count1, [count2, etc]
+N
+new
+bb
+indexbyte1, indexbyte2
+→ objectref
+creates new object of type identified by class reference in constant pool index (indexbyte1 << 8 + indexbyte2)
+newarray
+bc
+atype
+count → arrayref
+creates new array with count elements of primitive type identified by atype
+nop
+00
+
+[No change]
+performs no operation
+P
+pop
+57
+
+value →
+discards the top value on the stack
+pop2
+58
+
+{value2, value1} →
+discards the top two values on the stack (or one value, if it is a double or long)
+putfield
+b5
+indexbyte1, indexbyte2
+objectref, value →
+set field to value in an object objectref, where the field is identified by a field reference index in constant pool (indexbyte1 << 8 + indexbyte2)
+putstatic
+b3
+indexbyte1, indexbyte2
+value →
+set static field to value in a class, where the field is identified by a field reference index in constant pool (indexbyte1 << 8 + indexbyte2)
+R
+ret
+a9
+index
+[No change]
+continue execution from address taken from a local variable #index (the asymmetry with jsr is intentional)
+return
+b1
+
+→ [empty]
+return void from method
+S
+saload
+35
+
+arrayref, index → value
+load short from array
+sastore
+56
+
+arrayref, index, value →
+store short to array
+sipush
+11
+byte1, byte2
+→ value
+pushes a signed integer (byte1 << 8 + byte2) onto the stack
+swap
+5f
+
+value2, value1 → value1, value2
+swaps two top words on the stack (note that value1 and value2 must not be double or long)
+T
+tableswitch
+aa
+[0-3 bytes padding], defaultbyte1, defaultbyte2, defaultbyte3, defaultbyte4, lowbyte1, lowbyte2, lowbyte3, lowbyte4, highbyte1, highbyte2, highbyte3, highbyte4, jump offsets...
+index →
+continue execution from an address in the table at offset index
+W
+wide
+c4
+opcode, indexbyte1, indexbyte2
+or
+iinc, indexbyte1, indexbyte2, countbyte1, countbyte2
+[same as for corresponding instructions]
+execute opcode, where opcode is either iload, fload, aload, lload, dload, istore, fstore, astore, lstore, dstore, or ret, but assume the index is 16 bit; or execute iinc, where the index is 16 bits and the constant to increment by is a signed 16 bit short
+Unused
+breakpoint
+ca
+
+
+reserved for breakpoints in Java debuggers; should not appear in any class file
+impdep1
+fe
+
+
+reserved for implementation-dependent operations within debuggers; should not appear in any class file
+impdep2
+ff
+
+
+reserved for implementation-dependent operations within debuggers; should not appear in any class file
+(no name)
+cb-fd
+
+
+these values are currently unassigned for opcodes and are reserved for future use
+xxxunusedxxx
+ba
+
+
+this opcode is reserved "for historical reasons"
+<br>
+<br>↑ Oracle's Java Virtual Machine Specification
+<br>
+<br>Bytecode Visualizer - free Eclipse plugin for visualizing and debugging Java bytecode
+Bytecode Outline plugin for Eclipse by ObjectWeb
+Easy illustration to fill the gap between JVM, its purpose and advantages vs JIT Compiling
+<br><br>
+<br> Invoking C
+Java ProgrammingByte Code
+Links 
+<br> 
+NewPP limit report
+Parsed by mw1261
+Cached time: 20171026141525
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.200 seconds
+Real time usage: 0.467 seconds
+Preprocessor visited node count: 226/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 4011/2097152 bytes
+Template argument size: 48/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 92/500
+Lua time usage: 0.114/10.000 seconds
+Lua memory usage: 1.05 MB/50 MB
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  402.156      1 -total
+ 43.24%  173.907      2 Template:Programming/Navigation
+  1.75%    7.057      3 Template:BookCat
+  1.42%    5.697      1 Template:Java_Programming/BeginnersTopics/Nav
+  1.16%    4.657      3 Template:BookCat/default
+  0.75%    3.011      1 Template:Java_Programming/BeginnersTopics
+  0.66%    2.649      3 Template:BOOKCATEGORY
+  0.31%    1.233      3 Template:FULLBOOKNAME
+<br>  Byte Code
+Java ProgrammingLinks
+Glossary 
+<br>
+<br>
+Java Certification Preparation Guides
+Java Certification Mock Exams 500+ questions with exam simulator (this is the older 1.4 version of the exam)
+Java Language Specification.
+Thinking in Java
+Java 8 SDK Documentation
+Java 5 SDK Documentation in CHM Format
+Java 8 API Documentation
+The Java Tutorial
+Sun Developer Network New to Java Center
+A simple Java Tutorial
+Two Semesters of College-Level Java Lectures--Free
+Java Lessons - Interactive Java programming tutorials based on examples
+Java Tutorials for Kids and Adults
+<br>
+<br>
+<br>
+Introduction to Programming Using Java by David J. Eck
+Think Java by Allen Downey and Chris Mayfield
+Learn Java - ad-supported site with tutorials for many languages
+Java Certification Mock Exams 500+ questions with exam simulator
+SwingWiki - Open documentation project containing tips, tricks and best practices for Java Swing development
+JavaTips - Blog project containing best JAVA tips and tricks
+Free Java/ Advanced Java Books
+Free Java and J2EE eBooks
+Java books available for free downloads
+Roedy Green's Java & Internet Glossary A comprehensive reference that's also an excellent starting point for beginners
+C2: Java Language
+NetBeans IDE
+Eclipse IDE
+Zeus for Windows IDE
+Official Java Home Site
+Original Java Whitepaper
+Complete Java Programming Tutorials
+Javapassion, Java course - The Javapassion Site, Java Course, driven by Sang Shin from Sun
+beanshell Interpreted version
+The Java Language Specification, Third Edition "This book attempts a complete specification of the syntax and semantics of the language."
+The Java Virtual Machine Specification, Second Edition and amendments
+A pure java desktop
+Javapedia project
+Bruce Eckel Thinking in Java Third edition -- [1] (Bruce has an C/C++ free book available on-line too)
+JavaGameDevelopment Daily news and articles on Java Game Development
+Java Certifications Site(SCJP,SCWCD,SCBCD,Java 5.0,SCEA
+Java Programming FAQs and Tutorials
+More resources
+Java lessons
+Online Java Tutorial
+Full Java Tutorial - A collection of free premium programming tutorials
+Java Certification Practice Tests and Articles
+Kode Java - Learn Java Programming by Examples
+Games Programming Wiki - Java tutorials and lessons based on game programming
+WikiJava - Examples and tutorials in Java
+Download Free java ebooks from 83 ebooks collection - Free Java Ebooks to download from ebookslab.info
+Download Free Sun Certified Developer for Java Web Services - Free Java Ebooks to download from ebooks.mzwriter.net
+Code Conventions for the Java Programming Language - At SUN
+Java Lessons at LeoLoL - A collection of introductory lessons to Java
+Java Exercises at LeoLoL - A collection of Java exercises with sample solutions
+Java Best Practices - A collection of Java tutorials, best practices and programming tips
+<br>
+<br>Newsgroups:<br>
+<br>comp.lang.java (Google's web interface)
+<br><br>
+<br> Byte Code
+Java ProgrammingLinks
+Glossary 
+<br> 
+NewPP limit report
+Parsed by mw1304
+Cached time: 20171026143522
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.156 seconds
+Real time usage: 0.206 seconds
+Preprocessor visited node count: 77/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 2059/2097152 bytes
+Template argument size: 16/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 93/500
+Lua time usage: 0.128/10.000 seconds
+Lua memory usage: 1.05 MB/50 MB
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  190.466      1 -total
+ 99.93%  190.328      2 Template:Programming/Navigation
+  3.21%    6.109      1 Template:BookCat
+  2.36%    4.502      1 Template:BookCat/default
+  1.48%    2.821      1 Template:BOOKCATEGORY
+  0.93%    1.776      1 Template:FULLBOOKNAME
+<br>

@@ -1,0 +1,181 @@
+ <br>
+<br> Comments
+Java ProgrammingKeywords
+Coding conventions 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>Keywords are special tokens in the language which have reserved use in the language. Keywords may not be used as identifiers in Java — you cannot declare a field whose name is a keyword, for instance.<br>
+<br>Examples of keywords are the primitive types, int and boolean; the control flow statements for and if; access modifiers such as public, and special words which mark the declaration and definition of Java classes, packages, and interfaces: class, package, interface.<br>
+<br>Below are all the Java language keywords:<br>
+<br>
+abstract
+assert (since Java 1.4)
+boolean
+break
+byte
+case
+catch
+char
+class
+const (not used)
+continue
+default
+do
+double
+else
+enum (since Java 5.0)
+extends
+final
+finally
+float
+for
+goto (not used)
+if
+implements
+import
+instanceof
+int
+interface
+long
+native
+new
+package
+private
+protected
+public
+return
+short
+static
+strictfp (since Java 1.2)
+super
+switch
+synchronized
+this
+throw
+throws
+transient
+try
+void
+volatile
+while
+<br>
+<br>
+
+
+Contents
+
+1 abstract
+2 assert
+3 boolean
+4 break
+5 byte
+6 case
+7 catch
+8 char
+9 class
+10 const
+11 continue
+12 See also
+13 default
+14 do
+15 double
+16 else
+17 enum
+18 extends
+19 final
+20 For a variable
+21 For a class
+22 For a method
+23 Interest
+24 finally
+25 float
+26 for
+27 goto
+28 if
+29 implements
+30 import
+31 instanceof
+32 int
+33 interface
+34 long
+35 native
+36 See also
+37 new
+38 package
+39 private
+40 protected
+41 public
+42 return
+43 short
+44 static
+45 Interest
+46 strictfp
+47 super
+48 switch
+49 synchronized
+50 Singleton example
+51 this
+52 throw
+53 See also
+54 throws
+55 transient
+56 try
+57 void
+58 volatile
+59 while
+
+
+<br>In addition, the identifiers null, true, and false denote literal values and may not be used to create identifiers.<br>
+<br>
+<br>abstract is a Java keyword. It can be applied to a class and methods. An abstract class cannot be directly instantiated. It must be placed before the variable type or the method return type. It is recommended to place it after the access modifier and after the static keyword. A non-abstract class is a concrete class. An abstract class cannot be final.<br>
+<br>Only an abstract class can have abstract methods. An abstract method is only declared, not implemented:<br>
+<br>
+Code listing 1: AbstractClass.java
+
+
+1 public abstract class AbstractClass {
+2     // This method does not have a body; it is abstract.
+3     public abstract void abstractMethod();
+4  
+5     // This method does have a body; it is implemented in the abstract class and gives a default behavior.
+6     public void concreteMethod() {
+7         System.out.println("Already coded.");
+8     }
+9 }
+
+
+<br>An abstract method cannot be final, static nor native. Either you instantiate a concrete sub-class, either you instantiate the abstract class by implementing its abstract methods alongside a new statement:<br>
+<br>
+Code section 1: Abstract class use.
+
+
+1 AbstractClass myInstance = new AbstractClass() {
+2     public void abstractMethod() {
+3         System.out.println("Implementation.");
+4     }
+5 };
+
+
+<br>A private method cannot be abstract.<br>
+<br><br>
+<br>

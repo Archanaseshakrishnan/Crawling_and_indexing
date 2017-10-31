@@ -1,0 +1,108 @@
+ <br>
+<br> Mathematical functions
+Java ProgrammingLarge numbers
+Random numbers 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+The integer primitive type with the largest range of value is the long, from -263 to 263-1. If you need greater or lesser values, you have to use the BigInteger class in the package java.math. A BigInteger object can represent any integer (as large as the RAM on the computer can hold) as it is not mapped on a primitive type. Respectively, you need to use the BigDecimal class for great decimal numbers.<br>
+<br>However, as these perform much slower than primitive types, it is recommended to use primitive types when it is possible.<br>
+<br>
+<br>The BigInteger class represents integers of almost any size. As with other objects, they need to be constructed. Unlike regular numbers, the BigInteger represents an immutable object - methods in use by the BigInteger class will return a new copy of a BigInteger.<br>
+<br>To instantiate a BigInteger, you can create it from either byte array, or from a string. For example:<br>
+<br>
+Code section 3.23: 1 quintillion, or 10^18. Too large to fit in a long.
+
+
+1 BigInteger i = new BigInteger("1000000000000000000");
+
+
+<br>BigInteger cannot use the normal Java operators. They use the methods provided by the class.<br>
+<br>
+Code section 3.24: Multiplications and an addition.
+
+
+1 BigInteger a = new BigInteger("3");
+2 BigInteger b = new BigInteger("4");
+3 
+4 // c = a^2 + b^2
+5 BigInteger c = a.multiply(a).add(b.multiply(b));
+
+
+<br>It is possible to convert to a long, but the long may not be large enough.<br>
+<br>
+Code section 3.25: Conversion.
+
+
+1 BigInteger aBigInteger = new BigInteger("3");
+2 long aLong = aBigInteger.longValue();
+
+
+<br>
+<br>The BigInteger class cannot handle decimal numbers. The BigDecimal class represents a floating point value of arbitrary precision. It is composed of both a BigInteger, and a scale value (represented by a 32-bit integer).<br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br> Mathematical functions
+Java ProgrammingLarge numbers
+Random numbers 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1304
+Cached time: 20171026144957
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.140 seconds
+Real time usage: 0.179 seconds
+Preprocessor visited node count: 1172/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 18513/2097152 bytes
+Template argument size: 1738/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 29/500
+Lua time usage: 0.080/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  146.087      1 -total
+ 78.57%  114.781      2 Template:Programming/Navigation
+ 10.61%   15.501      1 Template:Java_Programming/LanguageFundamentalsTopic/Nav
+  6.08%    8.878      1 Template:Java_Programming/LanguageFundamentals/Topic
+  4.65%    6.790      3 Template:BookCat
+  3.83%    5.600     20 Template:Stage_short
+  3.30%    4.825      1 Template:Navbar
+  3.12%    4.552      3 Template:BookCat/default
+  2.78%    4.060      1 Template:Status
+  2.31%    3.371      3 Template:XExample
+<br>
+<br>

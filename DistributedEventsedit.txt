@@ -1,0 +1,100 @@
+ <br>
+<br> EJB
+Java ProgrammingJavaSpaces
+Annotations 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+After J2EE, Sun had a vision about the next step of network computing: in a network environment, there would be many independent services and consumers. That is JavaSpaces. JavaSpaces would allow these services/consumers to interact dynamically with each other in a robust way. It can be viewed as an object repository that provides a distributed persistent object exchange mechanism (persistent can be in memory or disk) for Java objects. It can be used to store the system state and implement distributed algorithms. In a JavaSpace, all communication partners (peers) communicate by sharing state. It is an implementation of the Tuple spaces idea.<br>
+<br>JavaSpaces is used when someone wants to achieve scalability and availability and at the same time reducing the complexity of the overall system.<br>
+<br>Processes perform simple operations to write new objects into a JavaSpace, take objects from a JavaSpace, or read (make a copy of) objects from the JavaSpace.<br>
+<br>In conventional applications, objects are assembled from the database before presenting to the end user. In JavaSpace applications, we keep the ready made "end user" objects and store them in the JavaSpace. In JavaSpace applications the services are decoupled from each other; they communicate through objects that they write and read/take from the JavaSpace. Services search for objects that they want to take or read from the Space by using template object.<br>
+<br>
+<br>JavaSpaces technology is part of the Java Jini technology. The basic features of JINI are:<br>
+<br>No user intervention is needed when services are brought on or offline. (In contrast to EJBs where the client program has to know the server and port number where the EJB is deployed. In JINI the client is supposed to find, discover the service in the network.)
+Self healing by adapting when services (consumers of services) come and go. Services need to periodically renew a lease to indicate that they are still available.
+Consumers of JINI services do not need prior knowledge of the service's implementation. The implementation is downloaded dynamically and run on the consumer JVM, without configuration and user intervention. For example, the end user may be presented with slightly different user interface depending which service is being used at the time. The implementation of those user interface code would be provided by the service being used.
+<br>This fact that the implementation is running on the consumer/client's JVM can increase performance, by eliminating the need of remote calls.
+<br>A minimal JINI network environment consists of:<br>
+<br>One or more services
+A lookup-service keeping a list of registered services
+One or more consumers
+<br>
+<br>The lookup service is described in the : Jini Lookup Service Specification (reggie). This service interface defines all operations that are possible on the lookup service. Clients locate services by requesting with a lookup server that implements a particular interface. Client asks the lookup server for all services that implement the particular service interface. The lookup service returns service objects for all registered services that implement the given interface. The client may invoke methods on that object in order to interact directly with the server.<br>
+<br>
+<br>Jini Discovery and Join Specification describes how does the client find the jini lookup service. There is a protocol to do that, jini comes with a set of API's that implement that protocol. The Jini Discovery Utility Specification defines a set of utility classes that are used to work with the protocol.<br>
+<br>
+<br>When a service registers with the lookup service, it receives a lease from the lookup service, described in the Jini Distributed Leasing Specification.<br>
+<br>
+<br><br>
+<br>
+
+
+
+To do:
+Complete this section.
+
+<br><br>
+<br>
+<br><br>
+<br>
+
+
+
+To do:
+Complete this section.
+
+<br><br>
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br> EJB
+Java ProgrammingJavaSpaces
+Annotations 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1300
+Cached time: 20171026142210
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.152 seconds
+Real time usage: 0.210 seconds
+Preprocessor visited node count: 563/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 10145/2097152 bytes
+Template argument size: 1053/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 62/500
+Lua time usage: 0.103/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  187.156      1 -total
+ 88.38%  165.405      2 Template:Programming/Navigation
+  8.92%   16.696      3 Template:BookCat
+  7.48%   13.992      3 Template:BookCat/default
+  6.73%   12.603      1 Template:Java_Programming/ConcurrentTopic/Nav
+  6.07%   11.365      3 Template:BOOKCATEGORY
+  2.79%    5.229      1 Template:Navbar
+  2.42%    4.521      1 Template:Java_Programming/Concurrent_Programming/Topic
+  2.22%    4.149      1 Template:Status
+  1.57%    2.931      3 Template:Todo
+<br>
+<br>

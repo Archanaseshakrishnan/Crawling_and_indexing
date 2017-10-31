@@ -1,0 +1,132 @@
+ <br>
+<br> Preventing NullPointerException
+Java ProgrammingStack trace
+Nesting Exceptions 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>
+Stack Trace is a list of method calls from the point when the application was started to the point where the exception was thrown. The most recent method calls are at the top.<br>
+<br>
+
+Code listing 6.3: StackTraceExample.java
+
+
+ 1 public class StackTraceExample {
+ 2   public static void main(String[] args) {
+ 3     method1();
+ 4   }
+ 5 
+ 6   public static void method1() {
+ 7     method11();
+ 8   }
+ 9 
+10   public static void method11() {
+11     method111();
+12   }
+13 
+14   public static void method111() {
+15     throw new NullPointerException("Fictitious NullPointerException");
+16   }
+17 }
+
+
+
+
+
+Output for Code listing 6.3
+
+Exception in thread "main" java.lang.NullPointerException: Fictitious NullPointerException
+at StackTraceExample.method111(StackTraceExample.java:15)
+at StackTraceExample.method11(StackTraceExample.java:11)
+at StackTraceExample.method1(StackTraceExample.java:7)
+at StackTraceExample.main(StackTraceExample.java:3)
+
+
+<br>The stack trace can be printed to the standard error by calling the public void printStackTrace() method of an exception.<br>
+<br>From Java 1.4, the stack trace is encapsulated into an array of a java class called java.lang.StackTraceElement. The stack trace element array returned by Throwable.getStackTrace() method. Each element represents a single stack frame. All stack frames except for the one at the top of the stack represent a method invocation. The frame at the top of the stack represents the execution point at which the stack trace was generated. Typically, this is the point at which the throwable corresponding to the stack trace was created.<br>
+<br>A stack frame represents the following information:<br>
+<br>
+Code section 6.24: Stack frame.
+
+
+1 public StackTraceElement(String declaringClass,
+2                          String methodName,
+3                          String fileName,
+4                          int lineNumber);
+
+
+<br>Creates a stack trace element representing the specified execution point.<br>
+<br>
+<br>Many times for debugging purposes, we'd like to convert the stack trace to a String so we can log it to our log file.<br>
+<br>The following code shows how to do that:<br>
+<br>
+Code section 6.25: Save the stack trace.
+
+
+ 1 import java.io.StringWriter;
+ 2 import java.io.PrintWriter;
+ 3 
+ 4 ...
+ 5 
+ 6   Exception e = new NullPointerException();
+ 7 
+ 8   StringWriter outError = new StringWriter();
+ 9   e.printStackTrace(new PrintWriter(outError));
+10   String errorString = outError.toString();
+11 
+12   // Do whatever you want with the errorString
+
+
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br> Preventing NullPointerException
+Java ProgrammingStack trace
+Nesting Exceptions 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1327
+Cached time: 20171026141215
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 0.195 seconds
+Preprocessor visited node count: 612/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 11388/2097152 bytes
+Template argument size: 1265/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 54/500
+Lua time usage: 0.083/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  175.959      1 -total
+ 71.23%  125.339      2 Template:Programming/Navigation
+ 10.14%   17.841      2 Template:XExample
+  7.93%   13.945      1 Template:Java_Programming/ExceptionsTopic/Nav
+  4.04%    7.117      3 Template:BookCat
+  4.04%    7.101      1 Template:XCode
+  3.90%    6.871      1 Template:Java_Programming/Exceptions/Topic
+  3.01%    5.305      3 Template:BookCat/default
+  2.93%    5.161      1 Template:Navbar
+  1.93%    3.402      1 Template:Status
+<br>
+<br>

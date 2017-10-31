@@ -1,0 +1,140 @@
+ <br>
+<br> Methods
+Java ProgrammingString
+Classes, Objects and Types 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>String is a class built into the Java language defined in the java.lang package. It represents character strings. Strings are ubiquitous in Java. Study the String class and its methods carefully. It will serve you well to know how to manipulate them skillfully. String literals in Java programs, such as "abc", are implemented as instances of this class like this:<br>
+<br>
+Code section 3.81: String example.
+
+
+1 String str = "This is string literal";
+
+
+<br>On the right hand side a String object is created represented by the string literal. Its object reference is assigned to the str variable.<br>
+<br>
+<br>Strings are immutable; that is, they cannot be modified once created. Whenever it looks as if a String object was modified actually a new String object was created. For instance, the String.trim() method returns the string with leading and trailing whitespace removed. Actually, it creates a new trimmed string and then returns it. Pay attention on what happens in Code section 3.82:<br>
+<br>
+
+Code section 3.82: Immutability.
+
+
+1 String badlyCutText = "     Java is great.     ";
+2 System.out.println(badlyCutText);
+3 
+4 badlyCutText.trim();
+5 System.out.println(badlyCutText);
+
+
+
+
+
+Output for Code section 3.82
+
+     Java is great.    
+     Java is great.    
+
+
+<br>The trim() method call does not modify the object so nothing happens. It creates a new trimmed string and then throws it away.<br>
+<br>
+
+Code section 3.83: Assignment.
+
+
+1 String badlyCutText = "     Java is great.     ";
+2 System.out.println(badlyCutText);
+3 
+4 badlyCutText = badlyCutText.trim();
+5 System.out.println(badlyCutText);
+
+
+
+
+
+Output for Code section 3.83
+
+     Java is great.    
+Java is great.
+
+
+<br>The returned string is assigned to the variable. It does the job as the trim() method has created a new String instance.<br>
+<br>
+<br>The Java language provides special support for the string concatenation with operator +:<br>
+<br>
+
+Code section 3.84: Examples of concatenation.
+
+
+1 System.out.println("First part");
+2 System.out.println(" second part");
+3 String str = "First part" + " second part";
+4 System.out.println(str);
+
+
+
+
+
+Output for Code section 3.84
+
+First part
+ second part
+First part second part
+
+
+<br>The concatenation is not always processed at the same time. Raw string literals concatenation is done at compile time, hence there is a single string literal in the byte code of the class. Concatenation with at least one object is done at runtime.<br>
+<br>+ operator can concatenate other objects with strings. For instance, integers will be converted to strings before the concatenation:<br>
+<br>
+
+Code section 3.85: Concatenation of integers.
+
+
+1 System.out.println("Age=" + 25);
+
+
+
+
+
+Output for Code section 3.85
+
+Age=25
+
+
+<br>Each Java object has the String toString() inherited from the Object class. This method provides a way to convert objects into Strings. Most classes override the default behavior to provide more specific (and more useful) data in the returned String:<br>
+<br>
+
+Code section 3.86: Concatenation of objects.
+
+
+1 System.out.println("Age=" + new Integer(31));
+
+
+
+
+
+Output for Code section 3.86
+
+Age=31
+
+
+<br>

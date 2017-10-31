@@ -1,0 +1,38 @@
+ <br>
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br>
+There are five annotation types in the java.lang.annotation package called meta-annotations. These annotation types are used to annotate other annotation types.<br>
+<br>
+<br>If a member is annotated with a type itself marked as @Documented, then that member will be documented as annotating that type.<br>
+<br>
+Code listing 1.1: Use of @Documented
+
+
+@interface Secret { }
+
+@Documented
+@interface NotSecret { }
+
+@Secret
+@NotSecret
+public class Example {
+}
+
+
+<br>In the documentation for the Example class, such as the JavaDoc, Example will be shown as annotated with @NotSecret, but not @Secret.<br>
+<br><br>
+<br>
+
+
+
+To do:
+Add the render of a Javadoc.
+
+<br><br>
+<br>

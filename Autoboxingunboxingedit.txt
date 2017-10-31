@@ -1,0 +1,204 @@
+ <br>
+<br> API/java.lang.String
+Java ProgrammingClasses, Objects and Types
+Packages 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+An object is composed of fields and methods. The fields, also called data members, characteristics, attributes, or properties, describe the state of the object. The methods generally describe the actions associated with a particular object. Think of an object as a noun, its fields as adjectives describing that noun, and its methods as the verbs that can be performed by or on that noun.<br>
+<br>For example, a sports car is an object. Some of its fields might be its height, weight, acceleration, and speed. An object's fields just hold data about that object. Some of the methods of the sports car could be "drive", "park", "race", etc. The methods really don't mean much unless associated with the sports car, and the same goes for the fields.<br>
+<br>The blueprint that lets us build our sports car object is called a class. A class doesn't tell us how fast our sports car goes, or what color it is, but it does tell us that our sports car will have a field representing speed and color, and that they will be say, a number and a word (or hex color code), respectively. The class also lays out the methods for us, telling the car how to park and drive, but these methods can't take any action with just the blueprint — they need an object to have an effect.<br>
+<br>In Java, a class is located in a file similar to its own name. If you want to have a class called SportsCar, its source file needs to be SportsCar.java. The class is created by placing the following in the source file:<br>
+<br>
+Code listing 3.13: SportsCar.java
+
+
+1 public class SportsCar {
+2    /* Insert your code here */
+3 }
+
+
+<br>The class doesn't do anything yet, as you will need to add methods and field variables first.<br>
+<br>The objects are different from the primitive types because:<br>
+<br>The primitive types are not instantiated.
+In the memory, for a primitive type only its value is stored. For an object, also a reference to an instance can be stored.
+In the memory, the allocated space of a primitive type is fixed, whatever their value. The allocated space of an object can vary, for instance either the object is instantiated or not.
+The primitive types don't have methods callable on them.
+A primitive type can't be inherited.
+<br>
+<br>In order to get from class to object, we "build" our object by instantiation. Instantiation simply means to create an instance of a class. Instance and object are very similar terms and are sometimes interchangeable, but remember that an instance refers to a specific object, which was created from a class.<br>
+<br>This instantiation is brought about by one of the class's methods, called a constructor. As its name implies, a constructor builds the object based on the blueprint. Behind the scenes, this means that computer memory is being allocated for the instance, and values are being assigned to the data members.<br>
+<br>In general there are four constructor types: default, non-default, copy, and cloning.<br>
+<br>A default constructor will build the most basic instance. Generally, this means assigning all the fields values like null, zero, or an empty string. Nothing would stop you, however, from setting the color of your default sports car color to red, but this is generally bad programming style. Another programmer would be confused if your basic car came out red instead of say, colorless.<br>
+<br>
+Code section 3.79: A default constructor.
+
+
+1 SportsCar car = new SportsCar();
+
+
+<br>A non-default constructor is designed to create an object instance with prescribed values for most, if not all, of the object's fields. The car is red, goes from 0-60 in 12 seconds, tops out at 190mph, etc.<br>
+<br>
+Code section 3.80: A non-default constructor.
+
+
+1 SportsCar car = new SportsCar("red", 12, 190);
+
+
+<br>A copy constructor is not included in the Java language, however one can easily create a constructor that does the same as a copy constructor. It's important to understand what it is. As the name implies, a copy constructor creates a new instance to be a duplicate of an already existing one. In Java, this can be also accomplished by creating the instance with the default constructor, and then using the assignment operator to equivocate them. This is not possible in all languages though, so just keep the terminology under your belt.<br>
+<br>Java has the concept of cloning an object, and the end results are similar to the copy constructor. Cloning an object is faster than creation with the new keyword, because all the object memory is copied at once to the destination cloned object. This is possible by implementing the Cloneable interface, which allows the method Object.clone() to perform a field-by-field copy.<br>
+<br>
+Code section 3.81: Cloning object.
+
+
+1 SportsCar car = oldCar.clone();
+
+
+<br>
+<br>When an object is created, a reference to the object is also created. The object can not be accessed directly in Java, only through this object reference. This object reference has a type assigned to it. We need this type when passing the object reference to a method as a parameter. Java does strong type checking.<br>
+<br>Type is basically a list of features/operations, that can be performed through that object reference. The object reference type is basically a contract that guarantees that those operations will be there at run time.<br>
+<br>When a car is created, it comes with a list of features/operations listed in the user manual that guarantees that those will be there when the car is used.<br>
+<br>When you create an object from a class by default its type is the same as its class. It means that all the features/operations the class defined are there and available, and can be used. See below:<br>
+<br>
+Code section 3.82: Default type.
+
+
+1 (new ClassName()).operations();
+
+
+<br>You can assign this to a variable having the same type as the class:<br>
+<br>
+Code section 3.83: A variable having the same type as the class.
+
+
+1 ClassName objRefVariable = new ClassName();
+2 objRefVariable.operations();
+
+
+<br>You can assign the created object reference to the class, super class, or to an interface the class implements:<br>
+<br>
+Code section 3.84: Using the super class.
+
+
+1 SuperClass objectRef = new ClassName(); // features/operations list are defined by the SuperClass class
+2 ...
+3 Interface inter = new ClassName(); // features/operations list are defined by the interface
+
+
+<br>In the car analogy, the created car may have different Types of drivers. We create separate user manuals for them, an Average user manual, a Power user manual, a Child user manual, or a Handicapped user manual. Each type of user manual describes only those features/operations appropriate for the type of driver. For instance, the Power driver may have additional gears to switch to higher speeds, that are not available to other type of users...<br>
+<br>When the car key is passed from an adult to a child we are replacing the user manuals, that is called Type Casting.<br>
+<br>In Java, casts can occur in three ways:<br>
+<br>up casting going up in the inheritance tree, until we reach the Object
+up casting to an interface the class implements
+down casting until we reach the class the object was created from
+<br>
+<br>Autoboxing and unboxing, language features since Java 1.5, make the programmer's life much easier when it comes to working with the primitive wrapper types. Consider this code fragment:<br>
+<br>
+Code section 3.85: Traditional object creation.
+
+
+1 int age = 23;
+2 Integer ageObject = new Integer(age);
+
+
+<br>Primitive wrapper objects were Java's way of allowing one to treat primitive data types as though they were objects. Consequently, one was expected to wrap one's primitive data type with the corresponding primitive wrapper object, as shown above.<br>
+<br>Since Java 1.5, one may write as below and the compiler will automatically create the wrap object. The extra step of wrapping the primitive is no longer required. It has been automatically boxed up on your behalf:<br>
+<br>
+Code section 3.86: Autoboxing.
+
+
+1 int age = 23;
+2 Integer ageObject = age;
+
+
+<br>
+Keep in mind that the compiler still creates the missing wrapper code, so one doesn't really gain anything performance-wise. Consider this feature a programmer convenience, not a performance booster.
+<br>Each primitive type has a class wrapper:<br>
+<br>Primitive type
+Class wrapper
+byte
+java.lang.Byte
+char
+java.lang.Character
+short
+java.lang.Short
+int
+java.lang.Integer
+long
+java.lang.Long
+float
+java.lang.Float
+double
+java.lang.Double
+boolean
+java.lang.Boolean
+void
+java.lang.Void
+<br>Unboxing uses the same process in reverse. Study the following code for a moment. The if statement requires a boolean primitive value, yet it was given a Boolean wrapper object. No problem! Java 1.5 will automatically unbox this.<br>
+<br>
+Code section 3.87: Unboxing.
+
+
+1 Boolean canMove = new Boolean(true);
+2  
+3 if (canMove) {
+4   System.out.println("This code is legal in Java 1.5");
+5 }
+
+
+<br>
+Test your knowledge
+
+Question 3.11: Consider the following code:
+
+Question 3.11: Autoboxing/unboxing.
+
+
+5 Integer a = 10;
+6 Integer b = a + 2;
+7 System.out.println(b);
+
+
+How many autoboxings and unboxings are there in this code?
+
+Answer
+
+
+Answer 3.11: Autoboxing/unboxing.
+
+
+1 Integer a = 10;
+2 Integer b = a + 2;
+3 System.out.println(b);
+
+
+3
+1 autoboxing at line 1 to assign.
+1 unboxing at line 2 to do the addition.
+1 autoboxing at line 2 to assign.
+No autoboxing nor unboxing at line 3 as println() supports the Integer class as parameter.
+
+
+
+<br>
+<br>

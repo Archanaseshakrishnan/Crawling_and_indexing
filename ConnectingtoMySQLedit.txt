@@ -1,0 +1,33 @@
+  Networking
+Java ProgrammingDatabase Programming
+Regular Expressions 
+<br>Navigate Advanced topic: ( v • d • e )
+ Networking
+ Database programming
+ Regular Expressions
+ Libraries, extensions and frameworks
+ 3D programming
+ Java Native Interface
+ Invoking C
+ Byte Code
+
+<br>Java uses JDBC, an API that defines how a client may access a database. Its drivers may be installed first. [1][2]<br>
+<br>
+<br>The following is used to open an ODBC connection to an Access database. Note that the username (and password, if applicable) are given in the DSN rather than the getConnection call. This is a MS Windows-only example, due to the requirement for the Microsoft Access Driver.<br>
+<br>
+
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+String path = "C:/example.mdb";
+String dsn = "jdbc:odbc:Driver={Microsoft Access Driver (*.mdb)};DBQ=" + path + ";UID=admin";
+accessConn = DriverManager.getConnection(dsn, "", "");
+<br>
+<br>
+<br>
+
+try {
+   Class.forName("com.mysql.jdbc.Driver");
+   Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/MySite?user=MyAccount&password=MyPassword");
+   conn.close();
+} catch(SQLException e) { e.printStackTrace(); }
+<br>
+<br>

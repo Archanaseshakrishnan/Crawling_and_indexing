@@ -1,0 +1,50 @@
+ <br>
+<br> Overloading Methods and Constructors
+Java ProgrammingObject Lifecycle
+Scope 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br>Before a Java object can be created the class byte code must be loaded from the file system (with .class extension) to memory. This process of locating the byte code for a given class name and converting that code into a Java class instance is known as class loading. There is one class created for each type of Java class.<br>
+<br>All objects in Java programs are created on heap memory. An object is created based on its class. You can consider a class as a blueprint, template, or a description how to create an object. When an object is created, memory is allocated to hold the object properties. An object reference pointing to that memory location is also created. To use the object in the future, that object reference has to be stored as a local variable or as an object member variable.<br>
+<br>The Java Virtual Machine (JVM) keeps track of the usage of object references. If there are no more reference to the object, the object can not be used any more and becomes garbage. After a while the heap memory will be full of unused objects. The JVM collects those garbage objects and frees the memory they allocated, so the memory can be reused again when a new object is created. See below a simple example:<br>
+<br>
+Code section 4.30: Object creation.
+
+
+1 {
+2   // Create an object
+3   MyObject obj = new MyObject();
+4 
+5   // Use the object
+6   obj.printMyValues();
+7 }
+
+
+<br>The obj variable contains the object reference pointing to an object created from the MyObject class. The obj object reference is in scope inside the { }. After the } the object becomes garbage. Object references can be passed in to methods and can be returned from methods.<br>
+<br>
+<br>99% of new objects are created using the new keyword.<br>
+<br>
+Code listing 4.13: MyProgram.java
+
+
+1 public class MyProgram {
+2 
+3   public static void main(String[] args) {
+4     // Create an 'MyObject' for the first time the application started
+5     MyObject obj = new MyObject();
+6   }
+7 }
+
+
+<br>When an object from the MyObject class is created for the first time, the JVM searches the file system for the definition of the class, that is the Java byte code. The file has the extension of *.class. The CLASSPATH environment variable contains locations where Java classes are stored. The JVM is looking for the MyObject.class file. Depending on which package the class belongs to, the package name will be translated to a directory path.<br>
+<br>When the MyObject.class file is found, the JVM's class loader loads the class in memory, and creates a java.lang.Class object. The JVM stores the code in memory, allocates memory for the static variables, and executes any static initialize block. Memory is not allocated for the object member variables at this point, memory will be allocated for them when an instance of the class, an object, is created.<br>
+<br>There is no limit on how many objects from the same class can be created. Code and static variables are stored only once, no matter how many objects are created. Memory is allocated for the object member variables when the object is created. Thus, the size of an object is determined not by its code's size but by the memory it needs for its member variables to be stored.<br>
+<br>

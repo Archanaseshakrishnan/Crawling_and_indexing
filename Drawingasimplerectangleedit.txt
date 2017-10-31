@@ -1,0 +1,181 @@
+ <br>
+<br> TOC
+Java ProgrammingDrawing shapes
+Drawing complex shapes 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br>
+<br>Throughout this chapter, we will refer to the process of creating Graphical content with code as either drawing or painting. However, Java officially recognizes the latter as the proper word for the process, but we will differentiate between the two later on.<br>
+<br>Now, the main class that you would be needing would, without doubt, be the Graphics class. If you take a closer look at the method that we used in theIdentifying the acquisition of the Graphics class in our code<br>
+<br>
+Code listing 9.3: A basic canvas
+
+
+import java.awt.*;
+import javax.swing.*;
+public class MyCanvas extends Canvas {
+    public MyCanvas() {
+    }
+
+    public void paint(Graphics graphics) {
+        /* We would be using this method only for the sake
+         * of brevity throughout the current section. Note
+         * that the Graphics class has been acquired along
+         * with the method that we overrode. */
+    }
+
+    public static void main(String[] args) {
+        MyCanvas canvas = new MyCanvas();
+        JFrame frame = new JFrame();
+        frame.setSize(400, 400);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(canvas);
+        frame.setVisible(true);
+    }
+}
+
+
+<br>To view the contents of the Graphics class, please check the external links at the bottom of the page for links to the online API.<br>
+<br>
+<br>Understanding coordinates[edit]<br>
+<br>To start off your drawing experience, consider drawing the most basic shape — a line. A canvas when viewed upon with regards to drawing routines can be expressed as an inverted Cartesian coordinate system. A plane expressed by an x- and a y-axis. The origin point or (0,0){\displaystyle (0,0)} being the top-left corner of a canvas and the visible area of the canvas being the Cartesian quadrant I or the positive-positive (+,+) quadrant. The further you go down from the top, the greater the value of y-coordinate on the y-axis, vice-versa for the x-axis as you move toward the right from the left. And unlike the values on a normal graph, the values appear to be positive. So a point at (10,20){\displaystyle (10,20)} would be 10 pixels away from the left and 20 pixels away from the top, hence the format (x,y){\displaystyle (x,y)}.<br>
+<br>
+
+
+
+Figure 9.2: A simple line form displayed across the canvas from Code section 9.4
+
+<br>
+<br>Drawing a simple line across the screen[edit]<br>
+<br>Now, we already know that a line is a connection of two discreet points atop a canvas. So, if one point is at (x1,y1){\displaystyle (x1,y1)} and the other is at (x2,y2){\displaystyle (x2,y2)}, drawing a line would require you to write a syntax like code below. For the sake of brevity, we will skim out the rest of the method unused in the example.<br>
+<br>
+Code section 9.4: Drawing a simple line form
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(Color.black);
+        graphics.drawLine(40, 30, 330, 380);
+        
+    }
+    ...
+}
+
+
+<br>In the above example, a simple method is used to define precisely where to place the line on the Cartesian scale of the canvas. The drawLine(int,int,int,int) asks you to put four arguments, appearing in order, the x1 coordinate, the y1 coordinate, the x2 coordinate and the y2 coordinate. Running the program will show a simple black line diagonally going across the canvas.<br>
+<br>
+
+
+
+Figure 9.3: A simple black-outlined rectangle drawn
+
+<br>
+<br>
+<br>We now proceed on to our second drawing. A simple rectangle would do it justice, see below for code.<br>
+<br>
+Code section 9.5: Drawing a simple rectangle
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.drawRect(10, 10, 100, 100);
+    }
+    ...
+}
+
+
+<br>In the above example, you see how easy it is to draw a simple rectangle using the drawRect(int, int, int, int) method in the Graphics instance that we obtained. Run the program and you will see a simple black outline of a rectangle appearing where once a blank canvas was.<br>
+<br>The four arguments that are being passed into the method are, in order of appearance, the x-coordinate, the y-coordinate, width and the height. Hence, the resultant rectangle would start painting at the point on the screen 10 pixels from the left and 10 from the top and would be a 100 pixel wide and a 100 pixel in height. To save the argument here, the above drawing is that of a square with equal sides but squares are drawn using the same method and there is no such method as drawSquare(int, int, int)<br>
+<br>
+
+
+
+Figure 9.4: Same rectangle drawn with a red outline
+
+<br>
+<br>Playing around with colors[edit]<br>
+<br>You can change the color of the outline by telling the Graphics instance the color you desire. This can be done as follows:<br>
+<br>
+Code section 9.6: Changing the outline color of the rectangle
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(Color.red);
+        graphics.drawRect(100, 100, 500, 500);
+    }
+    ...
+}
+
+
+<br>Running the program would render the same rectangle but with a red colored outline.<br>
+<br>For the purposes of bringing color to our drawing, we used a method namely the setColor(Color) method. This method comes into force for all the drawing made after its call until another color is set. It asks for an argument of type Color. Now because you have no idea of how to actually instantiate a Color class, the class itself has a few built-in colors. Some built-in colors that you can use are mentioned below.<br>
+<br>Color.red
+Color.blue
+Color.green
+Color.yellow
+Color.pink
+Color.black
+Color.white
+<br>Try running the program while coding changes to colors for a different colored outline each time. Play around a bit with more colors. Look for the Color class API documentation in the external links at the bottom of the page.<br>
+<br>
+
+
+
+Figure 9.5: Same rectangle drawn with a red outline and a yellow fill
+
+<br>
+<br>Filling up the area of the rectangle[edit]<br>
+<br>Up until now, you have been able to draw a simple rectangle for yourself while asking a question silently, "why is the outline of the rectangle being painted rather the area as a whole?" The answer is simple. Any method that starts with drawXxxx(...) only draws the outline. To paint the area within the outline, we use the fillXxxx(...) methods. For instance, the code below would fill a rectangle with yellow color while having a red outline. Notice that the arguments remain the same.<br>
+<br>
+Code section 9.7: Drawing a yellow rectangle with a red outline
+
+
+...
+public class MyCanvas extends Canvas {
+    ...
+    public void paint(Graphics graphics) {
+        graphics.setColor(Color.yellow);
+        graphics.fillRect(10, 10, 100, 100);
+        graphics.setColor(Color.red);
+        graphics.drawRect(10, 10, 100, 100);
+    }
+    ...
+}
+
+
+<br><br>
+<br>
+
+
+
+Figure 9.6: A white circle drawn with a blue outline
+
+<br>
+<br>

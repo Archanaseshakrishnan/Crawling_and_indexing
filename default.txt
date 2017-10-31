@@ -1,0 +1,4936 @@
+ <br>
+<br> Preface
+Java ProgrammingAbout This Book
+History 
+<br>Navigate Preface: ( v • d • e )
+ About this book
+ History of Java
+ Overview of the Java programming language
+ The Java platform (JRE & JDK)
+
+<br><br>
+<br>The Java Programming Wikibook is a shared effort in amassing a comprehensive guide of the complete Java platform — from programming advice and tutorials for the desktop computer to programming on mobile phones. The information presented in this book has been conceptualised with the combined efforts of various contributors, and anonymous editors.<br>
+<br>The primary purpose of this book is to teach the Java programming language to an audience of beginners, but its progressive layout of tutorials increasing in complexity, it can be just as helpful for intermediate and experienced programmers. Thus, this book is meant to be used as:<br>
+<br>a collection of tutorials building upon one another in a progressive manner;
+a guidebook for efficient programming with the Java programming language; and,
+a comprehensive manual resource for the advanced programmer.
+<br>This book is intended to be used in conjunction with various other online resources, such as:<br>
+<br>the Java platform API documentation;
+the official Java website; and,
+active Java communities online, such as Java.net and JavaRanch, etc.
+<br> <br>
+<br> About This Book
+Java ProgrammingHistory
+Java Overview 
+<br>Navigate Preface: ( v • d • e )
+ About this book
+ History of Java
+ Overview of the Java programming language
+ The Java platform (JRE & JDK)
+
+<br><br>
+<br>On 23 May 1995, John Gage, the director of the Science Office of the Sun Microsystems along with Marc Andreesen, co-founder and executive vice president at Netscape announced to an audience of SunWorldTM that Java technology wasn't a myth and that it was going to be incorporated into Netscape Navigator.[1]<br>
+<br>At the time the total number of people working on Java was less than 30.[1] This team would shape the future in the next decade and no one had any idea as to what was in store. From running an unmanned vehicle on Mars to serving as the operating environment of most consumer electronics, e.g. cable set-top boxes, VCRs, toasters and PDAs,[2] Java has come a long way from its inception. Let's see how it all began.<br>
+<br> <br>
+<br> History
+Java ProgrammingJava Overview
+The Java Platform 
+<br>Navigate Preface: ( v • d • e )
+ About this book
+ History of Java
+ Overview of the Java programming language
+ The Java platform (JRE & JDK)
+
+<br>The new features and upgrades included into Java changed the face of programming environment and gave a new definition to Object Oriented Programming (OOP in short). But unlike its predecessors, Java needed to be bundled with standard functionality and be independent of the host platform.<br>
+<br>The primary goals in the creation of the Java language:<br>
+<br>It is simple.
+It is object-oriented.
+It is independent of the host platform.
+It contains language facilities and libraries for networking.
+It is designed to execute code from remote sources securely.
+<br>The Java language introduces some new features that did not exist in other languages like C and C++.<br>
+<br> <br>
+<br> Java Overview
+Java ProgrammingThe Java Platform
+Getting started 
+<br>Navigate Preface: ( v • d • e )
+ About this book
+ History of Java
+ Overview of the Java programming language
+ The Java platform (JRE & JDK)
+
+<br>The Java platform is the name given to the computing platform from Oracle that helps users to run and develop Java applications. The platform does not just enable a user to run and develop a Java application, but also features a wide variety of tools that can help developers work efficiently with the Java programming language.<br>
+<br>The platform consists of two essential softwares:<br>
+<br>the Java Runtime Environment (JRE), which is needed to run Java applications and applets; and,
+the Java Development Kit (JDK), which is needed to develop those Java applications and applets. If you have installed the JDK, you should know that it comes equipped with a JRE as well. So, for all the purposes of this book, you would only require the JDK.
+<br>In this section, we will explore in further detail what these two software components of the Java platform do.<br>
+<br> <br>
+<br> Getting started
+Java ProgrammingInstallation
+Compilation 
+<br>Navigate Getting Started topic: ( v • d • e )
+ Installing Java on Your Computer
+ Compiling programs
+ Running Java programs
+ Understanding a Java program
+ Java IDEs
+
+<br>In order to make use of the content in this book, you would need to follow along each and every tutorial rather than simply reading through the book. But to do so, you would need access to a computer with the Java platform installed on it — the Java platform is the basic prerequisite for running and developing Java code, thus it is divided into two essential pieces of software:<br>
+<br>the Java Runtime Environment (JRE), which is needed to run Java applications and applets;
+the Java Development Kit (JDK), which is needed to develop those Java applications and applets.
+<br>However as a developer, you would only require the JDK which comes equipped with a JRE as well.<br>
+<br>As Java is just a programming language that allows you to program the computer, it has multiple implementations available. The most popular implementation of JDK and JRE are the "Oracle Java SE" (formerly known as Sun JDK), maintained by Oracle as a commercial release. However another similarly popular implementation is the OpenJDK, with the benefit of being free software that could distribute freely under GPL v2 without the requirement of accepting the "Oracle Binary Code License Agreement for the Java SE Platform Products and JavaFX". The third option - the GCJ, as part of the GNU Compiler Collection, would also supply the JDK and JRE.<br>
+<br>Given below are installation instruction for the Oracle Java SE JDK for various operating systems:<br>
+<br>
+Installation instructions for Windows
+
+Availability check for JRE[edit]
+The Java Runtime Environment (JRE) is necessary to execute Java programs. To check which version of Java Runtime Environment (JRE) you have, follow the steps below.
+
+1.
+For Window Vista or Windows 7, click Start › Control Panel › System and Maintenance › System.
+
+For Windows XP, click Start › Control Panel › System.
+
+For Windows 2000, click Start › Settings › Control Panel › System.
+
+Alternatively, you can also press ⊞ Win+R to open the Run dialog. With the dialog open, type cmd at the prompt:
+
+
+
+Figure 1.1: Run dialog
+
+
+
+
+2.
+In the command window with black background graced with white text, type the following command:
+
+JRE availability check
+
+java -version
+
+If you get an error, such as:
+
+Other output error
+
+Bad command or file name
+
+..then the JDK may not be installed or it may not be in your path.
+
+To learn more about the Command Prompt syntax, take a look at this MS-DOS tutorial.
+You may have other versions of Java installed; this command will only show the first in your PATH. You will be made familiar with the PATH environment variable later in this text. For now, if you have no idea what this is all about. Read through towards the end and we will provide you with a step-by-step guide on how to set your own environment variables.
+You can use your system's file search utilities to see if there is a javac.exe executable installed. If it is, and it is a recent enough version (Java 1.4.2 or Java 1.5, for example), you should put the bin directory that contains javac in your system path. The Java runtime, java, is often in the same bin directory.
+If the installed version is older (i.e. it is Java 1.3.1 or Java 1.4.2 and you wish to use the more recent Java 5 release), you should proceed below with downloading and installing a JDK.
+It is possible that you have the Java runtime (JRE), but not the JDK. In that case the javac program won't be found, but the java -version will print the JRE version number.
+Availability check for JDK[edit]
+Some Windows based systems come built-in with the JRE, however for the purposes of writing Java code by following the tutorials in this book, you would require the JDK nevertheless. The Java Development Kit (JDK) is necessary to build Java programs. First, check to see if a JDK is already installed on your system. To do so, first open a command window and execute the command below.
+
+Availability check
+
+javac -version
+
+If the JDK is installed and on your executable path, you should see some output which tells you the command line options. The output will vary depending on which version is installed and which vendor provided the Java installation.
+Advanced availability check options on Windows platform[edit]
+On a machine using the Windows operating system, one can invoke the Registry Editor utility by typing REGEDIT in the Run dialog. In the window that opens subsequently, if you traverse through the hierarchy HKEY_LOCAL_MACHINE > SOFTWARE > JavaSoft > Java Development Kit on the left-hand.
+The resultant would be similar to figure 1.2, with the only exception being the version entries for the Java Development Kit. At the time of writing this manuscript, the latest version for the Java Development Kit available from the Internet was 1.7 as seen in the Registry entry. If you see a resultant window that resembles the one presented above, it would prove that you have Java installed on your system, otherwise it is not.
+
+
+
+Figure 1.2: Registry Editor
+
+
+
+
+Caution should be exercised when traversing through the Registry Editor. Any changes to the keys and other entries may change the way your Windows operating system normally works. Even minor changes may result into catastrophic failures of the normal working of your machine. Better that you don't modify or tend to modify anything whilst you are in the Registry Editor.
+Download instructions[edit]
+To acquire the latest JDK (version 7), you can manually download the Java software from the Oracle website.
+For the convenience of our readers, the following table presents direct links to the latest JDK for the Windows operating system.
+Operating system
+Setup Installer
+License
+Windows x86
+Download
+Oracle Binary Code License Agreement
+Windows x64
+Download
+Oracle Binary Code License Agreement
+You must follow the instructions for the setup installer wizard step-by-step with the default settings to ensure that Java is properly installed on your system. Once the setup is completed, it is highly recommended to restart your Windows operating system.
+If you kept the default settings for the setup installer wizard, your JDK should now be installed at C:\Program Files\Java\jdk1.7.0_01. You would require the location to your bin folder at a later time — this is located at C:\Program Files\Java\jdk1.7.0_01\bin It may be a hidden file, but no matter. Just don't use Program Files (x86)\ by mistake unless that's were installed Java.
+Updating environment variables[edit]
+In order for you to start using the JDK compiler utility with the Command Prompt, you would need to set the environment variables that points to the bin folder of your recently installed JDK. To set permanently your environment variables, follow the steps below.
+
+1.
+To open System Properties dialog box use, the Control Panel or type the following command in the command window:
+
+System properties
+
+rundll32 shell32.dll,Control_RunDLL sysdm.cpl
+
+
+2.
+Navigate to the Advanced tab on the top, and select Environment Variables...
+3.
+Under System variables, select the variable named Path and click Edit...
+4.
+In the Edit System Variable dialog, go to the Variable value field. This field is a list of directory paths separated by semi-colons (;).
+5.
+To add a new path, append the location of your JDK bin folder separated by a semi-colon (;).
+6.
+Click OK on every opened dialog to save changes and get past to where you started.
+Start writing code[edit]
+Once you have successfully installed the JDK on your system, you are ready to program code in the Java programming language. However, to write code, you would need a decent text editor. Windows comes with a default text editor by default — Notepad. In order to use notepad to write code in Java, you need to follow the steps below:
+
+1.
+Click Start › All Programs › Accessories › Notepad to invoke the application.
+
+Alternatively, you can also press ⊞ Win+R to open the Run dialog. With the dialog open, type the following command at the prompt:
+
+Notepad launching
+
+notepad
+
+
+2.
+Once the Notepad application has fired up, you can use the editor to write code for the Java programming language.
+
+<br>
+<br>
+Installation instructions for GNU/Linux
+
+Availability check for JRE[edit]
+The Java Runtime Environment (JRE) is necessary to execute Java programs. To check which version of JRE you have, follow the steps below.
+
+1.
+Open the Terminal window.
+2.
+Type the following command:
+
+JRE availability check
+
+java -version
+
+If you get something like this:
+
+Output on a particular Kubuntu 12.10 installation, with OpenJDK as the provider of JDK and JRE
+
+java version "1.7.0_09"
+OpenJDK Runtime Environment (IcedTea7 2.3.3) (7u9-2.3.3-0ubuntu1~12.10.1)
+OpenJDK Client VM (build 23.2-b09, mixed mode, sharing)
+
+... then a JRE is installed. If you get an error, such as:
+
+Output error
+
+java: command not found
+
+... then the JDK may not be installed or it may not be in your PATH.
+
+You may have other versions of Java installed; this command will only show the first in your PATH. You will be made familiar with the PATH environment variable later in this text. For now, if you have no idea what this is all about, read through towards the end and we will provide you with a step-by-step guide on how to set your own environment variables.
+You can use your system's file search utilities to see if there is a javac executable installed. If it is, and it is a recent enough version, you should put the bin directory that contains javac in your system PATH. The Java runtime, java, is often in the same bin directory.
+If the installed version is older (i.e. it is Java 5 and you wish to use the more recent Java 7 release), you should proceed below with downloading and installing a JDK.
+It is possible that you have the Java runtime (JRE), but not the JDK. In that case the javac program won't be found, but the java -version will print the JRE version number.
+Availability check for JDK[edit]
+The Java Development Kit (JDK) is necessary to build Java programs. For our purposes, you must use a JDK. First, check to see if a JDK is already installed on your system. To do so, first open a terminal window and execute the command below.
+
+Availability check
+
+javac -version
+
+If the JDK is installed and on your executable path, you should see some output which tells you the command line options. The output will vary depending on which version is installed and which vendor provided the Java installation.
+Installation using Terminal[edit]
+Downloading and installing the Java platform on Linux machines is very easy and straight-forward. You have two choices to install the Java platforms: using a package manager such as DPKG/APT, YUM/RPM etc., or directly install them using the binary package. To use the terminal to download and install the Oracle Java SE platform, follow the instructions below.
+
+1.
+Open the Terminal window.
+2.
+At the prompt, type in the line followed by the name of your package manager as shown below:
+
+Retrieving the java packages
+
+# APT - Ubuntu, Linux Mint
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt update
+$ sudo apt-get install oracle-java8-installer
+# APT - Debian, etc.
+$ echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | sudo tee /etc/apt/sources.list.d/webupd8team-java.list
+$ echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | sudo tee -a /etc/apt/sources.list.d/webupd8team-java.list
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+# Portage - Gentoo
+# You need to accept the license and fetch the source code manually from http://www.oracle.com/technetwork/java/javase/downloads/index.html
+#   and save it to /usr/portage/distfiles
+$ echo "dev-java/oracle-jdk-bin Oracle-BCLA-JavaSE" | sudo tee -a /etc/portage/package.license # Accept the Oracle License
+$ emerge oracle-jdk-bin
+
+
+3.
+All Java softwares should be installed and instantly available now.
+Download instructions[edit]
+Alternatively, you can manually download the Java software from the Oracle website.
+For the convenience of our readers, the following table presents direct links to the latest JDK for the Linux operating system.
+Operating system
+RPM
+Tarball
+License
+Linux x86
+Download
+Download
+Oracle Binary Code License Agreement
+Linux x64
+Download
+Download
+Oracle Binary Code License Agreement
+Start writing code[edit]
+The most widely available text editor on GNOME desktops is Gedit, while on the KDE desktops, one can find Kate. Both these editors support syntax highlighting and code completion and therefore are sufficient for our purposes.
+However, if you require a robust and standalone text-editor like the Notepad++ editor on Windows, you would require the use of the minimalistic editor loaded with features – SciTE. Follow the instructions below if you wish to install SciTE:
+
+1.
+Open the Terminal window.
+2.
+At the prompt, write the following:
+
+Retrieving the java packages
+
+$ sudo apt-get install scite
+
+
+3.
+You should now be able to use SciTE for your programming needs. You may also want to try Geany. Installation instructions are similar to those for SciTE.
+
+<br>
+<br>
+Installation instructions for Mac OS
+
+On Mac OS, both the JRE and the JDK are already installed. However, the version installed was the latest version when the computer was purchased, so you may want to update it.
+Updating Java for Mac OS[edit]
+Go to the Java download page.
+Mechanically accept Oracle's license agreement.
+Click on the link for Mac OS X.
+Run the installer package.
+Availability check for JDK[edit]
+The Java Development Kit (JDK) is necessary to build Java programs. For our purposes, you must use a JDK. First, check to see if a JDK is already installed on your system. To do so, first open a terminal window and execute the command below.
+
+Availability check
+
+java -version
+
+If the JDK is installed and on your executable path, you should see some output which tells you the command line options. The output will vary depending on which version is installed and which vendor provided the Java installation.
+
+<br>
+<br>
+Installation instructions for Solaris
+
+
+
+
+
+
+To do:
+Add a section describing the installation of Java onto Solaris machines. Incorporate some of the information provided in the commented section of this page.
+
+
+
+<br>
+<br>
+No Install Option for Programming Online
+
+If you already have the JRE installed, you can use the Java Wiki Integrated Development Environment (JavaWIDE) to code directly in your browser, no account or special software required.
+Click here to visit the JavaWIDE Sandbox to get started.
+For more information, click here to visit the JavaWIDE site.
+
+<br>
+<br><br>
+<br> Getting started
+Java ProgrammingInstallation
+Compilation 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1310
+Cached time: 20171026152103
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.124 seconds
+Real time usage: 0.160 seconds
+Preprocessor visited node count: 1394/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 25400/2097152 bytes
+Template argument size: 3751/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 9/500
+Lua time usage: 0.050/10.000 seconds
+Lua memory usage: 627 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  123.570      1 -total
+ 57.21%   70.692      2 Template:Programming/Navigation
+ 14.36%   17.748      4 Template:Keypress
+ 12.70%   15.690      1 Template:Java_Programming/GettingStartedTopic/Nav
+  8.47%   10.467      4 Template:Key_press/core
+  6.49%    8.020      3 Template:BookCat
+  5.50%    6.801      1 Template:Navbar
+  5.33%    6.592      1 Template:Java_Programming/GettingStarted/Topic
+  4.78%    5.907      3 Template:BookCat/default
+  3.66%    4.517      1 Template:Status
+<br>
+<br> <br>
+<br> Installation
+Java ProgrammingCompilation
+Execution 
+<br>Navigate Getting Started topic: ( v • d • e )
+ Installing Java on Your Computer
+ Compiling programs
+ Running Java programs
+ Understanding a Java program
+ Java IDEs
+
+<br>
+In Java, programs are not compiled into executable files; they are compiled into bytecode (as discussed earlier), which the JVM (Java Virtual Machine) then executes at runtime. Java source code is compiled into bytecode when we use the javac compiler. The bytecode gets saved on the disk with the file extension .class. When the program is to be run, the bytecode is converted, using the just-in-time (JIT) compiler. The result is machine code which is then fed to the memory and is executed.<br>
+<br>Java code needs to be compiled twice in order to be executed:<br>
+<br>Java programs need to be compiled to bytecode.
+When the bytecode is run, it needs to be converted to machine code.
+<br>The Java classes/bytecode are compiled to machine code and loaded into memory by the JVM when needed the first time. This is different from other languages like C/C++ where programs are to be compiled to machine code and linked to create an executable file before it can be executed.<br>
+<br> <br>
+<br> Compilation
+Java ProgrammingExecution
+Understanding a Java Program 
+<br>Navigate Getting Started topic: ( v • d • e )
+ Installing Java on Your Computer
+ Compiling programs
+ Running Java programs
+ Understanding a Java program
+ Java IDEs
+
+<br>
+There are various ways in which Java code can be executed. A complex Java application usually uses third party APIs or services. In this section we list the most popular ways a piece of Java code may be packed together and/or executed.<br>
+<br> <br>
+<br> Execution
+Java ProgrammingUnderstanding a Java Program
+Java IDEs 
+<br>Navigate Getting Started topic: ( v • d • e )
+ Installing Java on Your Computer
+ Compiling programs
+ Running Java programs
+ Understanding a Java program
+ Java IDEs
+
+<br>
+This article presents a small Java program which can be run from the console. It computes the distance between two points on a plane. You do not need to understand the structure and meaning of the program just yet; we will get to that soon. Also, because the program is intended as a simple introduction, it has some room for improvement, and later in the module we will show some of these improvements. But let's not get too far ahead of ourselves!<br>
+<br> <br>
+<br> Understanding a Java Program
+Java ProgrammingJava IDEs
+Language Fundamentals 
+<br>Navigate Getting Started topic: ( v • d • e )
+ Installing Java on Your Computer
+ Compiling programs
+ Running Java programs
+ Understanding a Java program
+ Java IDEs
+
+<br> <br>
+<br> Language Fundamentals
+Java ProgrammingStatements
+Conditional blocks 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+Now that we have the Java platform on our systems and have run the first program successfully, we are geared towards understanding how programs are actually made. As we have already discussed, a program is a set of instructions, which are tasks provided to a computer. These instructions are called statements in Java. Statements can be anything from a single line of code to a complex mathematical equation. Consider the following line:<br>
+<br>
+Code section 3.1: A simple assignment statement.
+
+
+1 int age = 24;
+
+
+<br>This line is a simple instruction that tells the system to initialize a variable and set its value as 24. If the above statement was the only one in the program, it would look similar to this:<br>
+<br>
+Code listing 3.1: A statement in a simple class.
+
+
+1 public class MyProgram {
+2     public static void main(String[] args) {
+3         int age = 24;
+4     }
+5 }
+
+
+<br>Java places its statements within a class declaration and, in the class declaration, the statements are usually placed in a method declaration, as above.<br>
+<br> <br>
+<br> Statements
+Java ProgrammingConditional blocks
+Loop blocks 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+Conditional blocks allow a program to take a different path depending on some condition(s). These allow a program to perform a test and then take action based on the result of that test. In the code sections, the actually executed code lines will be highlighted.<br>
+<br>If[edit]<br>
+<br>The if block executes only if the boolean expression associated with it is true. The structure of an if block is as follows:<br>
+<br>if (boolean expression1) {
+statement1
+statement2
+...
+statementn
+}
+
+<br>Here is a double example to illustrate what happens if the condition is true and if the condition is false:<br>
+<br>
+
+Code section 3.22: Two if blocks.
+
+
+ 1 int age = 6;
+ 2 System.out.println("Hello!");
+ 3 
+ 4 if (age < 13) {
+ 5   System.out.println("I'm a child.");
+ 6 }
+ 7 
+ 8 if (age > 20) {
+ 9   System.out.println("I'm an adult.");
+10 }
+11 
+12 System.out.println("Bye!");
+
+
+
+
+
+
+Output for Code section 3.22
+
+Hello!
+I'm a child
+Bye!
+
+
+<br>
+If only one statement is to be executed after an if block, it does not have to be enclosed in curly braces. For example, if (i == 0) i = 1; is a perfectly valid portion of Java code. This works for most control structures, such as else and while. However Oracle's Java Code Conventions explicitly state that the braces should always be used.
+<br>If/else[edit]<br>
+<br>The if block may optionally be followed by an else block which will execute if that boolean expression is false. The structure of an if block is as follows:<br>
+<br>if (boolean expression1) {
+statement1
+statement2
+...
+statementn
+} else {
+statement1bis
+statement2bis
+...
+statementnbis
+}
+
+<br><br>
+<br>If/else-if/else[edit]<br>
+<br>An else-if block may be used when multiple conditions need to be checked. else-if statements come after the if block, but before the else block. The structure of an if block is as follows:<br>
+<br>if (boolean expression1) {
+statement1.1
+statement1.2
+...
+statementn
+} else if (boolean expression2) {
+statement2.1
+statement2.2
+...
+statement2.n
+} else {
+statement3.1
+statement3.2
+...
+statement3.n
+}
+
+<br>Here is an example to illustrate:<br>
+<br>
+
+Code listing 3.3: MyConditionalProgram.java
+
+
+ 1 public class MyConditionalProgram {
+ 2     public static void main (String[] args) {
+ 3       int a = 5;
+ 4       if (a > 0) {
+ 5           // a is greater than 0, so this statement will execute
+ 6           System.out.println("a is positive");
+ 7       } else if (a >= 0) {
+ 8           // a case has already executed, so this statement will NOT execute
+ 9           System.out.println("a is positive or zero");
+10       } else {
+11           // a case has already executed, so this statement will NOT execute
+12           System.out.println("a is negative");
+13       }
+14     }
+15 }
+
+
+
+
+
+Output for code listing 3.3
+
+a is positive
+
+
+<br>Keep in mind that only a single block will execute, and it will be the first true condition.<br>
+<br>All the conditions are evaluated when if is reached, no matter what the result of the condition is, after the execution of the if block:<br>
+<br>
+
+Code section 3.23: A new value for the variable a.
+
+
+ 1 int a = 5;
+ 2 if (a > 0) {
+ 3     // a is greater than 0, so this statement will execute
+ 4     System.out.println("a is positive");
+ 5     a = -5;
+ 6 } else if (a < 0) {
+ 7     // a WAS greater than 0, so this statement will not execute
+ 8     System.out.println("a is negative");
+ 9 } else {
+10     // a does not equal 0, so this statement will not execute
+11     System.out.println("a is zero");
+12 }
+
+
+
+
+
+Output for code section 3.23
+
+a is positive
+
+
+<br>Conditional expressions[edit]<br>
+<br>Conditional expressions use the compound ?: operator. Syntax:<br>
+<br>boolean expression1 ? expression1 : expression2
+<br>This evaluates boolean expression1, and if it is true then the conditional expression has the value of expression1; otherwise the conditional expression has the value of expression2.<br>
+<br>Example:<br>
+<br>
+Code section 3.24: Conditional expressions.
+
+
+1 String answer = (p < 0.05)? "reject" : "keep";
+
+
+<br>This is equivalent to the following code fragment:<br>
+<br>
+Code section 3.25: Equivalent code.
+
+
+1 String answer;
+2 if (p < 0.05) {
+3     answer = "reject";
+4 } else {
+5     answer = "keep";
+6 }
+
+
+<br>Switch[edit]<br>
+<br>The switch conditional statement is basically a shorthand version of writing many if...else statements. The switch block evaluates a char, byte, short, or int (or enum, starting in J2SE 5.0; or String, starting in J2SE 7.0), and, based on the value provided, jumps to a specific case within the switch block and executes code until the break command is encountered or the end of the block. If the switch value does not match any of the case values, execution will jump to the optional default case.<br>
+<br>The structure of a switch statement is as follows:<br>
+<br>switch (int1 or char1 or short1 or byte1 or enum1 or String value1) {
+case case value1:
+statement1.1
+...
+statement1.n
+break;
+
+case case value2:
+statement2.1
+...
+statement2.n
+break;
+
+default:
+statementn.1
+...
+statementn.n
+
+}
+
+<br>Here is an example to illustrate:<br>
+<br>
+
+Code section 3.26: A switch block.
+
+
+ 1 int i = 3;
+ 2 switch(i) {
+ 3     case 1:
+ 4         // i doesn't equal 1, so this code won't execute
+ 5         System.out.println("i equals 1");
+ 6         break;
+ 7     case 2:
+ 8         // i doesn't equal 2, so this code won't execute
+ 9         System.out.println("i equals 2");
+10         break;
+11     default:
+12         // i has not been handled so far, so this code will execute
+13         System.out.println("i equals something other than 1 or 2");
+14 }
+
+
+
+
+
+Output for code section 3.26
+
+i equals something other than 1 or 2
+
+
+<br>If a case does not end with the break statement, then the next case will be checked, otherwise the execution will jump to the end of the switch statement.<br>
+<br>Look at this example to see how it's done:<br>
+<br>
+
+Code section 3.27: A switch block containing a case without break.
+
+
+ 1 int i = -1;
+ 2 switch(i) {
+ 3     case -1:
+ 4     case 1:
+ 5         // i is -1, so it will fall through to this case and execute this code
+ 6         System.out.println("i is 1 or -1");
+ 7         break;
+ 8     case 0:
+ 9         // The break command is used before this case, so if i is 1 or -1, this will not execute
+10         System.out.println("i is 0");
+11 }
+
+
+
+
+
+Output for code section 3.27
+
+i is 1 or -1
+
+
+<br>Starting in J2SE 5.0, the switch statement can also be used with an enum value instead of an integer.<br>
+<br>Though enums have not been covered yet, here is an example so you can see how it's done (note that the enum constants in the cases do not need to be qualified with the type:<br>
+<br>
+
+Code section 3.28: A switch block with an enum type.
+
+
+ 1 Day day = Day.MONDAY; // Day is a fictional enum type containing the days of the week
+ 2 switch(day) {
+ 3     case MONDAY:
+ 4         // Since day == Day.MONDAY, this statement will execute
+ 5         System.out.println("Mondays are the worst!");
+ 6         break;
+ 7     case TUESDAY:
+ 8     case WEDNESDAY:
+ 9     case THURSDAY:
+10         System.out.println("Weekdays are so-so.");
+11         break;
+12     case FRIDAY:
+13     case SATURDAY:
+14     case SUNDAY:
+15         System.out.println("Weekends are the best!");
+16         break;
+17 }
+
+
+
+
+
+Output for code section 3.28
+
+Mondays are the worst!
+
+
+<br>Starting in J2SE 7.0, the switch statement can also be used with an String value instead of an integer.<br>
+<br>
+
+Code section 3.29: A switch block with a String type.
+
+
+ 1 String day = "Monday";
+ 2 switch(day) {
+ 3     case "Monday":
+ 4         // Since day == "Monday", this statement will execute
+ 5         System.out.println("Mondays are the worst!");
+ 6         break;
+ 7     case "Tuesday":
+ 8     case "Wednesday":
+ 9     case "Thursday":
+10         System.out.println("Weekdays are so-so.");
+11         break;
+12     case "Friday":
+13     case "Saturday":
+14     case "Sunday":
+15         System.out.println("Weekends are the best!");
+16         break;
+17     default:
+18         throw new IllegalArgumentException("Invalid day of the week: " + day);
+19 }
+
+
+
+
+
+Output for code section 3.29
+
+Mondays are the worst!
+
+
+<br><br>
+<br> Statements
+Java ProgrammingConditional blocks
+Loop blocks 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1308
+Cached time: 20171026152047
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 0.196 seconds
+Preprocessor visited node count: 1385/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 26795/2097152 bytes
+Template argument size: 3240/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 16/500
+Lua time usage: 0.058/10.000 seconds
+Lua memory usage: 689 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  145.277      1 -total
+ 59.38%   86.259      2 Template:Programming/Navigation
+ 12.36%   17.957      1 Template:Java_Programming/LanguageFundamentalsTopic/Nav
+  7.33%   10.642      1 Template:Java_Programming/LanguageFundamentals/Topic
+  6.66%    9.669      8 Template:XExample
+  5.31%    7.716      3 Template:BookCat
+  4.90%    7.118     20 Template:Stage_short
+  3.87%    5.627      3 Template:BookCat/default
+  3.60%    5.234      1 Template:Navbar
+  2.42%    3.510      1 Template:Status
+<br>
+<br> <br>
+<br> Conditional blocks
+Java ProgrammingLoop blocks
+Boolean expressions 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+Loops are a handy tool that enables programmers to do repetitive tasks with minimal effort. Say we want a program that can count from 1 to 10, we could write the following program.<br>
+<br>
+
+Code listing 3.4: Count.java
+
+
+ 1 class Count {
+ 2     public static void main(String[] args) {
+ 3         System.out.println("1 ");
+ 4         System.out.println("2 ");
+ 5         System.out.println("3 ");
+ 6         System.out.println("4 ");
+ 7         System.out.println("5 ");
+ 8         System.out.println("6 ");
+ 9         System.out.println("7 ");
+10         System.out.println("8 ");
+11         System.out.println("9 ";
+12         System.out.println("10 ");
+13     }
+14 }
+
+
+
+
+
+Output for code listing 3.4
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+<br>
+The task will be completed just fine, the numbers 1 to 10 will be printed in the output, but there are a few problems with this solution:<br>
+<br>Flexibility: what if we wanted to change the start number or end number? We would have to go through and change them, adding extra lines of code where they're needed.
+Scalability: 10 repeats are trivial, but what if we wanted 100 or even 1000 repeats? The number of lines of code needed would be overwhelming for a large number of iterations.
+Maintenance: where there is a large amount of code, one is more likely to make a mistake.
+Feature: the number of tasks is fixed and doesn't change at each execution.
+<br>Using loops we can solve all these problems. Once you get you head around them they will be invaluable to solving many problems in programming.<br>
+<br>Open up your editing program and create a new file saved as Loop.java. Now type or copy the following code:<br>
+<br>
+
+Code listing 3.5: Loop.java
+
+
+1 class Loop {
+2     public static void main(String[] args) {
+3         int i;
+4         for (i = 1; i <= 10; i++) {
+5             System.out.println(i + " ");
+6         }
+7     }
+8 }
+
+
+
+
+
+Output for code listing 3.5
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+<br>If we run the program, the same result is produced, but looking at the code, we immediately see the advantages of loops. Instead of executing 10 different lines of code, line 5 executes ten times. 10 lines of code have been reduced to just 4. Furthermore, we may change the number 10 to any number we like. Try it yourself, replace the 10 with your own number.<br>
+<br>While[edit]<br>
+<br>while loops are the simplest form of loop. The while loop repeats a block of code while the specified condition is true. Here is the structure of a while loop:<br>
+<br>while (boolean expression1) {
+statement1
+statement2
+...
+statementn
+}
+
+<br>The loop's condition is checked before each iteration of the loop. If the condition is false at the start of the loop, the loop will not be executed at all. The code section 3.28 sets in squareHigherThan200 the smallest integer whose square exceeds 200.<br>
+<br>
+Code section 3.28: The smallest integer whose square exceeds 200.
+
+
+1 int squareHigherThan200 = 0;
+2 
+3 while (squareHigherThan200 * squareHigherThan200 < 200) {
+4   squareHigherThan200 = squareHigherThan200 + 1;
+5 }
+
+
+<br>
+If a loop's condition will never become false, such as if the true constant is used for the condition, said loop is known as an infinite loop. Such a loop will repeat indefinitely unless it is broken out of. Infinite loops can be used to perform tasks that need to be repeated over and over again without a definite stopping point, such as updating a graphics display.
+<br>Do... while[edit]<br>
+<br>The do-while loop is functionally similar to the while loop, except the condition is evaluated AFTER the statement executes It is useful when we try to find a data that does the job by randomly browsing an amount of data.<br>
+<br>do {
+statement1
+statement2
+...
+statementn
+} while (boolean expression1);
+
+<br>For[edit]<br>
+<br>The for loop is a specialized while loop whose syntax is designed for easy iteration through a sequence of numbers. It consists of the keyword for followed by three extra statements enclosed in parentheses. The first statement is the variable declaration statement, which allows you to declare one or more integer variables. The second is the condition, which is checked the same way as the while loop. Last is the iteration statement, which is used to increment or decrement variables, though any statement is allowed.<br>
+<br>This is the structure of a for loop:<br>
+<br>for (variable declarations; condition; iteration statement) {
+statement1
+statement2
+...
+statementn
+}
+
+<br>To clarify how a for loop is used, here is an example:<br>
+<br>
+
+Code section 3.29: A for loop.
+
+
+1 for (int i = 1; i <= 10; i++) {
+2     System.out.println(i);
+3 }
+
+
+
+
+
+Output for code listing 3.29
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+<br>The for loop is like a template version of the while loop. The alternative code using a while loop would be as follows:<br>
+<br>
+Code section 3.30: An iteration using a while loop.
+
+
+1 int i = 1;
+2 while (i <= 10) {
+3   System.out.println(i);
+4   i++;
+5 }
+
+
+<br>The code section 3.31 shows how to iterate with the for loop using multiple variables and the code section 3.32 shows how any of the parameters of a for loop can be skipped. Skip them all, and you have an infinitely repeating loop.<br>
+<br>
+
+Code section 3.31: The for loop using multiple variables.
+
+
+1 for (int i = 1, j = 10; i <= 10; i++, j--) {
+2   System.out.print(i + " ");
+3   System.out.println(j);
+4 }
+
+
+
+
+
+Code section 3.32: The for loop without parameter.
+
+
+1 for (;;) {
+2   // Some code
+3 }
+
+
+
+<br>For-each[edit]<br>
+<br>Arrays haven't been covered yet, but you'll want to know how to use the enhanced for loop, called the for-each loop. The for-each loop automatically iterates through a list or array and assigns the value of each index to a variable.<br>
+<br>To understand the structure of a for-each loop, look at the following example:<br>
+<br>
+
+Code section 3.33: A for-each loop.
+
+
+1 String[] sentence = {"I", "am", "a", "Java", "program."};
+2 for (String word : sentence) {
+3     System.out.print(word + " ");
+4 }
+
+
+
+
+
+Output for code section 3.33
+
+I am a Java program.
+
+
+<br>The example iterates through an array of words and prints them out like a sentence. What the loop does is iterate through sentence and assign the value of each index to word, then execute the code block.<br>
+<br>Here is the general contract of the for-each loop:<br>
+<br>for (variable declaration : array or list) {
+statement1
+statement2
+...
+statementn
+}
+
+<br>Make sure that the type of the array or list is assignable to the declared variable, or you will get a compilation error. Notice that the loop automatically exits after the last item in the collection has been examined in the statement block.<br>
+<br>Although the enhanced for loop can make code much clearer, it can't be used in some common situations.<br>
+<br>Only access. Elements can not be assigned to, eg, not to increment each element in a collection.
+Only single structure. It's not possible to traverse two structures at once, eg, to compare two arrays.
+Only single element. Use only for single element access, eg, not to compare successive elements.
+Only forward. It's possible to iterate only forward by single steps.
+At least Java 5. Don't use it if you need compatibility with versions before Java 5.
+<br> <br>
+<br> Loop blocks
+Java ProgrammingBoolean expressions
+Variables 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+Boolean values are values that evaluate to either true or false, and are represented by the boolean data type. Boolean expressions are very similar to mathematical expressions, but instead of using mathematical operators such as "+" or "-", you use comparative or boolean operators such as "==" or "!".<br>
+<br> <br>
+<br> Boolean expressions
+Java ProgrammingVariables
+Primitive Types 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>In the Java programming language, the words field and variable are both one and the same thing. Variables are devices that are used to store data, such as a number, or a string of character data.<br>
+<br> <br>
+<br> Variables
+Java ProgrammingPrimitive Types
+Arithmetic expressions 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+Primitive types are the most basic data types available within the Java language. There are 8: boolean, byte, char, short, int, long, float and double. These types serve as the building blocks of data manipulation in Java. Such types serve only one purpose — containing pure, simple values of a kind. Because these data types are defined into the Java type system by default, they come with a number of operations predefined. You can not define a new operation for such primitive types. In the Java type system, there are three further categories of primitives:<br>
+<br>Numeric primitives: short, int, long, float and double. These primitive data types hold only numeric data. Operations associated with such data types are those of simple arithmetic (addition, subtraction, etc.) or of comparisons (is greater than, is equal to, etc.)
+Textual primitives: byte and char. These primitive data types hold characters (that can be Unicode alphabets or even numbers). Operations associated with such types are those of textual manipulation (comparing two words, joining characters to make words, etc.). However, byte and char can also support arithmetic operations.
+Boolean and null primitives: boolean and null.
+<br>All the primitive types have a fixed size. Thus, the primitive types are limited to a range of values. A smaller primitive type (byte) can contain less values than a bigger one (long).<br>
+<br>Category
+Types
+Size (bits)
+Minimum Value
+Maximum Value
+Precision
+Example
+Integer
+byte
+8
+-128
+127
+From +127 to -128
+byte b = 65;
+char
+16
+0
+216-1
+All Unicode characters
+char c = 'A';
+char c = 65;
+short
+16
+-215
+215-1
+From +32,767 to -32,768
+short s = 65;
+int
+32
+-231
+231-1
+From +2,147,483,647 to -2,147,483,648
+int i = 65;
+long
+64
+-263
+263-1
+From +9,223,372,036,854,775,807 to -9,223,372,036,854,775,808
+long l = 65L;
+Floating-point
+float
+32
+2-149
+(2-2-23)·2127
+From 3.402,823,5 E+38 to 1.4 E-45
+float f = 65f;
+double
+64
+2-1074
+(2-2-52)·21023
+From 1.797,693,134,862,315,7 E+308 to 4.9 E-324
+double d = 65.55;
+Other
+boolean
+1
+--
+--
+false, true
+boolean b = true;
+void
+--
+--
+--
+--
+--
+<br>Integer primitive types silently overflow:<br>
+<br>
+
+Code section 3.52: Several operators.
+
+
+1 int i = Integer.MAX_VALUE;
+2 System.out.println(i);
+3 i = i + 1;
+4 System.out.println(i);
+5 System.out.println(Integer.MIN_VALUE);
+
+
+
+
+
+Console for Code section 3.52
+
+2147483647
+-2147483648
+-2147483648
+
+
+<br>As Java is strongly typed, you can't assign a floating point number (a number with a decimal point) to an integer variable:<br>
+<br>
+Code section 3.53: Setting a floating point number as a value to an int (integer) type.
+
+
+1 int age;
+2 age = 10.5;
+
+
+<br>A primitive type should be set by an appropriate value. The primitive types can be initialized with a literal. Most of the literals are primitive type values, except String Literals, which are instance of the String class.<br>
+<br> <br>
+<br> Primitive Types
+Java ProgrammingArithmetic expressions
+Literals 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>In order to do arithmetic in Java, one must first declare at least one variable. Typically one declares a variable and assigns it a value before any arithmetic is done. Here's an example of declaring an integer variable:<br>
+<br>
+Code section 3.59: Variable assignation.
+
+
+1 int x = 5;
+
+
+<br>After creating a variable, one can manipulate its value by using Java's operators: + (addition), - (subtraction), * (multiplication), / (integer division), % (modulo or remainder), ++ (pre- & postincrement by one), -- (pre- & postdecrement by one).<br>
+<br>
+
+Code listing 3.10: Operators.java
+
+
+ 1 public class Operators {
+ 2   public static void main(String[] args) {
+ 3     int x = 5;
+ 4     System.out.println("x = " + x);
+ 5     System.out.println();
+ 6    
+ 7     System.out.println("--- Addition             ---");
+ 8     x = 5;
+ 9     System.out.println("x + 2 = " + (x + 2));
+10     System.out.println("x = " + x);
+11     System.out.println();
+12    
+13     System.out.println("--- Subtraction          ---");
+14     x = 5;
+15     System.out.println("x - 4 = " + (x - 4));
+16     System.out.println("x = " + x);
+17     System.out.println();
+18    
+19     System.out.println("--- Multiplication       ---");
+20     x = 5;
+21     System.out.println("x * 3 = " + (x * 3));
+22     System.out.println("x = " + x);
+23     System.out.println();
+24    
+25     System.out.println("--- (Integer) Division   ---");
+26     x = 5;
+27     System.out.println("x / 2 = " + (x / 2));
+28     System.out.println("x = " + x);
+29     System.out.println();
+30    
+31     System.out.println("--- Modulo (Remainder)   ---");
+32     x = 5;
+33     System.out.println("x % 2 = " + (x % 2));
+34     System.out.println("x = " + x);
+35     System.out.println();
+36    
+37     System.out.println("--- Preincrement by one  ---");
+38     x = 5;
+39     System.out.println("++x   = " + (++x  ));
+40     System.out.println("x = " + x);
+41     System.out.println();
+42    
+43     System.out.println("--- Predecrement by one  ---");
+44     x = 5;
+45     System.out.println("--x   = " + (--x  ));
+46     System.out.println("x = " + x);
+47     System.out.println();
+48    
+49     System.out.println("--- Postincrement by one ---");
+50     x = 5;
+51     System.out.println("x++   = " + (x++  ));
+52     System.out.println("x = " + x);
+53     System.out.println();
+54    
+55     System.out.println("--- Postdecrement by one ---");
+56     x = 5;
+57     System.out.println("x--   = " + (x--  ));
+58     System.out.println("x = " + x);
+59     System.out.println();
+60   }
+61 }
+
+
+
+
+
+Console for Code listing 3.10
+
+
+x = 5
+
+--- Addition             ---
+x + 2 = 7
+x = 5
+
+--- Subtraction          ---
+x - 4 = 1
+x = 5
+
+--- Multiplication       ---
+x * 3 = 15
+x = 5
+
+--- (Integer) Division   ---
+x / 2 = 2
+x = 5
+
+--- Modulo (Remainder)   ---
+x % 2 = 1
+x = 5
+
+--- Preincrement by one  ---
+++x   = 6
+x = 6
+
+--- Predecrement by one  ---
+--x   = 4
+x = 4
+
+--- Postincrement by one ---
+x++   = 5
+x = 6
+
+--- Postdecrement by one ---
+x--   = 5
+x = 4
+
+
+<br>The division operator rounds towards zero: 5/2 is 2, and -5/2 is -2. The remainder operator has the same sign as the left operand; it is defined such that ((a/b)*b) + (a%b) is always equal to a. The preincrement, predecrement, postincrement, and postdecrement operators are special: they also change the value of the variable, by adding or subtracting one. The only difference is that preincrement/decrement returns the new value of the variable; postincrement returns the original value of the variable.<br>
+<br>
+Test your knowledge
+
+Question 3.8: Consider the following code:
+
+Question 3.8: Question8.java
+
+
+ 1 public class Question8 {
+ 2   public static void main(String[] args) {
+ 3     int x = 10;
+ 4     x = x + 10;
+ 5     x = 2 * x;
+ 6     x = x - 19;
+ 7     x = x / 3;
+ 8     System.out.println(x);
+ 9   }
+10 }
+
+
+What will be printed in the standard output?
+
+Answer
+
+
+Output for Question 3.8
+
+7
+
+int x = 10; => 10x = x + 10; => 20x = 2 * x; => 40x = x - 19; => 21x = x / 3; => 7
+
+
+
+<br>
+<br>When using several operators in the same expression, one must consider Java's order of precedence. Java uses the standard PEMDAS (Parenthesis, Exponents, Multiplication and Division, Addition and Subtraction) order. When there are multiple instances of the same precedence, Java reads from left to right. Consider what the output of the following code would be:<br>
+<br>
+
+Code section 3.60: Several operators.
+
+
+1 System.out.println(10*5 + 100/10 - 5 + 7%2);
+
+
+
+
+
+Console for Code section 3.60
+
+56
+
+
+<br>The following chart shows how Java would compute this expression:<br>
+<br><br>
+<br>
+Figure 3.1: Computation of an arithmetic expression in the Java programming language
+
+
+
+
+
+
+<br>
+Besides performing mathematical functions, there are also operators to assign numbers to variables (each example again uses the variable initialized as x = 5):<br>
+<br>
+
+Code listing 3.11: Assignments.java
+
+
+ 1 public class Assignments {
+ 2   public static void main(String[] args) {
+ 3     int x = 5;
+ 4     x = 3;
+ 5     System.out.println("Assignment                                       (x = 3) : " + x);
+ 6 
+ 7     x = 5;
+ 8     x += 5;
+ 9     System.out.println("Assign x plus another integer to itself          (x += 5): " + x);
+10 
+11     x = 5;
+12     x -= 4;
+13     System.out.println("Assign x minus another integer to itself         (x -= 4): " + x);
+14 
+15     x = 5;
+16     x *= 6;
+17     System.out.println("Assign x multiplied by another integer to itself (x *= 6): " + x);
+18 
+19     x = 5;
+20     x /= 5;
+21     System.out.println("Assign x divided by another integer to itself    (x /= 5): " + x);
+22   }
+23 }
+
+
+
+
+
+Console for Code listing 3.11
+
+Assignment                                       (x = 3) : 3
+Assign x plus another integer to itself          (x += 5): 10
+Assign x minus another integer to itself         (x -= 4): 1
+Assign x multiplied by another integer to itself (x *= 6): 30
+Assign x divided by another integer to itself    (x /= 5): 1
+
+
+<br> <br>
+<br> Arithmetic expressions
+Java ProgrammingLiterals
+Methods 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>Java Literals are syntactic representations of boolean, character, numeric, or string data. Literals provide a means of expressing specific values in your program. For example, in the following statement, an integer variable named count is declared and assigned an integer value. The literal 0 represents, naturally enough, the value zero.<br>
+<br>
+Code section 3.61: Numeric literal.
+
+
+1 int count = 0;
+
+
+<br>The code section 3.62 contains two number literals followed by two boolean literals at line 1, one string literal followed by one number literal at line 2, and one string literal followed by one real number literal at line 3:<br>
+<br>
+Code section 3.62: Literals.
+
+
+1 (2 > 3) ? true : false;
+2 "text".substring(2);
+3 System.out.println("Display a hard coded float: " + 37.19f);
+
+
+<br> <br>
+<br> Literals
+Java ProgrammingMethods
+API/java.lang.String 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>Methods are how we communicate with objects. When we invoke or call a method we are asking the object to carry out a task. We can say methods implement the behaviour of objects. For each method we need to give a name, we need to define its input parameters and we need to define its return type. We also need to set its visibility (private, protected or public). If the method throws a checked exception, that needs to be declared as well. It is called a method definition. The syntax of method definition is:<br>
+<br>
+
+1 MyClass {
+2   ...
+3   public ReturnType methodName(ParamOneType parameter1, ParamTwoType parameter2) {
+4       ...
+5       return returnType;
+6   }
+7   ...
+8 }
+<br>
+<br>We can declare that the method does not return anything using the void Java keyword. For example:<br>
+<br>
+Code section 3.67: Method without returned data.
+
+
+1 private void methodName(String parameter1, String parameter2) {
+2   ...
+3   return;
+4 }
+
+
+<br>When the method returns nothing, the return keyword at the end of the method is optional. When the execution flow reaches the return keyword, the method execution is stopped and the execution flow returns to the caller method. The return keyword can be used anywhere in the method as long as there is a way to execute the instructions below:<br>
+<br>
+Code section 3.68: return keyword location.
+
+
+ 1 private void aMethod(int a, int b) {
+ 2   int c = 0;
+ 3   if (a > 0) {
+ 4     c = a;
+ 5     return;
+ 6   }
+ 7   int c = c + b;
+ 8   return;
+ 9   int c = c * 2;
+10 }
+
+
+<br>In the code section 3.68, the return keyword at line 5 is well placed because the instructions below can be reached when a is negative or equal to 0. However, the return keyword at line 8 is badly placed because the instructions below can't be reached.<br>
+<br>
+Test your knowledge
+
+Question 3.9: Consider the following code:
+
+Question 3.9: Compiler error.
+
+
+1 private int myMethod(int a, int b, boolean c) {
+2   b = b + 2;
+3   if (a > 0) {
+4     a = a + b;
+5     return a;
+6   } else {
+7     a = 0;
+8   }
+9 }
+
+
+The code above will return a compiler error. Why?
+
+Answer
+
+
+Answer 3.9: Compiler error.
+
+
+1 private int myMethod(int a, int b, boolean c) {
+2   b = b + 2;
+3   if (a > 0) {
+4     a = a + b;
+5     return a;
+6   } else {
+7     a = 0;
+8   }
+9 }
+
+
+The method is supposed to return a int but when a is negative or equal to 0, it returns nothing.
+
+
+
+<br>
+<br> <br>
+<br> Methods
+Java ProgrammingString
+Classes, Objects and Types 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>String is a class built into the Java language defined in the java.lang package. It represents character strings. Strings are ubiquitous in Java. Study the String class and its methods carefully. It will serve you well to know how to manipulate them skillfully. String literals in Java programs, such as "abc", are implemented as instances of this class like this:<br>
+<br>
+Code section 3.81: String example.
+
+
+1 String str = "This is string literal";
+
+
+<br>On the right hand side a String object is created represented by the string literal. Its object reference is assigned to the str variable.<br>
+<br> <br>
+<br> API/java.lang.String
+Java ProgrammingClasses, Objects and Types
+Packages 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+An object is composed of fields and methods. The fields, also called data members, characteristics, attributes, or properties, describe the state of the object. The methods generally describe the actions associated with a particular object. Think of an object as a noun, its fields as adjectives describing that noun, and its methods as the verbs that can be performed by or on that noun.<br>
+<br>For example, a sports car is an object. Some of its fields might be its height, weight, acceleration, and speed. An object's fields just hold data about that object. Some of the methods of the sports car could be "drive", "park", "race", etc. The methods really don't mean much unless associated with the sports car, and the same goes for the fields.<br>
+<br>The blueprint that lets us build our sports car object is called a class. A class doesn't tell us how fast our sports car goes, or what color it is, but it does tell us that our sports car will have a field representing speed and color, and that they will be say, a number and a word (or hex color code), respectively. The class also lays out the methods for us, telling the car how to park and drive, but these methods can't take any action with just the blueprint — they need an object to have an effect.<br>
+<br>In Java, a class is located in a file similar to its own name. If you want to have a class called SportsCar, its source file needs to be SportsCar.java. The class is created by placing the following in the source file:<br>
+<br>
+Code listing 3.13: SportsCar.java
+
+
+1 public class SportsCar {
+2    /* Insert your code here */
+3 }
+
+
+<br>The class doesn't do anything yet, as you will need to add methods and field variables first.<br>
+<br>The objects are different from the primitive types because:<br>
+<br>The primitive types are not instantiated.
+In the memory, for a primitive type only its value is stored. For an object, also a reference to an instance can be stored.
+In the memory, the allocated space of a primitive type is fixed, whatever their value. The allocated space of an object can vary, for instance either the object is instantiated or not.
+The primitive types don't have methods callable on them.
+A primitive type can't be inherited.
+<br> <br>
+<br> Classes, Objects and Types
+Java ProgrammingPackages
+Arrays 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+If your application becomes quite big, you may have lots of classes. Although you can browse them in their alphabetic order, it becomes confusing. So your application classes can be sorted into packages.<br>
+<br>A package is a name space that mainly contains classes and interfaces. For instance, the standard class ArrayList is in the package java.util. For this class, java.util.ArrayList is called its fully qualified name because this syntax has no ambiguity. Classes in different packages can have the same name. For example, you have the two classes java.util.Date and java.sql.Date which are not the same. If no package is declared in a class, its package is the default package.<br>
+<br> <br>
+<br> Packages
+Java ProgrammingArrays
+Mathematical functions 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>An array is similar to a table of objects or primitive types, keyed by index. You may have noticed the strange parameter of the default main() method (String[] args) since the beginning of the book. It is an array. Let's handle this parameter:<br>
+<br>
+
+Code listing 3.15: The default array parameter.
+
+
+1 public class ArrayExample {
+2   public static void main(String[] args) {
+3     for (int i = 0; i < args.length; ++i) {
+4       System.out.println("Argument #" + (i + 1) + ": " + args[i]);
+5     }
+6   }
+7 }
+
+
+
+
+
+Console for Code listing 3.15
+
+$ java ArrayExample This is a test
+Argument #1 This
+Argument #2 is
+Argument #3 a
+Argument #4 test
+
+
+<br>In the code listing 3.15, the array is args. It is an array of String objects (here those objects are the words that have been typed by the user at the program launching). At line 4, One contained object is accessed using its index in the array. You can see that its value is printed on the standard output. Note that the strings have been put in the array with the right order.<br>
+<br> <br>
+<br> Arrays
+Java ProgrammingMathematical functions
+Large numbers 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>The java.lang.Math class allows the use of many common mathematical functions that can be used while creating programs.<br>
+<br>Since it is in the java.lang package, the Math class does not need to be imported. However, in programs extensively utilizing these functions, a static import can be used.<br>
+<br> <br>
+<br> Mathematical functions
+Java ProgrammingLarge numbers
+Random numbers 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+The integer primitive type with the largest range of value is the long, from -263 to 263-1. If you need greater or lesser values, you have to use the BigInteger class in the package java.math. A BigInteger object can represent any integer (as large as the RAM on the computer can hold) as it is not mapped on a primitive type. Respectively, you need to use the BigDecimal class for great decimal numbers.<br>
+<br>However, as these perform much slower than primitive types, it is recommended to use primitive types when it is possible.<br>
+<br> <br>
+<br> Large numbers
+Java ProgrammingRandom numbers
+Unicode 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+To generate random numbers the Math.random() method can be used, which returns a double, greater than or equal to 0.0 and less than 1.0.<br>
+<br>The following code returns a random integer between n and m (where n <= randomNumber < m):<br>
+<br>
+Code section 3.30: A random integer.
+
+
+1   int randomNumber = n + (int)(Math.random() * ( m - n ));
+
+
+<br>Alternatively, the java.util.Random class provides methods for generating random booleans, bytes, floats, ints, longs and 'Gaussians' (doubles from a normal distribution with mean 0.0 and standard deviation 1.0). For example, the following code is equivalent to that above:<br>
+<br>
+Code section 3.31: A random integer with Gaussian.
+
+
+1   Random random = new Random();
+2   int randomNumber = n + random.nextInt(m - n);
+
+
+<br>As an example using random numbers, we can make a program that uses a Random object to simulate flipping a coin 20 times:<br>
+<br>
+
+Code listing 3.25: CoinFlipper.java
+
+
+ 1 import java.util.Random;
+ 2 
+ 3 public class CoinFlipper {
+ 4 
+ 5   public static void main(String[] args) {
+ 6     // The number of times to flip the coin
+ 7     final int TIMES_TO_FLIP = 20;
+ 8     int heads = 0;
+ 9     int tails = 0;
+10     // Create a Random object
+11     Random random = new Random();
+12     for (int i = 0; i < TIMES_TO_FLIP; i++) {
+13       // 0 or 1
+14       int result = random.nextInt(2);
+15       if (result == 1) {
+16         System.out.println("Heads");
+17         heads++;
+18       } else {
+19         System.out.println("Tails");
+20         tails++;
+21       }
+22     }
+23     System.out.println("There were "
+24             + heads
+25             + " heads and "
+26             + tails
+27             + " tails");
+28   }
+29 }
+
+
+
+
+
+Possible output for code listing 3.25
+
+Heads
+Tails
+Tails
+Tails
+Heads
+Tails
+Heads
+Heads
+Heads
+Heads
+Heads
+Heads
+Tails
+Tails
+Tails
+Tails
+Heads
+Tails
+Tails
+Tails
+There were 9 heads and 11 tails
+
+
+<br>Of course, if you run the program you will probably get different results.<br>
+<br> <br>
+<br> Random numbers
+Java ProgrammingUnicode
+Comments 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+Most Java program text consists of ASCII characters, but any Unicode character can be used as part of identifier names, in comments, and in character and string literals. For example, π (which is the Greek Lowercase Letter pi) is a valid Java identifier:<br>
+<br>
+Code section 3.100: Pi.
+
+
+1 double π = Math.PI;
+
+
+<br>and in a string literal:<br>
+<br>
+Code section 3.101: Pi literal.
+
+
+1 String pi = "π";
+
+
+<br> <br>
+<br> Unicode
+Java ProgrammingComments
+Keywords 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+A comment allows to insert text that will not be compiled nor interpreted. It can appear anywhere in the source code where whitespaces are allowed.<br>
+<br>It is useful for explaining what the source code does by:<br>
+<br>explaining the adopted technical choice: why this given algorithm and not another, why calling this given method...
+explaining what should be done in the next steps (the TODO list): improvement, issue to fix...
+giving the required explanation to understand the code and be able to update it yourself later or by other developers.
+<br>It can also be used to make the compiler ignore a portion of code: temporary code for debugging, code under development...<br>
+<br> <br>
+<br> Comments
+Java ProgrammingKeywords
+Coding conventions 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>Keywords are special tokens in the language which have reserved use in the language. Keywords may not be used as identifiers in Java — you cannot declare a field whose name is a keyword, for instance.<br>
+<br>Examples of keywords are the primitive types, int and boolean; the control flow statements for and if; access modifiers such as public, and special words which mark the declaration and definition of Java classes, packages, and interfaces: class, package, interface.<br>
+<br>Below are all the Java language keywords:<br>
+<br>
+abstract
+assert (since Java 1.4)
+boolean
+break
+byte
+case
+catch
+char
+class
+const (not used)
+continue
+default
+do
+double
+else
+enum (since Java 5.0)
+extends
+final
+finally
+float
+for
+goto (not used)
+if
+implements
+import
+instanceof
+int
+interface
+long
+native
+new
+package
+private
+protected
+public
+return
+short
+static
+strictfp (since Java 1.2)
+super
+switch
+synchronized
+this
+throw
+throws
+transient
+try
+void
+volatile
+while
+<br>
+<br>
+
+
+Contents
+
+1 abstract
+2 assert
+3 boolean
+4 break
+5 byte
+6 case
+7 catch
+8 char
+9 class
+10 const
+11 continue
+12 See also
+13 default
+14 do
+15 double
+16 else
+17 enum
+18 extends
+19 final
+20 For a variable
+21 For a class
+22 For a method
+23 Interest
+24 finally
+25 float
+26 for
+27 goto
+28 if
+29 implements
+30 import
+31 instanceof
+32 int
+33 interface
+34 long
+35 native
+36 See also
+37 new
+38 package
+39 private
+40 protected
+41 public
+42 return
+43 short
+44 static
+45 Interest
+46 strictfp
+47 super
+48 switch
+49 synchronized
+50 Singleton example
+51 this
+52 throw
+53 See also
+54 throws
+55 transient
+56 try
+57 void
+58 volatile
+59 while
+
+
+<br>In addition, the identifiers null, true, and false denote literal values and may not be used to create identifiers.<br>
+<br> <br>
+<br> Keywords
+Java ProgrammingCoding conventions
+Classes and Objects 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>
+The Java code conventions are defined by Oracle in the coding conventions document. In short, these conventions ask the user to use camel case when defining classes, methods, or variables. Classes start with a capital letter and should be nouns, like CalendarDialogView. For methods, the names should be verbs in imperative form, like getBrakeSystemType, and should start with a lowercase letter.<br>
+<br>It is important to get used to and follow coding conventions, so that code written by multiple programmers will appear the same. Projects may re-define the standard code conventions to better fit their needs. Examples include a list of allowed abbreviations, as these can often make the code difficult to understand for other designers. Documentation should always accompany code.<br>
+<br>One example from the coding conventions is how to define a constant. Constants should be written with capital letters in Java, where the words are separated by an underscore ('_') character. In the Java coding conventions, a constant is a static final field in a class.<br>
+<br>The reason for this diversion is that Java is not 100% object-oriented and discerns between "simple" and "complex" types. These will be handled in detail in the following sections. An example for a simple type is the byte type. An example for a complex type is a class. A subset of the complex types are classes that cannot be modified after creation, like a String, which is a concatenation of characters.<br>
+<br>For instance, consider the following "constants":<br>
+<br>
+
+ 1 public class MotorVehicle {
+ 2   /** Number of motors */
+ 3   private static final int MOTORS = 1;
+ 4 
+ 5   /** Name of a motor */
+ 6   private static final String MOTOR_NAME = "Mercedes V8";
+ 7 
+ 8   /** The motor object */
+ 9   private static final Motor THE_MOTOR = new MercedesMotor();
+10 
+11   /**
+12    * Constructor
+13    */
+14   public MotorVehicle() {
+15     MOTORS = 2;                     // Gives a syntax error as MOTORS has already been assigned a value.
+16     THE_MOTOR = new ToshibaMotor(); // Gives a syntax error as THE_MOTOR has already been assigned a value.
+17     MOTOR_NAME.toLowercase();       // Does not give a syntax error, because it returns a new String rather than editing the MOTOR_NAME variable.
+18     THE_MOTOR.fillFuel(20.5);       // Does not give a syntax error, as it changes a variable in the motor object, not the variable itself.
+19   }
+20 }
+<br>
+<br><br>
+<br> Keywords
+Java ProgrammingCoding conventions
+Classes and Objects 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1308
+Cached time: 20171026153159
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.136 seconds
+Real time usage: 0.170 seconds
+Preprocessor visited node count: 1105/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 16584/2097152 bytes
+Template argument size: 1340/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 34/500
+Lua time usage: 0.078/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  140.257      1 -total
+ 83.86%  117.621      2 Template:Programming/Navigation
+ 11.08%   15.538      1 Template:Java_Programming/LanguageFundamentalsTopic/Nav
+  6.89%    9.659      1 Template:Java_Programming/LanguageFundamentals/Topic
+  4.29%    6.012      3 Template:BookCat
+  4.22%    5.926     20 Template:Stage_short
+  3.03%    4.249      1 Template:Navbar
+  2.95%    4.144      1 Template:Status
+  2.77%    3.883      3 Template:BookCat/default
+  1.47%    2.061      3 Template:BOOKCATEGORY
+<br>
+<br> <br>
+<br> Classes and Objects
+Java ProgrammingDefining Classes
+Inheritance 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br> <br>
+<br> Defining Classes
+Java ProgrammingInheritance
+Interfaces 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br>The inheritance is one of the most powerful mechanism of the Object Oriented Programming. It allows the reuse of the members of a class (called the superclass or the mother class) in another class (called subclass, child class or the derived class) that inherits from it. This way, classes can be built by successive inheritance.<br>
+<br>In Java, this mechanism is enabled by the extends keyword. Example:<br>
+<br>
+Code listing 4.9: Vehicle.java
+
+
+1 public class Vehicle {
+2     public int speed;
+3     public int numberOfSeats;
+4 }
+
+
+<br>
+Code listing 4.10: Car.java
+
+
+1 public class Car extends Vehicle {
+2     public Car() {
+3         this.speed = 90;
+4         this.numberOfSeats = 5;
+5     }
+6 }
+
+
+<br>In the Code listing 4.10, the class Car inherits from Vehicle, which means that the attributes speed and numberOfSeats are present in the class Car, whereas they are defined in the class Vehicle. Also, the constructor defined in the class Car allows to initialize those attributes. In Java, the inheritance mechanism allows to define a class hierarchy with all the classes. Without explicit inheritance, a class implicitly inherits from the Object class. This Object class is the root of the class hierarchy.<br>
+<br>Some classes can't be inherited. Those classes are defined with the final keyword. For instance, the Integer class can't have subclasses. It is called a final class.<br>
+<br> <br>
+<br> Inheritance
+Java ProgrammingInterfaces
+Overloading Methods and Constructors 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br>An interface is an abstraction of class with no implementation details. For example, java.lang.Comparable is a standard interface in Java. You cannot instantiate an interface. An interface is not a class but it is written the same way. The first difference is that you do not use the class keyword but the interface keyword to define it. Then, there are fields and methods you cannot define here:<br>
+<br>A field is always a constant: it is always public, static and final, even if you do not mention it.
+A method must be public and abstract, but it is not required to write the public and abstract keywords.
+Constructors are forbidden.
+<br>An interface represents a contract:<br>
+<br>
+Code listing 4.14: SimpleInterface.java
+
+
+1 public interface SimpleInterface {
+2     public static final int CONSTANT1 = 1;
+3     int method1(String parameter);
+4 }
+
+
+<br>You can see that the method1() method is abstract (unimplemented). To use an interface, you have to define a class that implements it, using the implements keyword:<br>
+<br>
+Code listing 4.15: ClassWithInterface.java
+
+
+1 public class ClassWithInterface implements SimpleInterface {
+2     int method1(String parameter) {
+3         return 0;
+4     }
+5 }
+
+
+<br>A class can implement several interface, separated by a comma. Java interfaces behave much like the concept of the Objective-C protocol. It is recommended to name an interface <verb>able, to mean the type of action this interface would enable on a class. However, it is not recommended to start the name of an interface by I as in C++. It is useless. Your IDE will help you instead.<br>
+<br> <br>
+<br> Interfaces
+Java ProgrammingOverloading Methods and Constructors
+Object Lifecycle 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br> <br>
+<br> Overloading Methods and Constructors
+Java ProgrammingObject Lifecycle
+Scope 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br>Before a Java object can be created the class byte code must be loaded from the file system (with .class extension) to memory. This process of locating the byte code for a given class name and converting that code into a Java class instance is known as class loading. There is one class created for each type of Java class.<br>
+<br>All objects in Java programs are created on heap memory. An object is created based on its class. You can consider a class as a blueprint, template, or a description how to create an object. When an object is created, memory is allocated to hold the object properties. An object reference pointing to that memory location is also created. To use the object in the future, that object reference has to be stored as a local variable or as an object member variable.<br>
+<br>The Java Virtual Machine (JVM) keeps track of the usage of object references. If there are no more reference to the object, the object can not be used any more and becomes garbage. After a while the heap memory will be full of unused objects. The JVM collects those garbage objects and frees the memory they allocated, so the memory can be reused again when a new object is created. See below a simple example:<br>
+<br>
+Code section 4.30: Object creation.
+
+
+1 {
+2   // Create an object
+3   MyObject obj = new MyObject();
+4 
+5   // Use the object
+6   obj.printMyValues();
+7 }
+
+
+<br>The obj variable contains the object reference pointing to an object created from the MyObject class. The obj object reference is in scope inside the { }. After the } the object becomes garbage. Object references can be passed in to methods and can be returned from methods.<br>
+<br> <br>
+<br> Object Lifecycle
+Java ProgrammingScope
+Nested Classes 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br><br>
+<br> <br>
+<br> Scope
+Java ProgrammingNested Classes
+Generics 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br>
+In Java you can define a class inside an other class. A class can be nested inside another class or inside a method. A class that is not nested is called a top-level class and a class defining a nested class is an outer class.<br>
+<br> <br>
+<br> Nested Classes
+Java ProgrammingGenerics
+Aggregate 
+<br>Navigate Classes and Objects topic: ( v • d • e )
+ Defining classes
+ Inheritance
+ Interfaces
+ Overloading methods and constructors
+ Object Lifecycle
+ Scope
+ Nested classes
+ Generics
+
+<br>Java is a strongly typed language, so a field in a class may be typed like this:<br>
+<br>
+Code listing 4.34: Repository.java
+
+
+ 1 public class Repository {
+ 2 
+ 3    public Integer item;
+ 4 
+ 5    public Integer getItem() {
+ 6       return item;
+ 7    }
+ 8 
+ 9    public void setItem(Integer newItem) {
+10       item = newItem;
+11    }
+12 }
+
+
+<br>This ensures that, only Integer objects can be put in the field and a ClassCastException can't occur at runtime, only compile-time error can occur. Unfortunately, it can be used only with Integer objects. If you want to use the same class in another context with Strings, you have to generalize the type like this:<br>
+<br>
+Code listing 4.35: Repository.java
+
+
+ 1 public class Repository {
+ 2 
+ 3    public Object item;
+ 4 
+ 5    public Object getItem() {
+ 6       return item;
+ 7    }
+ 8 
+ 9    public void setItem(Integer newItem) {
+10       item = newItem;
+11    }
+12 
+13    public void setItem(String newItem) {
+14       item = newItem;
+15    }
+16 }
+
+
+<br>But you will have ClassCastException at runtime again and you can't easily use your field. The solution is to use Generics.<br>
+<br> <br>
+<br> Aggregate
+Java ProgrammingCollection
+ArrayList 
+<br>Navigate Aggregate topic: ( v • d • e )
+ Collection
+ ArrayList
+ Map
+ Comparing Objects
+
+<br>The most basic collection interface is called Collection. This interface gives the user the generic usage of a collection. All collections need to have the same basic operations. Those are:<br>
+<br>Adding element(s) to the collection
+Removing element(s) from the collection
+Obtaining the number of elements in the collection
+Listing the contents of the collection, (Iterating through the collection)
+<br>
+
+Code listing 5.1: CollectionProgram.java
+
+
+ 1 import java.util.Collection;   // Interface
+ 2 import java.util.ArrayList;    // Implementation
+ 3 
+ 4 public class CollectionProgram {
+ 5 
+ 6   public static void main(String[] args) {
+ 7     Collection myCollection = new ArrayList();
+ 8     myCollection.add("1");
+ 9     myCollection.add("2");
+10     myCollection.add("3");
+11     System.out.println("The collection contains " + myCollection.size() + " item(s).");
+12 
+13     myCollection.clear();
+14     if (myCollection.isEmpty()) {
+15       System.out.println("The collection is empty.");
+16     } else {
+17       System.out.println("The collection is not empty.");
+18     }
+19   }
+20 }
+
+
+
+
+
+Console for Code listing 5.1
+
+The collection contains 3 item(s).
+The collection is empty.
+
+
+<br>When you put an object in a collection, this object is not actually in the collection. Only its object reference is added to the collection. This means that if an object is changed after it was put in an collection, the object in the collection also changes. The code listing 5.2 computes the seven next days from tomorrow and stores each date in a list to read it afterwards. See what happens:<br>
+<br>
+
+Code listing 5.2: SevenNextDays.java
+
+
+ 1 import java.util.ArrayList;
+ 2 import java.util.Calendar;
+ 3 import java.util.Collection;
+ 4 import java.util.Date;
+ 5 import java.util.GregorianCalendar;
+ 6 
+ 7 public class SevenNextDays {
+ 8 
+ 9   public static void main(String[] args) {
+10    
+11     // The calendar is set at the current date: today
+12     Calendar calendar = new GregorianCalendar();
+13 
+14     Collection collectionOfDays = new ArrayList();
+15     Date currentDate = new Date();
+16     for (int i = 0; i < 7; ++i) {
+17       // The calendar is now set to the next day
+18       calendar.add(Calendar.DATE, 1);
+19       currentDate.setTime(calendar.getTimeInMillis());
+20 
+21       collectionOfDays.add(currentDate);
+22     }
+23 
+24     for (Object oneDay : collectionOfDays) {
+25       System.out.println("The next day is: " + oneDay);
+26     }
+27   }
+28 }
+
+
+
+
+
+Console for Code listing 5.2
+
+ The next day is: Thu Nov 2 14:10:20 UTC 2017 The next day is: Thu Nov 2 14:10:20 UTC 2017 The next day is: Thu Nov 2 14:10:20 UTC 2017 The next day is: Thu Nov 2 14:10:20 UTC 2017 The next day is: Thu Nov 2 14:10:20 UTC 2017 The next day is: Thu Nov 2 14:10:20 UTC 2017 The next day is: Thu Nov 2 14:10:20 UTC 2017
+
+
+
+<br>All collection items were meant to be updated to a different date but they all have been updated to the last one. This means that each update has updated all the collection items. The currentDate has been used to fill all the collection items. The collection didn't keep trace of the added values (one of the seven dates) but the added object references (currentDate). So the collection contains the same object seven times! To avoid this issue, we should have coded it this way:<br>
+<br>
+
+Code listing 5.3: ActualSevenNextDays.java
+
+
+ 1 import java.util.ArrayList;
+ 2 import java.util.Calendar;
+ 3 import java.util.Collection;
+ 4 import java.util.Date;
+ 5 import java.util.GregorianCalendar;
+ 6 
+ 7 public class ActualSevenNextDays {
+ 8 
+ 9   public static void main(String[] args) {
+10    
+11     // The calendar is set at the current date: today
+12     Calendar calendar = new GregorianCalendar();
+13 
+14     Collection collectionOfDays = new ArrayList();
+15     for (int i = 0; i < 7; ++i) {
+16       Date currentDate = new Date();
+17       // The calendar is now set to the next day
+18       calendar.add(Calendar.DATE, 1);
+19       currentDate.setTime(calendar.getTimeInMillis());
+20 
+21       collectionOfDays.add(currentDate);
+22     }
+23 
+24     for (Object oneDay : collectionOfDays) {
+25       System.out.println("The next day is: " + oneDay);
+26     }
+27   }
+28 }
+
+
+
+
+
+Console for Code listing 5.3
+
+ The next day is: Fri Oct 27 14:10:20 UTC 2017 The next day is: Sat Oct 28 14:10:20 UTC 2017 The next day is: Sun Oct 29 14:10:20 UTC 2017 The next day is: Mon Oct 30 14:10:20 UTC 2017 The next day is: Tue Oct 31 14:10:20 UTC 2017 The next day is: Wed Nov 1 14:10:20 UTC 2017 The next day is: Thu Nov 2 14:10:20 UTC 2017
+
+
+
+<br>Now each time we add an item to the collection, it is a different instance. All the items evolve separately. To add an object in a collection and avoid this item being changed each time the source object is changed, you have to copy or clone the object before you add it to the collection.<br>
+<br> <br>
+<br> Collection
+Java ProgrammingArrayList
+Map 
+<br>Navigate Aggregate topic: ( v • d • e )
+ Collection
+ ArrayList
+ Map
+ Comparing Objects
+
+<br>The ArrayList class extends AbstractList and implements the List interface. ArrayList supports dynamic arrays that can grow as needed.<br>
+<br>Standard Java arrays are of a fixed length. After arrays are created, they cannot grow or shrink, which means that you must know in advance how many elements an array will hold.<br>
+<br>Array lists are created with an initial size. When this size is exceeded, the collection is automatically enlarged. When objects are removed, the array may be shrunk.<br>
+<br> <br>
+<br> ArrayList
+Java ProgrammingMap
+Comparing Objects 
+<br>Navigate Aggregate topic: ( v • d • e )
+ Collection
+ ArrayList
+ Map
+ Comparing Objects
+
+<br>
+Aside from the java.util.Collection interface, the Java JDK has the java.util.Map interface as well. It is sometimes also called an Associated Array or a Dictionary. A map defines key value mappings. Implementations of the Map interface do not contain collections of objects. Instead they contain collections of key->value mappings. It can be thought of as an array where the index doesn't need to be an integer.<br>
+<br>
+Code section 5.17: Use of a map.
+
+
+1 import java.util.Map;
+2 import java.util.Hashtable;
+3 ...
+4 Map map = new Hashtable();
+5 ...
+6 map.put(key, value);
+
+
+<br>Use the Map interface if you need to keep related objects together in a Map where you can:<br>
+<br>Access an element by a key object
+Map one object to other
+<br><br>
+<br>
+Figure 5.6: Map Interfaces.
+
+
+
+
+
+
+<br><br>
+<br>java.util.Map<K,V> 
+maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value. The Map interface provides three collection views, which allow a map's contents to be viewed as a set of keys, collection of values, or set of key-value mappings. The key is usually a non-mutable object. The value object however can be a mutable object.
+java.util.SortedMap<K,V> 
+same as the Map interface, plus the keys in the Map are sorted.
+<br>In the above example, the same operations are made with two different map implementations:<br>
+<br>
+
+Code listing 5.4: MapImplementations.java
+
+
+ 1 import java.util.LinkedHashMap;
+ 2 import java.util.Map;
+ 3 import java.util.TreeMap;
+ 4 
+ 5 /**
+ 6  * Compare the map implementations.
+ 7  *
+ 8  * @author xxx
+ 9  */
+10 public class MapImplementations {
+11 
+12   /**
+13    * Compare the map implementations.
+14    * @param args The execution parameters.
+15    */
+16   public static void main(String[] args) {
+17     processMap(new LinkedHashMap<String, Integer>());
+18 
+19     processMap(new TreeMap<String, Integer>());
+20   }
+21 
+22   /**
+23    * Use a map:
+24    * 1. Fill the map with key-> value.
+25    * 2. Print all the keys.
+26    *
+27    * @param map The used map.
+28    */
+29   public static void processMap(Map<String, Integer> map) {
+30     System.out.println("Process the map");
+31     map.put("3", new Integer(3));
+32     map.put("2", new Integer(2));
+33     map.put("1", new Integer(1));
+34 
+35     for (String key : map.keySet()) {
+36       System.out.println(key);
+37     }
+38   }
+39 }
+
+
+
+
+
+Console for Code listing 5.4
+
+Process the map
+3
+2
+1
+Process the map
+1
+2
+3
+
+
+<br>We see that only the TreeMap has sorted the keys. Beware of the generics. The Map interface is tricky. The methods get() and remove() are not generic. This means that you must be careful of the type of the key:<br>
+<br>
+
+Code section 5.18: Tricky generics.
+
+
+ 1 Map<Integer, String> map = new TreeMap<Integer, String>();
+ 2 
+ 3 map.put(new Integer(1), "Watch");
+ 4 map.put(new Integer(2), "out");
+ 5 map.put(new Integer(3), "!");
+ 6 
+ 7 map.remove("2");
+ 8 
+ 9 for (String value : map.values()) {
+10   System.out.println(value);
+11 }
+
+
+
+
+
+Console for Code section 5.18
+
+Watch
+out
+!
+
+
+<br>The remove() call has done nothing because "2" is a String, not an Integer so no key and value has been found and removed.<br>
+<br>Map Classes[edit]<br>
+<br>The Map interface has the following implementations:<br>
+<br><br>
+<br>
+Figure 5.7: Map class diagram.
+
+
+
+
+
+
+<br><br>
+<br>java.util.TreeMap<E>
+guarantees that the map will be in ascending key order, sorted according to the natural order for the key's class, not-synchronized.
+java.util.Hashtable<E> 
+Synchronized, null can not be used as key
+java.util.HashMap<E> 
+is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls
+java.util.concurrent.ConcurrentHashMap 
+same as Hashtable, plus retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove).
+java.util.WeakHashMap<E> 
+entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. Non-synchronized.
+java.util.LinkedHashMap<E> 
+This linked list defines the iteration ordering, which is normally the order in which keys were first inserted into the map (first insertion-order). Note that insertion order is not affected if a key is re-inserted into the map.
+java.util.IdentityHashMap 
+This class implements the Map interface with a hash table, using reference-equality in place of object-equality when comparing keys (and values). In other words, in an IdentityHashMap, two keys k1 and k2 are considered equal if and only if (k1==k2). (In normal Map implementations (like HashMap) two keys k1 and k2 are considered equal if and only if (k1==null ? k2==null : k1.equals(k2)).) Not-synchronized.
+java.util.EnumMap 
+All of the keys in an enum map must come from a single enum type that is specified, explicitly or implicitly, when the map is created. Enum maps are represented internally as arrays. This representation is extremely compact and efficient. Not-synchronized.
+<br> <br>
+<br> Map
+Java ProgrammingComparing Objects
+Exceptions 
+<br>Navigate Aggregate topic: ( v • d • e )
+ Collection
+ ArrayList
+ Map
+ Comparing Objects
+
+<br>In Java, we can distinguish two kinds of equality.<br>
+<br>Object reference equality: when two object references point to the same object.
+Object value equality: when two separate objects happen to have the same values/state.
+<br>If two objects are equal in reference, they are equal in value too.<br>
+<br> <br>
+<br> Exceptions
+Java ProgrammingThrowing and Catching Exceptions
+Checked Exceptions 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>
+Language compilers are adept at pointing out most of the erroneous code in a program, however there are some errors that only become apparent when the program is executed. Consider the code listing 6.1; here, the program defines a method divide that does a simple division operation taking two integers as parameter arguments and returning the result of their division. It can safely be assumed that when the divide(4, 2) statement is called, it would return the number 2. However, consider the next statement, where the program relies upon the provided command line arguments to generate a division operation. What if the user provides the number zero (0) as the second argument? We all know that division by zero is impossible, but the compiler couldn't possibly have anticipated the user providing zero as an argument.<br>
+<br>
+
+Code listing 6.1: SimpleDivisionOperation.java
+
+
+ 1 public class SimpleDivisionOperation {
+ 2   public static void main(String[] args) {
+ 3     System.out.println(divide(4, 2));
+ 4     if (args.length > 1) {
+ 5       int arg0 = Integer.parseInt(args[0]);
+ 6       int arg1 = Integer.parseInt(args[1]);
+ 7       System.out.println(divide(arg0, arg1));
+ 8     }
+ 9   }
+10 
+11   public static int divide(int a, int b) {
+12     return a / b;
+13   }
+14 }
+
+
+
+
+
+Output for Code listing 6.1
+
+$ java SimpleDivisionOperation 1 0
+2
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+     at SimpleDivisionOperation.divide(SimpleDivisionOperation.java:12)
+     at SimpleDivisionOperation.main(SimpleDivisionOperation.java:7)
+
+
+<br>Such exceptional code that results in erroneous interpretations at program runtime usually results in errors that are called exceptions in Java. When the Java interpreter encounters an exceptional code, it halts execution and displays information about the error that occurs. This information is known as a stack trace. The stack trace in the above example tells us more about the error, such as the thread — "main" — where the exception occurred, the type of exception — java.lang.ArithmeticException, a comprehensible display message — / by zero, and the exact methods and the line numbers where the exception may have occurred.<br>
+<br> <br>
+<br> Throwing and Catching Exceptions
+Java ProgrammingChecked Exceptions
+Unchecked Exceptions 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>
+A checked exception is a type of exception that must be either caught or declared in the method in which it is thrown. For example, the java.io.IOException is a checked exception. To understand what is a checked exception, consider the following code:<br>
+<br>
+Code section 6.9: Unhandled exception.
+
+
+1 public void ioOperation(boolean isResourceAvailable) {
+2   if (!isResourceAvailable) {
+3     throw new IOException();
+4   }
+5 }
+
+
+<br>This code won't compile because it can throw a checked exception. The compilation error can be resolved in either of two ways: By catching the exception and handling it, or by declaring that the exception can be thrown using the throws keyword.<br>
+<br>
+
+Code section 6.10: Catching an exception.
+
+
+1 public void ioOperation(boolean isResourceAvailable) {
+2   try {
+3     if (!isResourceAvailable) {
+4       throw new IOException();
+5     }
+6   } catch(IOException e) {
+7     // Handle caught exceptions.
+8   }
+9 }
+
+
+
+
+
+Code section 6.11: Declaring an exception.
+
+
+1 public void ioOperation(boolean isResourceAvailable) throws IOException {
+2   if (!isResourceAvailable) {
+3     throw new IOException();
+4   }
+5 }
+
+
+
+<br>In the Java class hierarchy, an exception is a checked exception if it inherits from java.lang.Throwable, but not from java.lang.RuntimeException or java.lang.Error. All the application or business logic exceptions should be checked exceptions.<br>
+<br>It is possible that a method declares that it can throw an exception, but actually it does not. Still, the caller has to deal with it. The checked exception declaration has a domino effect. Any methods that will use the previous method will also have to handle the checked exception, and so on.<br>
+<br>So the compiler for the Java programming language checks, at compile time, that a program contains handlers for all application exceptions, by analyzing each method body. If, by executing the method body, an exception can be thrown to the caller, that exception must be declared. How does the compiler know whether a method body can throw an exception? That is easy. Inside the method body, there are calls to other methods; the compiler looks at each of their method signature, what exceptions they declared to throw.<br>
+<br> <br>
+<br> Checked Exceptions
+Java ProgrammingUnchecked Exceptions
+Preventing NullPointerException 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>
+Unchecked, uncaught or runtime exceptions are exceptions that can be thrown without being caught or declared:<br>
+<br>
+Code section 6.12: Throwing an exception without declaring it or catching it.
+
+
+1 public void futureMethod() {
+2   throw new RuntimeException("This method is not yet implemented");
+3 }
+
+
+<br>...however, you can still declare and catch such exceptions. Runtime exceptions are not business exceptions. They are usually related to hard-coded issues like data errors, arithmetic overflow, divide by zero etc. In other words, errors that can't be worked around nor anticipated. The most famous (and feared) runtime exception is the NullPointerException.<br>
+<br>A runtime exception must be or inherit from the RuntimeException class or the Error class.<br>
+<br>Sometime it is desirable to catch all exceptions for logging purposes, then throw them back in. For example, in servlet programming when an application server calls the server getLastModified(), we want to monitor that no exceptions happened during the serving of the request. The application has its own logging separate from the server logging so the runtime exceptions would just go through without being detected by the application. The following code checks all exceptions, logs them and throws them back again.<br>
+<br>
+Code section 6.13: Logging an exception.
+
+
+ 1 public long getLastModified(HttpServletRequest req) {
+ 2   try {
+ 3     ...
+ 4     return getTimeStamp();
+ 5     ...
+ 6   } catch(RuntimeException e) {
+ 7     log.error("Error during handling post request", e);
+ 8 
+ 9     throw e;
+10   }
+11 }
+
+
+<br>In the above code, all business logic exception are handled in the getTimeStamp() method. Runtime exceptions are caught for logging purposes, and then thrown back to the server to be handled.<br>
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br> Checked Exceptions
+Java ProgrammingUnchecked Exceptions
+Preventing NullPointerException 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1299
+Cached time: 20171026141635
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.120 seconds
+Real time usage: 0.166 seconds
+Preprocessor visited node count: 570/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 10757/2097152 bytes
+Template argument size: 1111/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 52/500
+Lua time usage: 0.088/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  147.737      1 -total
+ 86.88%  128.355      2 Template:Programming/Navigation
+  6.53%    9.646      1 Template:Java_Programming/ExceptionsTopic/Nav
+  3.42%    5.049      3 Template:BookCat
+  2.77%    4.097      1 Template:Java_Programming/Exceptions/Topic
+  2.73%    4.038      1 Template:Status
+  2.70%    3.986      1 Template:Navbar
+  2.40%    3.549      3 Template:BookCat/default
+  1.51%    2.231      6 Template:Stage_short
+  1.42%    2.105      1 Template:Todo
+<br>
+<br> <br>
+<br> Unchecked Exceptions
+Java ProgrammingPreventing NullPointerException
+Stack trace 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>NullPointerException is a RuntimeException. In Java, a special null value can be assigned to an object reference. NullPointerException is thrown when an application attempts to use an object reference that has the null value. These include:<br>
+<br>Calling an instance method on the object referred by a null reference.
+Accessing or modifying an instance field of the object referred by a null reference.
+If the reference type is an array type, taking the length of a null reference.
+If the reference type is an array type, accessing or modifying the slots of a null reference.
+If the reference type is a subtype of Throwable, throwing a null reference.
+<br>Applications should throw instances of this class to indicate other illegal uses of the null object.<br>
+<br>
+Code section 6.13: Null pointer.
+
+
+1 Object obj = null;
+2 obj.toString();  // This statement will throw a NullPointerException
+
+
+
+<br>The above code shows one of the pitfalls of Java and the most common source of bugs. No object is created and the compiler does not detect it. NullPointerException is one of the most common exceptions thrown in Java.<br>
+<br> <br>
+<br> Preventing NullPointerException
+Java ProgrammingStack trace
+Nesting Exceptions 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>
+Stack Trace is a list of method calls from the point when the application was started to the point where the exception was thrown. The most recent method calls are at the top.<br>
+<br>
+
+Code listing 6.3: StackTraceExample.java
+
+
+ 1 public class StackTraceExample {
+ 2   public static void main(String[] args) {
+ 3     method1();
+ 4   }
+ 5 
+ 6   public static void method1() {
+ 7     method11();
+ 8   }
+ 9 
+10   public static void method11() {
+11     method111();
+12   }
+13 
+14   public static void method111() {
+15     throw new NullPointerException("Fictitious NullPointerException");
+16   }
+17 }
+
+
+
+
+
+Output for Code listing 6.3
+
+Exception in thread "main" java.lang.NullPointerException: Fictitious NullPointerException
+at StackTraceExample.method111(StackTraceExample.java:15)
+at StackTraceExample.method11(StackTraceExample.java:11)
+at StackTraceExample.method1(StackTraceExample.java:7)
+at StackTraceExample.main(StackTraceExample.java:3)
+
+
+<br>The stack trace can be printed to the standard error by calling the public void printStackTrace() method of an exception.<br>
+<br>From Java 1.4, the stack trace is encapsulated into an array of a java class called java.lang.StackTraceElement. The stack trace element array returned by Throwable.getStackTrace() method. Each element represents a single stack frame. All stack frames except for the one at the top of the stack represent a method invocation. The frame at the top of the stack represents the execution point at which the stack trace was generated. Typically, this is the point at which the throwable corresponding to the stack trace was created.<br>
+<br>A stack frame represents the following information:<br>
+<br>
+Code section 6.24: Stack frame.
+
+
+1 public StackTraceElement(String declaringClass,
+2                          String methodName,
+3                          String fileName,
+4                          int lineNumber);
+
+
+<br>Creates a stack trace element representing the specified execution point.<br>
+<br> <br>
+<br> Stack trace
+Java ProgrammingNesting Exceptions
+Concurrent Programming 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>
+When an exception is caught, the exception contains the stack-trace, which describes the error and shows where the exception happened (i.e. where the problem is and where the application programmer should look to fix the problem). Sometimes it is desirable to catch an exception and throw another exception. If the new exception keeps a reference to the first exception, the first exception is called a nesting exception.<br>
+<br>
+
+Code listing 6.4: NestingExceptionExample.java
+
+
+ 1 public class NestingExceptionExample {
+ 2  
+ 3   public static void main(String[] args) throws Exception {
+ 4     Object[] localArgs = (Object[]) args;
+ 5    
+ 6     try {
+ 7       Integer[] numbers = (Integer[]) localArgs;
+ 8     } catch (ClassCastException originalException) {
+ 9       Exception generalException = new Exception(
+10         "Horrible exception!",
+11         originalException);
+12       throw generalException;
+13     }
+14   }
+15 }
+
+
+
+
+
+Output for Code listing 6.4
+
+Exception in thread "main" java.lang.Exception: Horrible exception!
+at NestingExceptionExample.main(NestingExceptionExample.java:9)
+Caused by: java.lang.ClassCastException: [Ljava.lang.String; incompatible with [Ljava.lang.Integer;
+at NestingExceptionExample.main(NestingExceptionExample.java:7)
+
+
+<br>The above code is an example of a nesting exception. When the Exception is thrown, by passing in the ClassCastException object reference as a parameter, the ClassCastException is nested in the newly created Exception, its stack-trace is appended together. When the Exception is caught, its stack-trace contains the original ClassCastException's stack-trace.<br>
+<br>This is a kind of exception conversion, from one exception to another. For example, calling a remote object using RMI, the calling method has to deal with RemoteException which is thrown if something is wrong during the communication. From the application point of view, RemoteException has no meaning, it should be transparent to the application that a remote object was used or not. So the RemoteException should be converted to an application exception.<br>
+<br>This conversion can also hide where the error is originated. The stack-trace starts when the exception is thrown. So when we catch and throw a new exception, the stack-trace starts at when the new exception was thrown, losing the original stack-trace. This was true with the earlier version of Java (before 1.4). Since then, so called cause facility capabilities were built in the Throwable class.<br>
+<br>A throwable contains a snapshot of the execution stack of its thread at the time it was created. It can also contain a message string that gives more information about the error. Finally, it can contain a cause: another throwable that caused this throwable to get thrown. The cause facility is also known as the chained exception facility, as the cause can, itself, have a cause, and so on, leading to a "chain" of exceptions, each caused by another.<br>
+<br>A cause can be associated with a throwable in two ways: via a constructor that takes the cause as an argument, or via the initCause(Throwable) method. New throwable classes that wish to allow causes to be associated with them should provide constructors that take a cause and delegate (perhaps indirectly) to one of the Throwable constructors that takes a cause. For example:<br>
+<br>
+Code section 6.26: Chaining-aware constructor.
+
+
+1 try {
+2     lowLevelOp();
+3 } catch (LowLevelException le) {
+4     throw new HighLevelException(le);
+5 }
+
+
+<br>Because the initCause method is public, it allows a cause to be associated with any throwable, even a "legacy throwable" whose implementation predates the addition of the exception chaining mechanism to Throwable. For example:<br>
+<br>
+Code section 6.27: Legacy constructor.
+
+
+1 try {
+2     lowLevelOp();
+3 } catch (LowLevelException le) {
+4     throw (HighLevelException) new HighLevelException().initCause(le);
+5 }
+
+
+<br>Further, as of release 1.4, many general purpose Throwable classes (for example Exception, RuntimeException, Error) have been retrofitted with constructors that take a cause. This was not strictly necessary, due to the existence of the initCause method, but it is more convenient and expressive to delegate to a constructor that takes a cause.<br>
+<br>By convention, class Throwable and its subclasses have two constructors, one that takes no arguments and one that takes a String argument that can be used to produce a detail message. Further, those subclasses that might likely have a cause associated with them should have two more constructors, one that takes a Throwable (the cause), and one that takes a String (the detail message) and a Throwable (the cause).<br>
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br> Stack trace
+Java ProgrammingNesting Exceptions
+Concurrent Programming 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1188
+Cached time: 20171026142531
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.184 seconds
+Real time usage: 0.227 seconds
+Preprocessor visited node count: 587/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 11345/2097152 bytes
+Template argument size: 1270/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 55/500
+Lua time usage: 0.112/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  192.991      1 -total
+ 82.06%  158.361      2 Template:Programming/Navigation
+  8.64%   16.671      1 Template:Java_Programming/ExceptionsTopic/Nav
+  4.84%    9.335      3 Template:BookCat
+  4.06%    7.832      1 Template:Java_Programming/Exceptions/Topic
+  3.47%    6.691      3 Template:BookCat/default
+  3.22%    6.212      1 Template:Navbar
+  2.62%    5.051      1 Template:Status
+  2.15%    4.142      2 Template:XExample
+  1.88%    3.633      6 Template:Stage_short
+<br>
+<br> <br>
+<br> Concurrent Programming
+Java ProgrammingThreads and Runnables
+Basic Synchronization 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+CPUs for any computer are designed to execute one task at any given time, yet we run multiple applications side-by-side and everything works in perfect congruence. It's not just because CPUs are extremely fast in performing calculations, it's because CPUs use a clever device of dividing their time amongst various tasks. Each application or task that is invoked on a computer gets associated with the CPU in the form of a process. A CPU therefore manages various processes, and jumps back and forth amongst each process giving it a fraction of its time and processing capability. This happens so fast that to a normal computer user it presents with the illusion of processes being run simultaneously. This capability of the CPU to divide its time amongst processes is called multitasking.<br>
+<br>So, if we run a Java application on a computer, we are effectively creating a process with the CPU that gets a fraction of the CPU's time. In Java parlance, this main process gets called the daemon process or the daemon thread. But, Java goes one step further. It allows programmers to divide this daemon thread into several multiple threads which get executed simultaneously (much like a CPU) hence providing a Java application with a finer multitasking capability called multithreading.<br>
+<br>In this section, we will take a look at what threads are and how multithreading is implemented within a Java program to make it appear congruent and effectively fast to respond.<br>
+<br> <br>
+<br> Threads and Runnables
+Java ProgrammingBasic Synchronization
+Client Server 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+In a multi-threaded environment, when more than one thread can access and modify a resource, the outcome could be unpredictable. For example, let's have a counter variable that is incremented by more than one thread.<br>
+<br>Beware! Synchronization is an ambiguous term. It doesn't consist of making all threads executing the same code section at the same time. It is the opposite. It prevents any two threads from executing the same code section at the same time. It synchronizes the end of one processing with the beginning of a second processing.<br>
+<br>
+Code section 1.1: Counter implementation
+
+
+int counter = 0;
+...
+counter += 1;
+
+
+<br>The above code is built up by the following sub-operations:<br>
+<br>Read ; read variable counter
+Add ; add 1 to the value
+Save ; save the new value to variable counter
+<br>Let's say that two threads need to execute that code, and if the initial value of the counter variable is zero, we expect after the operations the value to be 2.<br>
+<br>Thread 1
+ 
+Thread 2
+ 
+ 
+ 
+ 
+ 
+Read 0
+ 
+Read 0
+ 
+ 
+ 
+ 
+ 
+Add 1
+ 
+Add 1
+ 
+ 
+ 
+ 
+ 
+Save 1
+ 
+Save 1
+ 
+ 
+ 
+ 
+ 
+<br>In the above case Thread 1 operation is lost, because Thread 2 overwrites its value. We'd like Thread 2 to wait until Thread 1 finishes the operation. See below:<br>
+<br>Thread 1
+ 
+Thread 2
+ 
+ 
+ 
+ 
+ 
+Read 0
+ 
+blocked
+ 
+ 
+ 
+ 
+ 
+Add 1
+ 
+blocked
+ 
+ 
+ 
+ 
+ 
+Save 1
+ 
+unblocked
+ 
+ 
+ 
+ 
+ 
+ 
+Read 1
+ 
+ 
+ 
+ 
+Add 1
+ 
+ 
+ 
+ 
+Save 2
+ 
+ 
+ 
+<br>Critical Section 
+In the above example the code counter+=1 must be executed by one and only one thread at any given time. That is called critical section. During programming, in a multi-threading environment we have to identify all those pieces of code that belongs to a critical section, and make sure that only one thread can execute those codes at any given time. That is called synchronization.
+<br>Synchronizing threads 
+The thread access to a critical section code must be synchronized among the threads, that is to make sure that only one thread can execute it at any given time.
+<br>Object monitor 
+Each object has an Object monitor. Basically it is a semaphore, indicating if a critical section code is being executed by a thread or not. Before a critical section can be executed, the thread must obtain an Object monitor. Only one thread at a time can own that object's monitor.
+<br>A thread becomes the owner of the object's monitor in one of three ways 
+
+By executing a synchronized instance method of that object. See synchronized keyword.
+By executing the body of a synchronized statement that synchronizes on the object. See synchronized keyword.
+For objects of type Class, by executing a synchronized static method of that class.
+
+<br>The Object Monitor takes care of the synchronization, so why do we need the "wait() and notify() methods"? 
+For synchronization we don't really need them, however for certain situations it is nice to use them. A nice and considerate thread will use them. It can happen that during executing a critical section, the thread is stuck, cannot continue. It can be because it's waiting for an IO and other resources. In any case, the thread may need to wait a relatively long time. It would be selfish for the thread to hold on to the object monitor and blocking other threads to do their work. So the thread goes to a 'wait' state, by calling the wait() method on the object. It has to be the same object the thread obtained its object monitor from.
+On the other hand though, a thread should call the wait() method only if there is at least one other thread out there who will call the notify() method when the resource is available, otherwise the thread will wait for ever, unless a time interval is specified as parameter.
+<br>Let's have an analogy. You go in a shop to buy some items. You line up at the counter, you obtain the attention of the sales-clerk - you get her "object-monitor". You ask for the item you want. One item needs to be brought in from a warehouse. It'll take more than five minutes, so you release the sales-clerk (give her back her "object-monitor") so she can serve other customers. You go into a wait state. Let's say there are five other customers already waiting. There is another sales-clerk, who brings in the items from the warehouse. As she does that, she gets the attention of the first sales-clerk, getting her object-monitor and notifies one or all waiting customer(s), so the waited customer(s) wake up and line up again to get the attention of the first sales-clerk.
+<br>Note the synchronization between the waiting customer and the sales-clerk who brings in the items. This is kind of producer-consumer synchronization.
+Also note that there is only one object-monitor, belonging to the first sales-clerk. That object-monitor/the attention of clerk needs to be obtained first before a wait and a notify can happen.
+<br><br>
+<br>final void wait() method 
+The current thread must own this object's monitor. The thread releases ownership of this monitor and waits until another thread notifies the threads waiting on this object's monitor to wake up either through a call to the notify method or to the notifyAll method. The thread then waits until it can re-obtain ownership of the monitor and resume execution.
+<br>final void wait(long time) 
+The same as wait, but the thread wakes after the specified duration of time passes, regardless of whether there was a notification or not.
+<br>final void notify() 
+This method should only be called by a thread that is the owner of this object's monitor. Wakes up a single thread that is waiting on this object's monitor. If many threads are waiting on this object's monitor, one of them is chosen to be awakened. The choice is arbitrary and occurs at the discretion of the implementation. A thread waits on an object's monitor by calling one of the wait methods.
+The awakened thread will not be able to proceed until the current thread relinquishes the lock on this object. The awakened thread will compete in the usual manner with any other threads that might be actively competing to synchronize on this object; for example, the awakened thread enjoys no reliable privilege or disadvantage in being the next thread to lock this object.
+<br>final void notifyAll() 
+Same as notify(), but it wakes up all threads that are waiting on this object's monitor.
+<br><br>
+<br>What are the differences between the sleep() and wait() methods? 
+<br>
+Thread.sleep(millis)  
+This is a static method of the Thread class. Causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds. The thread does not lose ownership of any monitors. It means that if the thread has an object-monitor, all other threads that need that monitor are blocked. This method can be called regardless whether the thread has any monitor or not.
+
+<br>
+wait()  
+This method is inherited from the Object class. The thread must have obtained the object-monitor of that object first before calling the wait() method. The object monitor is released by the wait() method, so it does not block other waiting threads wanting this object-monitor.
+
+<br><br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br> Threads and Runnables
+Java ProgrammingBasic Synchronization
+Client Server 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1299
+Cached time: 20171026141711
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.148 seconds
+Real time usage: 0.206 seconds
+Preprocessor visited node count: 561/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 11544/2097152 bytes
+Template argument size: 1159/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 58/500
+Lua time usage: 0.103/10.000 seconds
+Lua memory usage: 778 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  178.203      1 -total
+ 86.02%  153.294      2 Template:Programming/Navigation
+  5.30%    9.436      1 Template:Java_Programming/ConcurrentTopic/Nav
+  3.10%    5.525      3 Template:BookCat
+  2.19%    3.904      1 Template:Java_Programming/Concurrent_Programming/Topic
+  2.19%    3.898      1 Template:Navbar
+  2.13%    3.788      3 Template:BookCat/default
+  1.86%    3.317      1 Template:Status
+  1.30%    2.321      2 Template:Java:synchronized
+  1.20%    2.132      1 Template:Todo
+<br>
+<br> <br>
+<br> Basic Synchronization
+Java ProgrammingClient Server
+Remote Method Invocation 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+In 1990s, the trend was moving away from Mainframe computing to Client/Server as the price of Unix servers dropped. The database access and some business logic were centralized on the back-end server, collecting data from the user program was installed on the front-end users' "client" computers. In the Java world there are three main ways the front-end and the back-end can communicate.<br>
+<br>The client application uses JDBC (Java DataBase Connectivity API) to connect to the data base server, (Limited business logic on the back-end, unless using Stored procedures).
+The client application uses RMI (Remote Method Invocation) to communicate with the back-end.
+The client application uses a socket connection to communicate with the back-end.
+<br> <br>
+<br> Client Server
+Java ProgrammingRemote Method Invocation
+EJB 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+Java's Remote Method Invocation (commonly referred to as RMI) is used for client and server models. RMI is the object oriented equivalent to RPC (Remote procedure call).<br>
+<br>The Java Remote Method Invocation (RMI) system allows an object running in one Java Virtual Machine (VM) to invoke methods of an object running in another Java VM. RMI provides for remote communication between programs written in the Java programming language.<br>
+<br>RMI is only defined for use with the Java platform. If you need to call methods between different language environments, use CORBA. With CORBA a Java client can call a C++ server and/or a C++ client can call a Java server. With RMI that can not be done.<br>
+<br> <br>
+<br> Remote Method Invocation
+Java ProgrammingEJB
+JavaSpaces 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+Enterprise JavaBeans (EJB) technology is the server-side component architecture for Java Platform, Enterprise Edition (Java EE). EJB technology enables to create distributed, transactional, secure and portable application component objects.<br>
+<br>EJB supports the development and deployment of component based business applications. Applications written using the Enterprise JavaBeans architecture are scalable, transactional, and multi-user secure. These applications may be written once, and then deployed on any server platform that supports the Enterprise JavaBeans specification.<br>
+<br> <br>
+<br> EJB
+Java ProgrammingJavaSpaces
+Annotations 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+After J2EE, Sun had a vision about the next step of network computing: in a network environment, there would be many independent services and consumers. That is JavaSpaces. JavaSpaces would allow these services/consumers to interact dynamically with each other in a robust way. It can be viewed as an object repository that provides a distributed persistent object exchange mechanism (persistent can be in memory or disk) for Java objects. It can be used to store the system state and implement distributed algorithms. In a JavaSpace, all communication partners (peers) communicate by sharing state. It is an implementation of the Tuple spaces idea.<br>
+<br>JavaSpaces is used when someone wants to achieve scalability and availability and at the same time reducing the complexity of the overall system.<br>
+<br>Processes perform simple operations to write new objects into a JavaSpace, take objects from a JavaSpace, or read (make a copy of) objects from the JavaSpace.<br>
+<br>In conventional applications, objects are assembled from the database before presenting to the end user. In JavaSpace applications, we keep the ready made "end user" objects and store them in the JavaSpace. In JavaSpace applications the services are decoupled from each other; they communicate through objects that they write and read/take from the JavaSpace. Services search for objects that they want to take or read from the Space by using template object.<br>
+<br> <br>
+<br> Annotations
+Java ProgrammingJavadoc
+Annotations/Introduction 
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br>
+Java allows users to document the classes and the members by using a particular syntax of comment.<br>
+<br> <br>
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br><br>
+<br> <br>
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br>
+Annotations can be viewed as a source of defining meta-data for a piece of code in Java. The annotation @CodeDescription used in the following sections does not come as a part of the Java API.<br>
+<br> <br>
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br>
+There are five annotation types in the java.lang.annotation package called meta-annotations. These annotation types are used to annotate other annotation types.<br>
+<br> <br>
+<br>Navigate Javadoc & Annotations topic: ( v • d • e )
+ Javadoc
+ Introduction to Annotation
+ Creating custom annotations
+ Meta-annotations
+ Helping the compiler
+
+<br>
+Annotations can be used by the compiler to carry out certain directives. Much that you'd love programming in Java, you probably would have been fussed about compiler warnings. Compiler warnings are not necessarily errors but are warnings that tell you the code might malfunction because of some reason.<br>
+<br>Taming the compiler[edit]<br>
+<br>You can issue directive to the compiler in the shape of three pre-defined annotation to tell it what sort of pre-processing a certain bit of code requires. The three annotations are:<br>
+<br>@Deprecated
+@Override
+@SuppressWarnings(..)
+<br>@Deprecated is used to flag that a method or class should no longer be used, normally because a better alternative exists. Compilers and IDEs typically raise a warning if deprecated code is invoked from non deprecated code. [1]<br>
+<br>@Override flags that a method overrides a method in a superclass. If there is no overridden method, a compile error should occur. [2]<br>
+<br>@SuppressWarnings(..) SuppressWarnings tells the compiler not to report on some, or all, types of warnings. It can be applied to a type, a method or a variable. [3]<br>
+<br> <br>
+<br> Annotations/Compiler and Annotations
+Java ProgrammingBasic IO
+Streams 
+<br>Topics:
+Preface
+Getting started
+Language fundamentals
+Classes and objects
+Aggregate
+Exceptions
+Concurrent Programming
+Javadoc & Annotations
+Designing user interfaces
+Advanced topics
+
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br>
+This section covers the Java platform classes used for basic input and output. But before we begin we need to have a concrete understanding of what input and output means in programming. To grasp this concept, think of the Java platform as a system.<br>
+<br> <br>
+<br> Basic IO
+Java ProgrammingStreams
+Event Handling 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br>
+The most basic input and output in Java (System.in and System.out fields that have been used in the Basic I/O) is done using streams. Streams are objects that represent sources and destinations of data. Streams that are sources of data can be read from, and streams that are destinations of data can be written to. A stream in Java is an ordered sequence of bytes of undetermined length. Streams are ordered and in sequence so that the java virtual machine can understand and work upon the stream. Streams are analogous to water streams. They exist as a communication medium, just like electromagnetic waves in communication. The order or sequence of bytes in a Java stream allow the virtual machine to classify it among other streams.<br>
+<br>Java has various inbuilt streams implemented as classes in the package java.io like the classes of System.in and System.out. Streams can be classed as both input and output streams. All Java streams are derived from Input Stream (java.io.InputStream) and Output Stream (java.io.OutputStream) classes. They are abstract base classes meant for other stream classes. The System.in is the input stream class derivative and analogically System.out is the output counterpart. Both are basic classes used to directly interact with input and output through console, similarly follows System.err. Also Java has streams to communicate across different parts of a program or even among threads. There are also classes that "filter" streams, changing one format to another (e.g. class DataOutputStream, which translates various primitive types to byte streams).<br>
+<br>It is a characteristic of streams that they deal only in one discrete unit of data at a time, and different streams deal with different types of data. If one had a stream that represented a destination for bytes, for example, one would send data to the destination one byte at a time. If a stream was a source of byte data, one would read the data a byte at a time. Because this is the only way to access data from a stream, in this latter case, we wouldn't know when we had read all the data from the stream until we actually got there. When reading a stream, one generally has to check each unit of data each read operation to see if the end of the stream has been reached (with byte streams, the special value is the integer -1, or FFFF hex).<br>
+<br> <br>
+<br> Streams
+Java ProgrammingEvent Handling
+JavaBeans 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br>
+The Java platform Event Model is the basis for event-driven programming on the Java platform.<br>
+<br> <br>
+<br> Event Handling
+Java ProgrammingJavaBeans
+Canvas 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br>
+Reusability comes at the core of any modern computer language's framework. It is often desirable to use components you previously built in recurring environments. In Rapid Application Development, these prove more helpful as you can drag them off a list of components and use it elsewhere in your project. Such level of reusability is added into the Java Programming language with the help of the JavaBeans architecture.<br>
+<br>JavaBeans are the mainstream Java component model, introduced in 1996 by Sun Microsystems. JavaBeans are defined as follows:<br>
+<br>"A JavaBean is a reusable software component that can be manipulated visually in a builder tool."<br>
+<br>Together with the component model, Sun released a simple visual composition tool, the BeanBox. It is mostly intended for experimenting with Beans rather than offering a professional IDE. For real world applications, one should better deploy on one of the Java IDEs like Visual Age or JBuilder that support the visual composition of JavaBeans.<br>
+<br>As we will see, JavaBeans do not essentially differ from standard Java classes, which makes the component model quite easy to use. What sets a JavaBean apart from normal Java classes is that a JavaBean follows the Oracle JavaBeans Standard (the term JavaBean or simply bean also refers to the instances of a JavaBean class). There is a set of features and conventions adopted for facilitating reuse:<br>
+<br>Presence of a no argument constructor;
+Support for persistence;
+Properties manipulated by getter and setter methods;
+Support for introspection;
+Events as the mechanism of communication between beans;
+Support for customization via property editors.
+<br>The JavaBeans standard provides a framework for creating objects to be used by GUI tools, including Java development environments. But in more common usage, a bean is a serializable class that follows the JavaBeans naming conventions for its properties. These naming standards make it easy to use Java introspection.<br>
+<br> <br>
+<br> JavaBeans
+Java ProgrammingCanvas
+Graphics 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br>
+An essential part of programming in Java requires you to build exciting new user interfaces for yourselves. Components that come built into the Java framework are regular UI elements, however for a more rich experience, you need controls of your own. Take, for instance, a charting application. No charting tool comes built into a Java API. You need to manually draw the chart yourself.<br>
+<br>Coding drawing, to begin with, is pretty daunting but once you know the basics of Graphics programming in Java, you can create elegant graphics and art in no time. But the question that arises in one's mind is what to draw on. The answer to this question is simpler than it seems. You can start drawing on any component in the Java framework. Whether it be a panel, window or even a button.<br>
+<br>Let me break it down for you. A component in the Java language is a class that has been derived from the Component class. Each component has a method with a signature paint(Graphics) which can be overridden to manually draw something atop it.<br>
+<br> <br>
+<br> Canvas
+Java ProgrammingGraphics
+Graphics/Drawing shapes 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br> <br>
+<br> TOC
+Java ProgrammingDrawing shapes
+Drawing complex shapes 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br> <br>
+<br> Drawing shapes
+Java ProgrammingDrawing complex shapes
+Drawing text 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br>
+Code listing 9.4: Drawing complex shapes
+
+
+public class Hello {
+    JLabel label = newJLabel("Hello, Mundo!");
+    JFrame frame = new JFrame("BK*");
+    frame.add(label);
+
+    frame.setSize(300, 300);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+    frame.setLocationRelativeTo(null);
+    frame.toFront();
+    }
+}
+
+
+<br><br>
+<br> Drawing shapes
+Java ProgrammingDrawing complex shapes
+Drawing text 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1311
+Cached time: 20171026143433
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.064 seconds
+Real time usage: 0.090 seconds
+Preprocessor visited node count: 903/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 17008/2097152 bytes
+Template argument size: 1206/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 4/500
+Lua time usage: 0.011/10.000 seconds
+Lua memory usage: 598 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   60.107      1 -total
+ 60.10%   36.125      2 Template:Programming/Navigation
+ 26.18%   15.739      1 Template:Java_Programming/UserInterfaceTopics/Nav
+ 15.38%    9.247      1 Template:Java_Programming/UserInterface/Topic
+ 11.33%    6.810      5 Template:BookCat
+  8.30%    4.986      5 Template:BookCat/default
+  8.09%    4.864     15 Template:Stage_short
+  7.99%    4.803      1 Template:Navbar
+  5.49%    3.301      1 Template:Status
+  4.73%    2.843      1 Template:Java_Programming/Applets
+<br>
+<br> <br>
+<br> Drawing complex shapes
+Java ProgrammingDrawing text
+Understanding gradients 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br>
+Code listing 9.5: Drawing text
+
+
+public class MyCanvas extends Canvas {
+    public void init() {
+        setFont("Times New Roman", Font.PLAIN, 24);
+        setColor(Color.white);
+        setBackGroundColor(Color.black);
+        setLayout(new GridLayout());
+ 
+        add(label);
+        add(button);
+    }
+}
+
+
+<br><br>
+<br> Drawing complex shapes
+Java ProgrammingDrawing text
+Understanding gradients 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1309
+Cached time: 20171026151451
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.064 seconds
+Real time usage: 0.089 seconds
+Preprocessor visited node count: 903/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 16626/2097152 bytes
+Template argument size: 1186/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 5/500
+Lua time usage: 0.014/10.000 seconds
+Lua memory usage: 606 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   60.150      1 -total
+ 61.00%   36.694      2 Template:Programming/Navigation
+ 25.65%   15.430      1 Template:Java_Programming/UserInterfaceTopics/Nav
+ 14.53%    8.738      1 Template:Java_Programming/UserInterface/Topic
+ 13.23%    7.960      5 Template:BookCat
+  9.47%    5.698      5 Template:BookCat/default
+  8.02%    4.823      1 Template:Navbar
+  7.72%    4.644     15 Template:Stage_short
+  5.78%    3.479      1 Template:Status
+  5.56%    3.346      5 Template:BOOKCATEGORY
+<br>
+<br> <br>
+<br> Drawing text
+Java ProgrammingUnderstanding gradients
+TOC 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1310
+Cached time: 20171026154320
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.052 seconds
+Real time usage: 0.082 seconds
+Preprocessor visited node count: 806/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 14981/2097152 bytes
+Template argument size: 1183/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 7/500
+Lua time usage: 0.012/10.000 seconds
+Lua memory usage: 643 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   52.467      1 -total
+ 62.54%   32.814      1 Template:Programming/Navigation
+ 28.35%   14.875      1 Template:Java_Programming/UserInterfaceTopics/Nav
+ 16.87%    8.853      1 Template:Java_Programming/UserInterface/Topic
+ 10.83%    5.684      4 Template:BookCat
+  8.48%    4.447      1 Template:Navbar
+  8.22%    4.315     15 Template:Stage_short
+  7.44%    3.903      4 Template:BookCat/default
+  6.17%    3.235      1 Template:Todo
+  5.09%    2.671      1 Template:Java_Programming/Applets
+<br>
+<br> <br>
+<br> Graphics/Understanding gradients
+Java ProgrammingApplets
+Reflection 
+<br>Navigate User Interface topic:( v • d • e )
+ Basic I/O
+ Streams
+ Event handling
+ JavaBeans
+ Canvas
+ Graphics
+ Drawing basic shapes
+ Drawing complex shapes
+ Drawing text
+ Understanding gradients
+
+ Applets
+
+ Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+
+
+
+<br><br>
+<br> Overview
+ User Interface
+ Event Listeners
+ Graphics and Media
+<br><br>
+<br> Graphics/Understanding gradients
+Java ProgrammingApplets
+Reflection 
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1303
+Cached time: 20171026141613
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.164 seconds
+Real time usage: 0.225 seconds
+Preprocessor visited node count: 1039/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 16479/2097152 bytes
+Template argument size: 1221/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 79/500
+Lua time usage: 0.114/10.000 seconds
+Lua memory usage: 940 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  198.213      1 -total
+ 88.55%  175.522      2 Template:Programming/Navigation
+  7.97%   15.805      1 Template:Java_Programming/UserInterfaceTopics/Nav
+  6.91%   13.691      5 Template:BookCat
+  5.34%   10.578      5 Template:BookCat/default
+  4.47%    8.857      1 Template:Java_Programming/UserInterface/Topic
+  3.55%    7.042      5 Template:BOOKCATEGORY
+  2.78%    5.501     19 Template:Stage_short
+  2.27%    4.496      1 Template:Navbar
+  2.11%    4.186      2 Template:Java_Programming/Applets
+<br>
+<br> <br>
+<br>Navigate Reflection topic: ( v • d • e )
+ Reflection Overview
+ Dynamic Class Loading
+ Dynamic Method Invocation
+ Accessing Private Features with Reflection
+
+<br>Reflection is the mechanism by which Java exposes the features of a class during runtime, allowing Java programs to enumerate and access a class' methods, fields, and constructors as objects. In other words, there are object-based mirrors that reflect the Java object model, and you can use these objects to access an object's features using runtime API constructs instead of compile-time language constructs. Each object instance has a getClass() method, inherited from java.lang.Object, which returns an object with the runtime representation of that object's class; this object is an instance of the java.lang.Class, which in turn has methods that return the fields, methods, constructors, superclass, and other properties of that class. You can use these reflection objects to access fields, invoke methods, or instantiate instances, all without having compile-time dependencies on those features. The Java runtime provides the corresponding classes for reflection. Most of the Java classes that support reflection are in the java.lang.reflect package. Reflection is most useful for performing dynamic operations with Java — operations that are not hard-coded into a source program, but that are determined at run time. One of the most important aspects of reflection is dynamic class loading.<br>
+<br> <br>
+<br>Navigate Reflection topic: ( v • d • e )
+ Reflection Overview
+ Dynamic Class Loading
+ Dynamic Method Invocation
+ Accessing Private Features with Reflection
+
+<br>Dynamic Class Loading allows the loading of java code that is not known about before a program starts. Many classes rely on other classes and resources such as icons which make loading a single class unfeasible. For this reason the ClassLoader (java.lang.ClassLoader) is used to manage all the inner dependencies of a collection of classes. The Java model loads classes as needed and doesn't need to know the name of all classes in a collection before any one of its classes can be loaded and run.<br>
+<br> <br>
+<br>Navigate Reflection topic: ( v • d • e )
+ Reflection Overview
+ Dynamic Class Loading
+ Dynamic Method Invocation
+ Accessing Private Features with Reflection
+
+<br>We start with basic transfer object:<br>
+<br>
+Code listing 10.1: DummyTo.java
+
+
+ 1 package com.test;
+ 2  
+ 3 public class DummyTo {
+ 4     private String name;
+ 5     private String address;
+ 6  
+ 7     public String getName() {
+ 8         return name;
+ 9     }
+10  
+11     public void setName(String name) {
+12         this.name = name;
+13     }
+14  
+15     public String getAddress() {
+16         return address;
+17     }
+18  
+19     public void setAddress(String address) {
+20         this.address = address;
+21     }
+22  
+23     public DummyTo(String name, String address) {
+24         this.name = name;
+25         this.address = address;
+26     }
+27  
+28     public DummyTo() {
+29         this.name = new String();
+30         this.address = new String();
+31     }
+32  
+33     public String toString(String appendBefore) {
+34         return appendBefore + " " + name + ", " + address;
+35     }
+36 }
+
+
+<br>Following is the example for invoking method from the above mentioned to dynamically. Code is self explanatory.<br>
+<br>
+
+Code listing 10.2: ReflectTest.java
+
+
+ 1 package com.test;
+ 2  
+ 3 import java.lang.reflect.Constructor;
+ 4 import java.lang.reflect.InvocationTargetException;
+ 5 import java.lang.reflect.Method;
+ 6  
+ 7 public class ReflectTest {
+ 8     public static void main(String[] args) {
+ 9         try {
+10             Class<?> dummyClass = Class.forName("com.test.DummyTo");
+11  
+12             // parameter types for methods
+13             Class<?>[] partypes = new Class[]{String.class};
+14  
+15             // Create method object. methodname and parameter types
+16             Method meth = dummyClass.getMethod("toString", partypes);
+17  
+18             // parameter types for constructor
+19             Class<?>[] constrpartypes = new Class[]{String.class, String.class};
+20  
+21             //Create constructor object. parameter types
+22             Constructor<?> constr = dummyClass.getConstructor(constrpartypes);
+23  
+24             // create instance
+25             Object dummyto = constr.newInstance(new Object[]{"Java Programmer", "India"});
+26  
+27             // Arguments to be passed into method
+28             Object[] arglist = new Object[]{"I am"};
+29  
+30             // invoke method!!
+31             String output = (String) meth.invoke(dummyto, arglist);
+32             System.out.println(output);
+33  
+34         } catch (ClassNotFoundException e) {
+35             e.printStackTrace();
+36         } catch (SecurityException e) {
+37             e.printStackTrace();
+38         } catch (NoSuchMethodException e) {
+39             e.printStackTrace();
+40         } catch (IllegalArgumentException e) {
+41             e.printStackTrace();
+42         } catch (IllegalAccessException e) {
+43             e.printStackTrace();
+44         } catch (InvocationTargetException e) {
+45             e.printStackTrace();
+46         } catch (InstantiationException e) {
+47             e.printStackTrace();
+48         }
+49     }
+50 }
+
+
+
+
+
+Console for Code listing 10.2
+
+I am Java Programmer, India
+
+
+<br>Conclusion: Above examples demonstrate the invocation of method dynamically using reflection.<br>
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1309
+Cached time: 20171026140956
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.044 seconds
+Real time usage: 0.076 seconds
+Preprocessor visited node count: 488/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 8597/2097152 bytes
+Template argument size: 1090/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.006/10.000 seconds
+Lua memory usage: 573 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   54.545      1 -total
+ 56.41%   30.769      2 Template:Programming/Navigation
+ 20.52%   11.190      3 Template:BookCat
+ 19.85%   10.828      1 Template:Java_Programming/Reflection/Nav
+ 15.99%    8.721      3 Template:BookCat/default
+ 11.81%    6.441      3 Template:BOOKCATEGORY
+  8.52%    4.647      1 Template:Navbar
+  7.56%    4.126      1 Template:Java_Programming/Reflection/Topic
+  6.91%    3.770      1 Template:Status
+  5.53%    3.018      1 Template:Todo
+<br>
+<br> <br>
+<br>Navigate Reflection topic: ( v • d • e )
+ Reflection Overview
+ Dynamic Class Loading
+ Dynamic Method Invocation
+ Accessing Private Features with Reflection
+
+<br>All features of a class can be obtained via reflection, including access to private methods & variables. But not always see [1]. Let us look at the following example:<br>
+<br>
+Code listing 10.3: Secret.java
+
+
+1 public class Secret {
+2   private String secretCode = "It's a secret";
+3  
+4   private String getSecretCode() {
+5     return secretCode;     
+6   }
+7 }
+
+
+<br>Although the field and method are marked private, the following class shows that it is possible to access the private features of a class:<br>
+<br>
+
+Code listing 10.4: Hacker.java
+
+
+ 1 import java.lang.reflect.Field;
+ 2 import java.lang.reflect.InvocationTargetException;
+ 3 import java.lang.reflect.Method;
+ 4  
+ 5 public class Hacker {
+ 6  
+ 7    private static final Object[] EMPTY = {};
+ 8  
+ 9    public void reflect() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+10      Secret instance = new Secret();
+11      Class<?> secretClass = instance.getClass();
+12  
+13      // Print all the method names & execution result
+14      Method methods[] = secretClass.getDeclaredMethods();
+15      System.out.println("Access all the methods");
+16      for (Method method : methods) {
+17         System.out.println("Method Name: " + method.getName());
+18         System.out.println("Return type: " + method.getReturnType());
+19         method.setAccessible(true);
+20         System.out.println(method.invoke(instance, EMPTY) + "\n");
+21      }
+22  
+23      // Print all the field names & values
+24      Field fields[] = secretClass.getDeclaredFields();
+25      System.out.println("Access all the fields");
+26      for (Field field : fields) {
+27         System.out.println("Field Name: " + field.getName());
+28         field.setAccessible(true);
+29         System.out.println(field.get(instance) + "\n");
+30      }
+31   }
+32  
+33   public static void main(String[] args) {
+34     Hacker newHacker = new Hacker();
+35  
+36     try {
+37       newHacker.reflect();
+38     } catch (Exception e) {
+39       e.printStackTrace();
+40     }
+41   }
+42 }
+
+
+
+
+
+Console for Code listing 10.4
+
+Access all the methods
+Method Name: getSecretCode
+Return type: class java.lang.String
+It's a secret
+Access all the fields
+Field Name: secretCode
+It's a secret
+
+
+<br><br>
+<br>
+
+
+
+To do:
+We need to add some explanation of what is going on here.
+
+<br><br>
+<br>JUnit - Test Private methods[edit]<br>
+<br>JUnit's are unit test cases, used to test the Java programs. Now you know how to test a private method using Reflection in JUnit. There's a long-standing debate on whether testing private members is a good habit[1];There are cases where you want to make sure a class exhibited the right behavior while not making the fields that need checking to assert that public (as it's generally considered bad practice to create accessors to a class just for the sake of a unit test). There are also cases when you can greatly simplify a test case by using reflection to test all smaller private methods (and their various branches), then test the main function. With dp4j it is possible to test private members without directly using the Reflection API but simply accessing them as if they were accessible from the testing method; dp4j injects the needed Reflection code at compile-time[2].<br>
+<br>↑ What's the best way of unit testing private methods?, March 7, 2011
+↑ Reflection API injected at compile-time
+<br><br>
+<br>
+
+
+
+To do:
+Add some exercises like the ones in Variables
+
+<br><br>
+<br><br>
+
+
+<br> 
+NewPP limit report
+Parsed by mw1264
+Cached time: 20171026135454
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.084 seconds
+Real time usage: 0.328 seconds
+Preprocessor visited node count: 559/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 10380/2097152 bytes
+Template argument size: 1179/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 2/500
+Lua time usage: 0.009/10.000 seconds
+Lua memory usage: 573 KB/50 MB
+<br>
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  301.577      1 -total
+ 76.57%  230.926      2 Template:XCode
+ 11.32%   34.136      2 Template:Programming/Navigation
+  5.17%   15.587      1 Template:Java_Programming/Reflection/Nav
+  2.57%    7.756      3 Template:BookCat
+  1.85%    5.591      3 Template:BookCat/default
+  1.75%    5.271      1 Template:Status
+  1.74%    5.240      1 Template:Navbar
+  1.46%    4.408      1 Template:Java_Programming/Reflection/Topic
+  1.11%    3.357      3 Template:BOOKCATEGORY
+<br>
+<br> <br>
+<br> Reflection/Accessing Private Features with Reflection
+Java ProgrammingNetworking
+Database Programming 
+<br>Navigate Advanced topic: ( v • d • e )
+ Networking
+ Database programming
+ Regular Expressions
+ Libraries, extensions and frameworks
+ 3D programming
+ Java Native Interface
+ Invoking C
+ Byte Code
+
+<br>Prior to modern networking solutions there existed workstations that were connected to a massive Mainframe computer that was solely responsible for memory management, processes and almost everything. The workstations would just render the information sent in from the Mainframe console.<br>
+<br>But in the mid 90's, with the prices of Unix servers dropping, the trend was moving away from Mainframe computing toward Client-Server computing. This would enable rich clients to be developed on workstations while they would communicate with a centralized server, serving computers connected to it, to either communicate with other workstations also connected to it or it would request for database access or business logic stored on the server itself. The workstations were called clients.<br>
+<br>This form of computing gave rise to the notion of the Front-end and Back-end programming. In it's hey-day, Java came up with different ways of making networking between computers possible. In this chapter, we would be looking at some of these ways. Listed below are two of the frameworks that Java uses to enable network programming. We would be exploring both of these in this chapter.<br>
+<br>
+Client-Server programming[edit]
+ Networking basics
+ Creating a simple server
+ Listening for clients
+ Creating a client to interact with the server
+ Sending information over a network
+ Building complex carriage routines
+
+
+Remote Method Invocation (RMI)[edit]
+ Basics of Remote Method Invocation
+ Of stubs and proxies
+
+<br><br>
+<br> Reflection/Accessing Private Features with Reflection
+Java ProgrammingNetworking
+Database Programming 
+<br> 
+NewPP limit report
+Parsed by mw1308
+Cached time: 20171026142534
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.160 seconds
+Real time usage: 0.227 seconds
+Preprocessor visited node count: 720/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 11152/2097152 bytes
+Template argument size: 1009/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 85/500
+Lua time usage: 0.116/10.000 seconds
+Lua memory usage: 1,002 KB/50 MB
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  187.684      1 -total
+ 90.43%  169.715      2 Template:Programming/Navigation
+  7.36%   13.808      1 Template:Java_Programming/AdvancedTopics/Nav
+  3.71%    6.958      3 Template:BookCat
+  3.16%    5.925      1 Template:Java_Programming/Advanced/Topic
+  2.82%    5.294      1 Template:Navbar
+  2.68%    5.039     16 Template:Stage_short
+  2.42%    4.536      3 Template:BookCat/default
+  1.32%    2.480      3 Template:BOOKCATEGORY
+  1.17%    2.200      3 Template:Transclude
+<br>  Networking
+Java ProgrammingDatabase Programming
+Regular Expressions 
+<br>Navigate Advanced topic: ( v • d • e )
+ Networking
+ Database programming
+ Regular Expressions
+ Libraries, extensions and frameworks
+ 3D programming
+ Java Native Interface
+ Invoking C
+ Byte Code
+
+<br>Java uses JDBC, an API that defines how a client may access a database. Its drivers may be installed first. [1][2]<br>
+<br> <br>
+<br> Database Programming
+Java ProgrammingRegular Expressions
+Libraries, extensions and frameworks 
+<br>Navigate Advanced topic: ( v • d • e )
+ Networking
+ Database programming
+ Regular Expressions
+ Libraries, extensions and frameworks
+ 3D programming
+ Java Native Interface
+ Invoking C
+ Byte Code
+
+<br>
+The regular expressions (regex) are provided by the package java.util.regex.<br>
+<br> <br>
+<br> Regular Expressions
+Java ProgrammingLibraries, extensions and frameworks
+3D Programming 
+<br>Navigate Advanced topic: ( v • d • e )
+ Networking
+ Database programming
+ Regular Expressions
+ Libraries, extensions and frameworks
+ 3D programming
+ Java Native Interface
+ Invoking C
+ Byte Code
+
+<br>  Libraries, extensions and frameworks
+Java Programming3D Programming
+Java Native Interface 
+<br>
+
+
+This page or section is an undeveloped draft or outline.
+You can help to develop the work, or you can ask for assistance in the project room.
+<br>Although Java comes with the Java 3D library other libraries have been developed over time with similar functionality. Thus, unlike many other areas of Java development explored in this book, a Java programmer has a choice to make as to which 3D library to use.<br>
+<br> <br>
+<br> 3D Programming
+Java ProgrammingJava Native Interface
+Invoking C 
+<br>Navigate Advanced topic: ( v • d • e )
+ Networking
+ Database programming
+ Regular Expressions
+ Libraries, extensions and frameworks
+ 3D programming
+ Java Native Interface
+ Invoking C
+ Byte Code
+
+<br>
+The Java Native Interface (JNI) enables Java code running in a Java Virtual Machine (JVM) to call and to be called by native applications (programs specific to a hardware and operating system platform) and libraries written in other languages, such as C, C++ and assembly.<br>
+<br>JNI can be used:<br>
+<br>To implement or use features that are platform-specific.
+To implement or use features that the standard Java class library does not support.
+To enable an existing application—written in another programming language—to be accessible to Java applications.
+To let a native method use Java objects in the same way that Java code uses these objects (a native method can create Java objects and then inspect and use these objects to perform its tasks).
+To let a native method inspect and use objects created by Java application code.
+For time-critical calculations or operations like solving complicated mathematical equations (native code may be faster than JVM code).
+<br>On the other hand, an application that relies on JNI loses the platform portability Java offers. So you will have to write a separate implementation of JNI code for each platform and have Java detect the operating system and load the correct one at runtime. Many of the standard library classes depend on JNI to provide functionality to the developer and the user (file I/O, sound capabilities...). Including performance- and platform-sensitive API implementations in the standard library allows all Java applications to access this functionality in a safe and platform-independent manner. Only applications and signed applets can invoke JNI. JNI should be used with caution. Subtle errors in the use of JNI can destabilize the entire JVM in ways that are very difficult to reproduce and debug. Error checking is a must or it has the potential to crash the JNI side and the JVM.<br>
+<br>This page will only explain how to call native code from JVM, not how to call JVM from native code.<br>
+<br> <br>
+<br> Java Native Interface
+Java ProgrammingInvoking C
+Byte Code 
+<br>Navigate Advanced topic: ( v • d • e )
+ Networking
+ Database programming
+ Regular Expressions
+ Libraries, extensions and frameworks
+ 3D programming
+ Java Native Interface
+ Invoking C
+ Byte Code
+
+<br>
+You can use Runtime.exec() method to invoke a program from within a running Java application. Runtime.exec() also allows you to perform operations related to the program, such as control the program's standard input and output, wait until it completes execution, and get its exit status.<br>
+<br>Here's a simple C application that illustrates these features. This C program will be called from Java:<br>
+<br>
+
+#include <stdio.h>
+
+int main() {
+    printf("testing\n");
+    return 0;
+}
+<br>
+<br>This application writes a string "testing" to standard output, and then terminates with an exit status of 0. To execute this simple program within a Java application, compile the C application:<br>
+<br>
+Compilation
+
+$ cc test.c -o test
+
+<br>Then invoke the C program using this Java code:<br>
+<br>
+Code listing 10.2: Invoking C programs.
+
+
+ 1 import java.io.InputStream;
+ 2 import java.io.BufferedReader;
+ 3 import java.io.InputStreamReader;
+ 4 import java.io.IOException;
+ 5 import java.io.InterruptedException;
+ 6 import java.io.Process;
+ 7 import java.io.Runtime;
+ 8 
+ 9 import java.util.ArrayList;
+10 
+11 public class ExecDemo {
+12     public static String[] runCommand(String cmd) throws IOException {
+13         // --- set up list to capture command output lines ---
+14         ArrayList list = new ArrayList();
+15 
+16         // --- start command running
+17         Process proc = Runtime.getRuntime().exec(cmd);
+18 
+19         // --- get command's output stream and
+20         // put a buffered reader input stream on it ---
+21         InputStream istr = proc.getInputStream();
+22         BufferedReader br = new BufferedReader(new InputStreamReader(istr));
+23 
+24         // --- read output lines from command
+25         String str;
+26         while ((str = br.readLine()) != null) {
+27             list.add(str);
+28         }
+29 
+30         // wait for command to terminate
+31         try {
+32             proc.waitFor();
+33         }
+34         catch (InterruptedException e) {
+35             System.err.println("process was interrupted");
+36         }
+37 
+38         // check its exit value
+39         if (proc.exitValue() != 0) {
+40             System.err.println("exit value was non-zero");
+41         }
+42 
+43         // close stream
+44         br.close();
+45 
+46         // return list of strings to caller
+47         return (String[])list.toArray(new String[0]);
+48     }
+49 
+50     public static void main(String args[]) throws IOException {
+51         try {
+52 
+53             // run a command
+54             String outlist[] = runCommand("test");
+55 
+56             // display its output
+57             for (int i = 0; i < outlist.length; i++)
+58                 System.out.println(outlist[i]);
+59         }
+60         catch (IOException e) {
+61             System.err.println(e);
+62         }
+63     }
+64 }
+
+
+<br>The demo calls a method runCommand to actually run the program.<br>
+<br>
+Code section 10.1: Running a command.
+
+
+1 String outlist[] = runCommand("test");
+
+
+<br>This method hooks an input stream to the program's output stream, so that it can read the program's output, and save it into a list of strings.<br>
+<br>
+Code section 10.2: Reading the program's output.
+
+
+1 InputStream istr = proc.getInputStream();
+2 BufferedReader br = new BufferedReader(new InputStreamReader(istr));
+3              
+4 String str;
+5 while ((str = br.readLine()) != null) {
+6     list.add(str);
+7 }
+
+
+<br> <br>
+<br> Invoking C
+Java ProgrammingByte Code
+Links 
+<br>Topics:
+Preface
+Getting started
+Language fundamentals
+Classes and objects
+Aggregate
+Exceptions
+Concurrent Programming
+Javadoc & Annotations
+Designing user interfaces
+Advanced topics
+
+<br>
+Java Byte Code is the language to which Java source is compiled and the Java Virtual Machine understands. Unlike compiled languages that have to be specifically compiled for each different type of computers, a Java program only needs to be converted to byte code once, after which it can run on any platform for which a Java Virtual Machine exists.<br>
+<br>Bytecode is the compiled format for Java programs. Once a Java program has been converted to bytecode, it can be transferred across a network and executed by Java Virtual Machine (JVM). Bytecode files generally have a .class extension. It is not normally necessary for a Java programmer to know byte code, but it can be useful.<br>
+<br><br>
+<br>
+
+Contents
+
+1 Other Languages
+2 Example
+3 Example 2
+4 The Java bytecodes
+5 References
+6 External Links
+<br>
+<br><br>
+<br>  Byte Code
+Java ProgrammingLinks
+Glossary 
+<br>  Links
+Java ProgrammingGlossary
+Index 
+<br>This is a glossary of the book.<br>
+<br>Contents:
+Top - 0–9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+<br>  Glossary
+Java ProgrammingIndex
+TOC 
+<br>This is an alphabetical index to the book about basic java.<br>
+<br>Contents:
+Top - 0–9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+<br>
+
+
+
+A[edit]
+abstract
+Arrays
+ArrayLists
+ArrayList
+assert
+B[edit]
+base class
+boolean
+break
+byte
+C[edit]
+case
+catch
+char
+class
+ClassLoader
+Collections
+const
+continue
+D[edit]
+default
+do
+double
+Dynamic Class Loading
+E[edit]
+else
+enum
+Exceptions
+Throwing and Catching
+
+Examples:
+Rounding number example
+Singleton example
+
+extends
+F[edit]
+final
+finally
+float
+for
+G[edit]
+Generics
+goto
+I[edit]
+if
+implements
+import
+int
+interface
+
+
+
+K[edit]
+Keywords
+L[edit]
+List
+LinkedList
+long
+M[edit]
+Java Programming/Collection_Classes#Map
+MVC
+Methods
+N[edit]
+native
+new
+Nested Classes
+O[edit]
+Overloading and Overriding
+P[edit]
+package
+parent class
+Primitive Types
+private
+protected
+public
+Q[edit]
+Queue
+R[edit]
+return
+S[edit]
+Set
+short
+Stack
+static
+strictfp
+super
+superclass
+switch
+synchronized
+T[edit]
+this
+throw
+throws
+transient
+try
+V[edit]
+Variable arity (varargs)
+Variable number of arguments
+Variadic functions
+Vector
+void
+volatile
+
+
+<br>
+<br><br>
+<br> Glossary
+Java ProgrammingIndex
+TOC 
+<br> 
+NewPP limit report
+Parsed by mw1308
+Cached time: 20171026143530
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.156 seconds
+Real time usage: 0.215 seconds
+Preprocessor visited node count: 222/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 2593/2097152 bytes
+Template argument size: 16/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 94/500
+Lua time usage: 0.125/10.000 seconds
+Lua memory usage: 1.05 MB/50 MB
+<br>
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  193.860      1 -total
+ 96.10%  186.293      2 Template:Programming/Navigation
+  2.77%    5.361      1 Template:BookCat
+  2.15%    4.161      1 Template:BookCat/default
+  1.74%    3.364      1 Template:CompactTOC
+  1.23%    2.379      1 Template:BOOKCATEGORY
+  1.11%    2.144      1 MediaWiki:Toc
+  0.80%    1.552      1 Template:Top
+  0.71%    1.368      1 Template:FULLBOOKNAME
+  0.59%    1.134      1 Template:Bottom
+<br>

@@ -1,0 +1,73 @@
+ <br>
+<br> Unchecked Exceptions
+Java ProgrammingPreventing NullPointerException
+Stack trace 
+<br>Navigate Exceptions topic:( v • d • e )
+ Throwing and catching exceptions
+ Checked exceptions
+ Unchecked exceptions
+ Preventing NullPointerException
+ Stack trace
+ Nesting exceptions (chained exceptions)
+
+<br>NullPointerException is a RuntimeException. In Java, a special null value can be assigned to an object reference. NullPointerException is thrown when an application attempts to use an object reference that has the null value. These include:<br>
+<br>Calling an instance method on the object referred by a null reference.
+Accessing or modifying an instance field of the object referred by a null reference.
+If the reference type is an array type, taking the length of a null reference.
+If the reference type is an array type, accessing or modifying the slots of a null reference.
+If the reference type is a subtype of Throwable, throwing a null reference.
+<br>Applications should throw instances of this class to indicate other illegal uses of the null object.<br>
+<br>
+Code section 6.13: Null pointer.
+
+
+1 Object obj = null;
+2 obj.toString();  // This statement will throw a NullPointerException
+
+
+
+<br>The above code shows one of the pitfalls of Java and the most common source of bugs. No object is created and the compiler does not detect it. NullPointerException is one of the most common exceptions thrown in Java.<br>
+<br>
+<br>The reason we need it is because many times we need to create an object reference before the object itself is created. Object references cannot exist without a value, so we assign the null value to it.<br>
+<br>
+Code section 6.14: Non-instantiated declared object.
+
+
+1 public Person getPerson(boolean isWoman) {
+2   Person person = null;
+3   if (isWoman) {
+4     person = createWoman();
+5   } else {
+6     person = createMan();
+7   }
+8   return person;
+9 }
+
+
+<br>In code section 6.14 we want to create the Person inside the if-else, but we also want to return the object reference to the caller, so we need to create the object reference outside of the if-else, because of the scoping rule in Java. Incorrect error-handling and poor contract design can be a pitfall with any programming language. This is also true for Java.<br>
+<br>Now we will describe how to prevent NullPointerException. We do not describe general techniques for how you should program Java, we just hope to make you more aware of null values, and to be more careful about generating them yourself.<br>
+<br>This list is not complete — there are no rules for preventing NullPointerException entirely in Java, because the standard libraries have to be used, and they can cause NullPointerExceptions. Also, it is possible to observe an uninitialized final field in Java, so you can't even treat a final field as being completely trusted during the object's creation.<br>
+<br>A good approach is to learn how to deal with NullPointerExceptions first, and become competent with that. These suggestions will help you to cause less NullPointerExceptions, but they don't replace the need to know about NullPointerExceptions.<br>
+<br>
+<br>When you compare a variable with a string literal, most of people would do that this way:<br>
+<br>
+Code section 6.15: Bad comparison.
+
+
+1 if (state.equals("OK")) {
+2   ...
+3 }
+
+
+<br>Always put the string literal first:<br>
+<br>
+Code section 6.16: Better comparison.
+
+
+1 if ("OK".equals(state)) {
+2   ...
+3 }
+
+
+<br>If the state variable is null, you get a NullPointerException in the first example, but not in the second one.<br>
+<br>

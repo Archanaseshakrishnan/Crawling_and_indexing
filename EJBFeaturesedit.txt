@@ -1,0 +1,32 @@
+ <br>
+<br> Remote Method Invocation
+Java ProgrammingEJB
+JavaSpaces 
+<br>Navigate Concurrent Programming topic: ( v • d • e )
+ Threads and Runnables
+ Basic Synchronization
+ Client Server Programming
+ Remote Method Invocation (RMI)
+ Enterprise JavaBean Programming (EJB)
+ Java Spaces Programming (Jini)
+
+<br>
+Enterprise JavaBeans (EJB) technology is the server-side component architecture for Java Platform, Enterprise Edition (Java EE). EJB technology enables to create distributed, transactional, secure and portable application component objects.<br>
+<br>EJB supports the development and deployment of component based business applications. Applications written using the Enterprise JavaBeans architecture are scalable, transactional, and multi-user secure. These applications may be written once, and then deployed on any server platform that supports the Enterprise JavaBeans specification.<br>
+<br>
+<br><br>
+<br>
+
+
+
+To do:
+Complete this section.
+
+<br><br>
+<br>
+<br>Security Management
+Persistence Management
+Transaction Management
+Distributable Interoperable Management
+Exception Management
+<br>

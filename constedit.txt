@@ -1,0 +1,382 @@
+ <br>
+<br> Comments
+Java ProgrammingKeywords
+Coding conventions 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>Keywords are special tokens in the language which have reserved use in the language. Keywords may not be used as identifiers in Java — you cannot declare a field whose name is a keyword, for instance.<br>
+<br>Examples of keywords are the primitive types, int and boolean; the control flow statements for and if; access modifiers such as public, and special words which mark the declaration and definition of Java classes, packages, and interfaces: class, package, interface.<br>
+<br>Below are all the Java language keywords:<br>
+<br>
+abstract
+assert (since Java 1.4)
+boolean
+break
+byte
+case
+catch
+char
+class
+const (not used)
+continue
+default
+do
+double
+else
+enum (since Java 5.0)
+extends
+final
+finally
+float
+for
+goto (not used)
+if
+implements
+import
+instanceof
+int
+interface
+long
+native
+new
+package
+private
+protected
+public
+return
+short
+static
+strictfp (since Java 1.2)
+super
+switch
+synchronized
+this
+throw
+throws
+transient
+try
+void
+volatile
+while
+<br>
+<br>
+
+
+Contents
+
+1 abstract
+2 assert
+3 boolean
+4 break
+5 byte
+6 case
+7 catch
+8 char
+9 class
+10 const
+11 continue
+12 See also
+13 default
+14 do
+15 double
+16 else
+17 enum
+18 extends
+19 final
+20 For a variable
+21 For a class
+22 For a method
+23 Interest
+24 finally
+25 float
+26 for
+27 goto
+28 if
+29 implements
+30 import
+31 instanceof
+32 int
+33 interface
+34 long
+35 native
+36 See also
+37 new
+38 package
+39 private
+40 protected
+41 public
+42 return
+43 short
+44 static
+45 Interest
+46 strictfp
+47 super
+48 switch
+49 synchronized
+50 Singleton example
+51 this
+52 throw
+53 See also
+54 throws
+55 transient
+56 try
+57 void
+58 volatile
+59 while
+
+
+<br>In addition, the identifiers null, true, and false denote literal values and may not be used to create identifiers.<br>
+<br>
+<br>abstract is a Java keyword. It can be applied to a class and methods. An abstract class cannot be directly instantiated. It must be placed before the variable type or the method return type. It is recommended to place it after the access modifier and after the static keyword. A non-abstract class is a concrete class. An abstract class cannot be final.<br>
+<br>Only an abstract class can have abstract methods. An abstract method is only declared, not implemented:<br>
+<br>
+Code listing 1: AbstractClass.java
+
+
+1 public abstract class AbstractClass {
+2     // This method does not have a body; it is abstract.
+3     public abstract void abstractMethod();
+4  
+5     // This method does have a body; it is implemented in the abstract class and gives a default behavior.
+6     public void concreteMethod() {
+7         System.out.println("Already coded.");
+8     }
+9 }
+
+
+<br>An abstract method cannot be final, static nor native. Either you instantiate a concrete sub-class, either you instantiate the abstract class by implementing its abstract methods alongside a new statement:<br>
+<br>
+Code section 1: Abstract class use.
+
+
+1 AbstractClass myInstance = new AbstractClass() {
+2     public void abstractMethod() {
+3         System.out.println("Implementation.");
+4     }
+5 };
+
+
+<br>A private method cannot be abstract.<br>
+<br><br>
+<br>
+<br>assert is a Java keyword used to define an assert statement. An assert statement is used to declare an expected boolean condition in a program. If the program is running with assertions enabled, then the condition is checked at runtime. If the condition is false, the Java runtime system throws an AssertionError.<br>
+<br>Assertions may be declared using the following syntax:<br>
+<br>
+
+
+
+assert expression1 [: expression2];
+
+
+<br>expression1 is a boolean that will throw the assertion if it is false. When it is thrown, the assertion error exception is created with the parameter expression2 (if applicable).<br>
+<br>An example:<br>
+<br>
+
+
+
+assert list != null && list.size() > 0 : "list variable is null or empty";
+Object value = list.get(0);
+
+
+<br>Assertions are usually used as a debugging aid. They should not be used instead of validating arguments to public methods, or in place of a more precise runtime error exception.<br>
+<br>Assertions are enabled with the Java -ea or -enableassertions runtime option. See your Java environment documentation for additional options for controlling assertions.<br>
+<br>
+<br>boolean is a keyword which designates the boolean primitive type. There are only two possible boolean values: true and false. The default value for boolean fields is false.<br>
+<br>The following is a declaration of a private boolean field named initialized, and its use in a method named synchronizeConnection.<br>
+<br>
+Code section 1: Connection synchronization.
+
+
+1 private boolean initialized = false;
+2 
+3 public void synchronizeConnection() {
+4    if (!initialized) {
+5       connection = connect();
+6       initialized = true;
+7    }
+8 }
+
+
+<br>The previous code only creates a connection once (at the first method call). Note that there is no automatic conversion between integer types (such as int) to boolean as is possible in some languages like C. Instead, one must use an equivalent expression such as (i != 0) which evaluates to true if i is not zero.<br>
+<br>
+<br>break is a Java keyword.<br>
+<br>Jumps (breaks) out from a loop. Also used at switch statement.<br>
+<br>For example:<br>
+<br>
+
+
+
+for ( int i=0; i < maxLoopIter; i++ ) {
+   System.out.println("Iter=" +i);
+   if ( i == 5 ) {
+      break;  // -- 5 iteration is enough --
+   }
+}
+
+
+<br>
+See also:<br>
+<br>Java Programming/Keywords/switch
+<br>
+<br>byte is a keyword which designates the 8 bit signed integer primitive type.<br>
+<br>The java.lang.Byte class is the nominal wrapper class when you need to store a byte value but an object reference is required.<br>
+<br>Syntax:<br>
+<br>
+byte <variable-name> = <integer-value>;
+<br>
+<br>For example:<br>
+<br>
+
+
+
+byte b = 65;
+
+
+<br>or<br>
+<br>
+
+
+
+byte b = 'A'
+
+
+<br>The number 65 is the code for 'A' in ASCII.<br>
+<br>See also:<br>
+<br>Java Programming/Primitive Types
+<br>
+<br>case is a Java keyword.<br>
+<br>This is part of the switch statement, to find if the value passed to the switch statement matches a value followed by case.<br>
+<br>For example:<br>
+<br>
+
+
+
+int i = 3;
+switch(i) {
+case 1:
+   System.out.println("The number is 1.");
+   break;
+case 2:
+   System.out.println("The number is 2.");
+   break;
+case 3:
+   System.out.println("The number is 3."); // this line will print
+   break;
+case 4:
+   System.out.println("The number is 4.");
+   break;
+case 5:
+   System.out.println("The number is 5.");
+   break;
+default:
+  System.out.println("The number is not 1, 2, 3, 4, or 5.");
+}
+
+
+<br>
+<br>catch is a keyword.<br>
+<br>It's part of a try block. If an exception is thrown inside a try block, the exception will be compared to any of the catch part of the block. If the exception match with one of the exception in the catch part, the exception will be handled there.<br>
+<br>For example:<br>
+<br>
+
+
+
+try {
+   //...
+     throw new MyException_1();
+   //...
+} catch ( MyException_1 e ) {
+   // --- Handle the Exception_1 here --
+} catch ( MyException_2 e ) {
+   // --- Handle the Exception_2 here --
+}
+
+
+<br>
+See also:<br>
+<br>Java Programming/Keywords/try
+<br>
+<br>char is a keyword. It defines a character primitive type. char can be created from character literals and numeric representation. Character literals consist of a single quote character (') (ASCII 39, hex 0x27), a single character, and a close quote ('), such as 'w'. Instead of a character, you can also use unicode escape sequences, but there must be exactly one.<br>
+<br>Syntax:<br>
+<br>char variable name1 = 'character1';
+<br>
+
+Code section 1: Three examples.
+
+
+1 char oneChar1 = 'A';
+2 char oneChar2 = 65;
+3 char oneChar3 = '\u0041';
+4 System.out.println(oneChar1);
+5 System.out.println(oneChar2);
+6 System.out.println(oneChar3);
+
+
+
+
+
+Output for Code section 1
+
+A
+A
+A
+
+
+<br>65 is the numeric representation of character 'A' , or its ASCII code.<br>
+<br>The nominal wrapper class is the java.lang.Character class when you need to store a char value but an object reference is required.<br>
+<br>
+Code section 2: char wrapping.
+
+
+1 char aCharPrimitiveType = 'A';
+2 Character aCharacterObject = aCharPrimitiveType;
+
+
+<br>See also:<br>
+<br>Java Programming/Primitive Types
+<br>
+<br>class is a Java keyword which begins the declaration and definition of a class.<br>
+<br>The general syntax of a class declaration, using Extended Backus-Naur Form, is<br>
+<br>
+class-declaration ::= [access-modifiers] class identifier
+                      [extends-clause] [implements-clause] 
+                      class-body
+
+extends-clause ::= extends class-name
+implements-clause ::= implements interface-names 
+interface-names ::= interface-name [, interface-names]
+class-body ::= { [member-declarations] }
+member-declarations = member-declaration [member-declarations]
+member-declaration = field-declaration 
+                     | initializer 
+                     | constructor 
+                     | method-declaration
+                     | class-declaration
+<br>
+<br>The extends word is optional. If omitted, the class extends the Object class, as all Java classes inherit from it.<br>
+<br>See also:<br>
+<br>Java Programming/Keywords/new
+<br>
+<br>const is a reserved keyword, presently not being used.<br>
+<br>In other programming languages, such as C, const is often used to declare a constant. However, in Java, final is used instead.<br>
+<br>

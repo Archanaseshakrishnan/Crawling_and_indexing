@@ -1,0 +1,264 @@
+ <br>
+<br> Methods
+Java ProgrammingString
+Classes, Objects and Types 
+<br>Navigate Language Fundamentals topic: ( v • d • e )
+ Statements
+ Conditional blocks
+ Loop blocks
+ Boolean expressions
+ Variables
+ Primitive Types
+ Arithmetic expressions
+ Literals
+ Methods
+ String
+ Objects
+ Packages
+ Arrays
+ Mathematical functions
+ Large numbers
+ Random numbers
+ Unicode
+ Comments
+ Keywords
+ Coding conventions
+
+<br>String is a class built into the Java language defined in the java.lang package. It represents character strings. Strings are ubiquitous in Java. Study the String class and its methods carefully. It will serve you well to know how to manipulate them skillfully. String literals in Java programs, such as "abc", are implemented as instances of this class like this:<br>
+<br>
+Code section 3.81: String example.
+
+
+1 String str = "This is string literal";
+
+
+<br>On the right hand side a String object is created represented by the string literal. Its object reference is assigned to the str variable.<br>
+<br>
+<br>Strings are immutable; that is, they cannot be modified once created. Whenever it looks as if a String object was modified actually a new String object was created. For instance, the String.trim() method returns the string with leading and trailing whitespace removed. Actually, it creates a new trimmed string and then returns it. Pay attention on what happens in Code section 3.82:<br>
+<br>
+
+Code section 3.82: Immutability.
+
+
+1 String badlyCutText = "     Java is great.     ";
+2 System.out.println(badlyCutText);
+3 
+4 badlyCutText.trim();
+5 System.out.println(badlyCutText);
+
+
+
+
+
+Output for Code section 3.82
+
+     Java is great.    
+     Java is great.    
+
+
+<br>The trim() method call does not modify the object so nothing happens. It creates a new trimmed string and then throws it away.<br>
+<br>
+
+Code section 3.83: Assignment.
+
+
+1 String badlyCutText = "     Java is great.     ";
+2 System.out.println(badlyCutText);
+3 
+4 badlyCutText = badlyCutText.trim();
+5 System.out.println(badlyCutText);
+
+
+
+
+
+Output for Code section 3.83
+
+     Java is great.    
+Java is great.
+
+
+<br>The returned string is assigned to the variable. It does the job as the trim() method has created a new String instance.<br>
+<br>
+<br>The Java language provides special support for the string concatenation with operator +:<br>
+<br>
+
+Code section 3.84: Examples of concatenation.
+
+
+1 System.out.println("First part");
+2 System.out.println(" second part");
+3 String str = "First part" + " second part";
+4 System.out.println(str);
+
+
+
+
+
+Output for Code section 3.84
+
+First part
+ second part
+First part second part
+
+
+<br>The concatenation is not always processed at the same time. Raw string literals concatenation is done at compile time, hence there is a single string literal in the byte code of the class. Concatenation with at least one object is done at runtime.<br>
+<br>+ operator can concatenate other objects with strings. For instance, integers will be converted to strings before the concatenation:<br>
+<br>
+
+Code section 3.85: Concatenation of integers.
+
+
+1 System.out.println("Age=" + 25);
+
+
+
+
+
+Output for Code section 3.85
+
+Age=25
+
+
+<br>Each Java object has the String toString() inherited from the Object class. This method provides a way to convert objects into Strings. Most classes override the default behavior to provide more specific (and more useful) data in the returned String:<br>
+<br>
+
+Code section 3.86: Concatenation of objects.
+
+
+1 System.out.println("Age=" + new Integer(31));
+
+
+
+
+
+Output for Code section 3.86
+
+Age=31
+
+
+<br>
+<br>Remember that String objects are immutable objects. Once a String is created, it can not be modified, takes up memory until garbage collected. Be careful of writing a method like this:<br>
+<br>
+Code section 3.87: Raw concatenation.
+
+
+1 public String convertToString(Collection<String> words) {
+2   String str = "";
+3   // Loops through every element in words collection
+4   for (String word : words) {
+5     str = str + word + " ";
+6   }
+7   return str;
+8 }
+
+
+<br>On the + operation a new String object is created at each iteration. Suppose words contains the elements ["Foo", "Bar", "Bam", "Baz"]. At runtime, the method creates thirteen Strings:<br>
+<br>""
+"Foo"
+" "
+"Foo "
+"Foo Bar"
+" "
+"Foo Bar "
+"Foo Bar Bam"
+" "
+"Foo Bar Bam "
+"Foo Bar Bam Baz"
+" "
+"Foo Bar Bam Baz "
+<br>Even though only the last one is actually useful.<br>
+<br>To avoid unnecessary memory use like this, use the StringBuilder class. It provides similar functionality to Strings, but stores its data in a mutable way. Only one StringBuilder object is created. Also because object creation is time consuming, using StringBuilder produces much faster code.<br>
+<br>
+Code section 3.88: Concatenation with StringBuilder.
+
+
+1 public String convertToString(Collection<String> words) {
+2   StringBuilder buf = new StringBuilder();
+3   // Loops through every element in words collection
+4   for (String word : words) {
+5     buf.append(word);
+6     buf.append(" ");
+7   }
+8   return buf.toString();
+9 }
+
+
+<br>As StringBuilder isn't thread safe (see the chapter on Concurrency) you can't use it in more than one thread. For a multi-thread environment, use StringBuffer instead which does the same and is thread safe. However, StringBuffer is slower so only use it when it is required. Moreover, before Java 5 only StringBuffer existed.<br>
+<br>
+<br>Comparing strings is not as easy as it may first seem. Be aware of what you are doing when comparing String's using ==:<br>
+<br>
+
+Code section 3.89: Dangerous comparison.
+
+
+1 String greeting = "Hello World!";
+2 if (greeting == "Hello World!") {
+3     System.out.println("Match found.");
+4 }
+
+
+
+
+
+Output for Code section 3.89
+
+Match found.
+
+
+<br>The difference between the above and below code is that the above code checks to see if the String's are the same objects in memory which they are. This is as a result of the fact that String's are stored in a place in memory called the String Constant Pool. If the new keyword is not explicitly used when creating the String it checks to see if it already exists in the Pool and uses the existing one. If it does not exist, a new Object is created. This is what allows Strings to be immutable in Java. To test for equality, use the equals(Object) method inherited by every class and defined by String to return true if and only if the object passed in is a String contains the exact same data:<br>
+<br>
+
+Code section 3.90: Right comparison.
+
+
+1 String greeting = "Hello World!";
+2 if (greeting.equals("Hello World!")) {
+3     System.out.println("Match found.");
+4 }
+
+
+
+
+
+Output for Code section 3.90
+
+Match found.
+
+
+<br>Remember that the comparison is case sensitive.<br>
+<br>
+
+Code section 3.91: Comparison with lowercase.
+
+
+1 String greeting = "Hello World!";
+2 if (greeting.equals("hello world!")) {
+3     System.out.println("Match found.");
+4 }
+
+
+
+
+
+Output for Code section 3.91
+
+
+
+<br>To order String objects, use the compareTo() method, which can be accessed wherever we use a String datatype. The compareTo() method returns a negative, zero, or positive number if the parameter is less than, equal to, or greater than the object on which it is called. Let's take a look at an example:<br>
+<br>
+Code section 3.92: Order.
+
+
+1 String person1 = "Peter";
+2 String person2 = "John";
+3 if (person1.compareTo(person2) > 0) {
+4     // Badly ordered
+5     String temp = person1;
+6     person1 = person2;
+7     person2 = temp;
+8 }
+
+
+<br>The code section 3.92 is comparing the String variable person1 to person2. If person1 is different even in the slightest manner, we will get a value above or below 0 depending on the exact difference. The result is negative if this String object lexicographically precedes the argument string. The result is positive if this String object lexicographically follows the argument string. Take a look at the Java API for more details.<br>
+<br>
